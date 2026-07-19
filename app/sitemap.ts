@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { articles } from "@/lib/articles";
 
 export const dynamic = "force-static";
 
@@ -11,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/products",
     "/services",
     "/investors",
+    "/learn",
+    ...articles.map((a) => `/learn/${a.slug}`),
     "/compliance",
     "/contact",
     "/faq",
