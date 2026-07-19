@@ -118,12 +118,20 @@ export default function HomePage() {
           employment through the cannabis business, supporting hill farmers, and
           making Nepal more self-reliant, one licensed harvest at a time.
         </p>
-        <Link
-          href="/about"
-          className="mt-8 inline-block rounded-lg bg-himalaya-600 px-6 py-3 font-medium text-white shadow hover:bg-himalaya-700"
-        >
-          Our story
-        </Link>
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <Link
+            href="/about"
+            className="rounded-lg bg-himalaya-600 px-6 py-3 font-medium text-white shadow hover:bg-himalaya-700"
+          >
+            Our story
+          </Link>
+          <Link
+            href="/investors"
+            className="rounded-lg border border-himalaya-600 px-6 py-3 font-medium text-himalaya-700 hover:bg-himalaya-50"
+          >
+            Invest with us
+          </Link>
+        </div>
       </section>
     </>
   );
