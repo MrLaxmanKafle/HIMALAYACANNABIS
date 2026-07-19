@@ -19,6 +19,7 @@ export default function Footer() {
             <li><Link href="/services" className="hover:text-white">Lab & Services</Link></li>
             <li><Link href="/investors" className="hover:text-white">Investors</Link></li>
             <li><Link href="/compliance" className="hover:text-white">Compliance & Licensing</Link></li>
+            <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
             <li><Link href="/contact" className="hover:text-white">B2B & Export Inquiries</Link></li>
           </ul>
         </div>
@@ -34,10 +35,16 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-himalaya-900">
-        <p className="mx-auto max-w-6xl px-4 py-4 text-xs text-himalaya-300">
-          © {new Date().getFullYear()} {company.name} All activities are subject to the
-          licences and approvals required under the prevailing laws of Nepal.
-        </p>
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-himalaya-300">
+          <p>
+            © {new Date().getFullYear()} {company.name} All activities are subject to
+            the licences and approvals required under the prevailing laws of Nepal.
+          </p>
+          <p className="flex gap-4">
+            <Link href="/privacy" className="hover:text-white">Privacy</Link>
+            <Link href="/terms" className="hover:text-white">Terms</Link>
+          </p>
+        </div>
       </div>
     </footer>
   );

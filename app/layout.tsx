@@ -22,6 +22,42 @@ export const metadata: Metadata = {
     "bhango",
     "CBD Nepal",
   ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "https://himalayacannabis.com",
+    siteName: company.name,
+    title: `${company.name} — Himalayan Hemp & Medical Cannabis, Nepal`,
+    description:
+      "Licensed medical and industrial hemp from the Himalayan and hilly regions of Nepal. Lab-tested textiles, seed foods, wellness products, and cannabis-sector services.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Himalaya Cannabis" }],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${company.name} — Himalayan Hemp, Nepal`,
+    description:
+      "Licensed medical and industrial hemp from the Himalayan regions of Nepal. Lab-tested. No recreational sales.",
+    images: ["/og.png"],
+  },
+  robots: { index: true, follow: true },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: company.name,
+  alternateName: company.nameNepali,
+  url: "https://himalayacannabis.com",
+  logo: "https://himalayacannabis.com/icon.svg",
+  email: company.email,
+  description: company.natureOfBusiness,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Kathmandu Metropolitan City, Ward No. 32",
+    addressRegion: "Bagmati Province",
+    addressCountry: "NP",
+  },
 };
 
 export default function RootLayout({
@@ -32,6 +68,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

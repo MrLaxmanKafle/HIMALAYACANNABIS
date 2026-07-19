@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { company } from "@/lib/company";
+import Logo from "@/components/Logo";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -23,9 +24,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-himalaya-900 text-white shadow-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span aria-hidden className="grid size-10 place-items-center rounded-full bg-himalaya-600 text-xl font-bold">
-            ॐ
-          </span>
+          <Logo className="size-10" />
           <span className="leading-tight">
             <span className="block font-semibold tracking-wide">HIMALAYA CANNABIS</span>
             <span className="block text-xs text-himalaya-200">{company.nameNepali}</span>
