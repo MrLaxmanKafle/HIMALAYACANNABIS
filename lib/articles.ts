@@ -6,7 +6,9 @@ export type Article = {
   keywords: string[];
   date: string;
   lede: string;
+  keyPoints: string[];
   sections: { h: string; ps: string[] }[];
+  faq: { q: string; a: string }[];
 };
 
 export const articles: Article[] = [
@@ -27,6 +29,12 @@ export const articles: Article[] = [
     date: "2026-07-19",
     lede:
       "The short answer: recreational cannabis is illegal in Nepal, while medical and industrial cannabis (hemp) can operate only under licence. Here is what the law actually says.",
+        keyPoints: [
+      "Recreational cannabis is illegal in Nepal under the Narcotic Drugs (Control) Act, 2033 (1976).",
+      "Medical and industrial cannabis (hemp) can operate only under licence from the relevant authority.",
+      "Industrial hemp is defined by THC content below 0.3%, verified by certified laboratory testing.",
+      "There is no legal recreational market in Nepal — offers to sell recreational cannabis are unlawful.",
+    ],
     sections: [
       {
         h: "The general prohibition",
@@ -51,6 +59,20 @@ export const articles: Article[] = [
         ],
       },
     ],
+    faq: [
+      {
+        q: "Is weed legal in Nepal?",
+        a: "No. Recreational cannabis (weed/marijuana/ganja) is illegal in Nepal under the Narcotic Drugs (Control) Act, 2033 (1976). Only licensed medical and industrial cannabis activity is contemplated by law.",
+      },
+      {
+        q: "Can tourists buy cannabis in Nepal?",
+        a: "No. There is no legal recreational market in Nepal for anyone, including tourists. Street offers are illegal and often scams.",
+      },
+      {
+        q: "Is hemp legal in Nepal?",
+        a: "Industrial hemp (cannabis below 0.3% THC) can be cultivated and processed only under licence from the relevant authority, with mandatory certified laboratory testing.",
+      },
+    ],
   },
   {
     slug: "hemp-vs-marijuana-difference",
@@ -68,6 +90,12 @@ export const articles: Article[] = [
     date: "2026-07-19",
     lede:
       "Cannabis, hemp, marijuana, weed, and ganja all refer to the same plant species — Cannabis sativa. The difference that matters, legally and practically, is THC.",
+        keyPoints: [
+      "Hemp and marijuana are the same plant species (Cannabis sativa) — the legal difference is THC content.",
+      "Hemp contains below 0.3% THC and cannot intoxicate; marijuana is grown for high THC.",
+      "Hemp is an industrial crop: fibre for textiles, seed (bhango) for food, and CBD for wellness.",
+      "In Nepal, a certified lab report is what legally separates industrial hemp from prohibited cannabis.",
+    ],
     sections: [
       {
         h: "One plant, two categories",
@@ -90,6 +118,16 @@ export const articles: Article[] = [
         ],
       },
     ],
+    faq: [
+      {
+        q: "Does hemp get you high?",
+        a: "No. Hemp is defined by THC content below 0.3%, far too low to intoxicate. Its value is in fibre, seed, and non-intoxicating compounds like CBD.",
+      },
+      {
+        q: "Is hemp the same as weed?",
+        a: "Botanically the same species, legally opposite categories. Weed/marijuana is high-THC cannabis and is illegal in Nepal; hemp is low-THC industrial cannabis that can be grown under licence.",
+      },
+    ],
   },
   {
     slug: "hemp-in-nepal-history",
@@ -108,6 +146,12 @@ export const articles: Article[] = [
     date: "2026-07-19",
     lede:
       "Long before 'hemp' became a global wellness keyword, Himalayan households were weaving it, eating it, and trading it. Nepal's relationship with this plant is measured in centuries.",
+        keyPoints: [
+      "Cannabis grows wild across Nepal's hills — the Himalaya is one of the plant's native homes.",
+      "Hemp seed (bhango, भाङ्गो) has been a traditional protein-rich food in Nepali hill kitchens for generations.",
+      "Hand-woven hemp cloth remains a living craft tradition in Nepal's far-western districts.",
+      "Nepal prohibited cannabis in 1976; today's medical and industrial frameworks are reviving the heritage crop legally.",
+    ],
     sections: [
       {
         h: "A plant of the hills",
@@ -130,6 +174,16 @@ export const articles: Article[] = [
         ],
       },
     ],
+    faq: [
+      {
+        q: "What is bhango?",
+        a: "Bhango (भाङ्गो) is hemp seed — a traditional Nepali food, roasted and ground into achar (chutney). It is rich in complete protein and omega fatty acids and has no intoxicating effect.",
+      },
+      {
+        q: "Does Nepal have a hemp textile tradition?",
+        a: "Yes. Hill communities have woven hemp fibre into rope and durable cloth for centuries, and hand-woven hemp fabric remains a living craft in Nepal's far-western districts.",
+      },
+    ],
   },
   {
     slug: "medical-cannabis-nepal",
@@ -146,6 +200,12 @@ export const articles: Article[] = [
     date: "2026-07-19",
     lede:
       "Medical cannabis in Nepal is not a free-for-all — it is an emerging licensed framework. Here is how it is structured and where it is heading.",
+        keyPoints: [
+      "Medical cannabis in Nepal is an emerging licensed framework, not an open market.",
+      "Bills have been tabled federally, and Gandaki Province has developed a medical and industrial cannabis framework.",
+      "Every regulated activity requires a licence plus certified laboratory testing of products.",
+      "Nepal's ayurvedic tradition gives it a distinctive position in plant-based medicine.",
+    ],
     sections: [
       {
         h: "The framework taking shape",
@@ -169,6 +229,16 @@ export const articles: Article[] = [
         ],
       },
     ],
+    faq: [
+      {
+        q: "Is medical marijuana legal in Nepal?",
+        a: "Medical cannabis in Nepal is possible only through an emerging licensing framework — provincial frameworks such as Gandaki's and bills tabled in parliament. It is not an open or recreational market.",
+      },
+      {
+        q: "Who can grow medical cannabis in Nepal?",
+        a: "Only operators holding the licences required under prevailing law, with certified laboratory testing of products. Unlicensed cultivation remains a criminal offence.",
+      },
+    ],
   },
   {
     slug: "cbd-in-nepal",
@@ -186,6 +256,12 @@ export const articles: Article[] = [
     date: "2026-07-19",
     lede:
       "CBD is the cannabis compound that doesn't get you high — and it has built a global wellness industry. Here's what it is and how it fits Nepal's framework.",
+        keyPoints: [
+      "CBD (cannabidiol) is a non-intoxicating cannabis compound, typically extracted from industrial hemp.",
+      "CBD is not the same as hemp seed oil — seed oil is a food product with no meaningful cannabinoids.",
+      "In Nepal, CBD products require licensing under the medical and industrial cannabis framework.",
+      "Himalayan provenance plus ayurvedic tradition position Nepali CBD as a distinctive export category.",
+    ],
     sections: [
       {
         h: "What CBD is",
@@ -208,6 +284,16 @@ export const articles: Article[] = [
         ],
       },
     ],
+    faq: [
+      {
+        q: "Is CBD legal in Nepal?",
+        a: "CBD falls under Nepal's cannabis licensing framework: production and sale become possible only through the medical and industrial licensing pathway, with certified lab testing. There is no free CBD market in Nepal today.",
+      },
+      {
+        q: "Does CBD get you high?",
+        a: "No. CBD (cannabidiol) is non-intoxicating. The intoxicating compound in cannabis is THC, which industrial hemp contains only below 0.3%.",
+      },
+    ],
   },
   {
     slug: "hemp-products-guide",
@@ -225,6 +311,12 @@ export const articles: Article[] = [
     date: "2026-07-19",
     lede:
       "Few crops make cloth, food, medicine, and cosmetics at once. A guide to the hemp plant's product families — and which ones Nepal is best placed to win.",
+        keyPoints: [
+      "Hemp yields four product families at once: fibre textiles, seed foods, extracts, and cosmetics.",
+      "Hemp bast fibre is among the strongest natural fibres — ideal for durable, breathable textiles.",
+      "Hemp seed (bhango) is a complete protein rich in omega-3 and omega-6.",
+      "Nepal's craft weaving tradition and Himalayan provenance are premium differentiators for export.",
+    ],
     sections: [
       {
         h: "Fibre: textiles, rope, and paper",
@@ -250,6 +342,16 @@ export const articles: Article[] = [
           "Hemp seed oil's fatty-acid profile makes it a strong base for soaps, creams, and hair care. Further afield, hemp finds use in bio-composites, insulation ('hempcrete'), and animal feed — categories that grow as supply matures.",
           "Himalaya Cannabis is building five of these families — textiles, seed foods, CBD wellness, ayurvedic formulations, and cosmetics — on one licensed, lab-tested Himalayan supply chain. See our products page for current status.",
         ],
+      },
+    ],
+    faq: [
+      {
+        q: "What products are made from hemp?",
+        a: "Textiles, rope, and paper from the fibre; foods and cold-pressed oil from the seed (bhango); CBD wellness products from the flowers; and soaps and cosmetics from the seed oil.",
+      },
+      {
+        q: "Is hemp seed oil the same as CBD oil?",
+        a: "No. Hemp seed oil is a food oil pressed from seeds and contains no meaningful cannabinoids. CBD oil is an extract from the plant's flowers and leaves and falls under cannabis licensing rules.",
       },
     ],
   },
