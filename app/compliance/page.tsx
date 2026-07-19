@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Compliance & Licensing",
@@ -35,50 +36,39 @@ const framework = [
 export default function CompliancePage() {
   return (
     <>
-      <section className="bg-himalaya-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <h1 className="text-4xl font-bold">Compliance & Licensing</h1>
-          <p className="mt-3 max-w-2xl text-himalaya-200">
-            Operating legally is not a constraint on our business — it is our
-            business. Here is exactly how we work.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Compliance & Licensing"
+        lede="Operating legally is not a constraint on our business — it is our business. Here is exactly how we work."
+      />
 
-      <section className="mx-auto max-w-4xl px-4 py-16">
-        <h2 className="text-2xl font-bold text-himalaya-900">Our commitments</h2>
-        <div className="mt-8 space-y-6">
+      <section className="mx-auto max-w-3xl px-5 py-16">
+        <h2 className="text-2xl font-bold">Our commitments</h2>
+        <dl className="mt-8 divide-y divide-line border-y border-line">
           {commitments.map((c) => (
-            <article
-              key={c.title}
-              className="rounded-xl border-l-4 border-himalaya-600 bg-white p-6 shadow-sm"
-            >
-              <h3 className="font-semibold text-himalaya-900">{c.title}</h3>
-              <p className="mt-2 leading-relaxed text-himalaya-800/80">{c.body}</p>
-            </article>
+            <div key={c.title} className="py-6">
+              <dt className="font-bold">{c.title}</dt>
+              <dd className="mt-2 leading-relaxed text-ink-2">{c.body}</dd>
+            </div>
           ))}
-        </div>
+        </dl>
 
-        <h2 className="mt-16 text-2xl font-bold text-himalaya-900">
+        <h2 className="mt-20 text-2xl font-bold">
           The legal framework we operate under
         </h2>
-        <ul className="mt-6 space-y-3">
+        <ul className="mt-6 space-y-3 leading-relaxed text-ink-2">
           {framework.map((f) => (
-            <li
-              key={f}
-              className="flex items-start gap-3 rounded-lg bg-himalaya-50 px-5 py-3 text-himalaya-800"
-            >
-              <span aria-hidden className="mt-0.5 text-himalaya-600">⚖</span>
+            <li key={f} className="flex gap-3">
+              <span aria-hidden className="text-marigold">—</span>
               {f}
             </li>
           ))}
         </ul>
 
-        <p className="mt-12 rounded-xl border border-himalaya-100 bg-white p-6 text-sm leading-relaxed text-himalaya-800/70">
-          This page summarises provisions of the Company&apos;s Memorandum and Articles
-          of Association and is provided for general information. It is not legal
-          advice. Product availability is subject to the licences and approvals in
-          force at any given time.
+        <p className="mt-16 border-t border-line pt-6 text-sm leading-relaxed text-ink-3">
+          This page summarises provisions of the Company&apos;s Memorandum and
+          Articles of Association and is provided for general information. It is
+          not legal advice. Product availability is subject to the licences and
+          approvals in force at any given time.
         </p>
       </section>
     </>

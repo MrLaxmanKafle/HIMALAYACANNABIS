@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 import { services } from "@/lib/company";
 
 export const metadata: Metadata = {
@@ -11,41 +12,42 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-himalaya-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <h1 className="text-4xl font-bold">Laboratory & Industry Services</h1>
-          <p className="mt-3 max-w-2xl text-himalaya-200">
-            A legal cannabis industry needs more than growers — it needs testing,
-            traceability, and know-how. We&apos;re building all three.
-          </p>
-        </div>
+      <PageHero
+        title="Laboratory & Industry Services"
+        lede="A legal cannabis industry needs more than growers — it needs testing, traceability, and know-how. We're building all three."
+      />
+
+      <section className="mx-auto max-w-6xl px-5 py-8">
+        {services.map((s, i) => (
+          <article
+            key={s.name}
+            className="grid gap-4 border-b border-line py-12 last:border-b-0 sm:grid-cols-[4rem_1fr]"
+          >
+            <span className="text-sm font-semibold text-ink-3 tabular-nums">
+              0{i + 1}
+            </span>
+            <div>
+              <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold tracking-[-0.01em]">
+                {s.name}
+              </h2>
+              <p className="mt-3 max-w-2xl leading-relaxed text-ink-2">{s.summary}</p>
+            </div>
+          </article>
+        ))}
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <div className="grid gap-8 md:grid-cols-2">
-          {services.map((s, i) => (
-            <article
-              key={s.name}
-              className="rounded-2xl border border-himalaya-100 bg-white p-8 shadow-sm"
-            >
-              <span className="text-sm font-semibold text-himalaya-400">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h2 className="mt-2 text-xl font-bold text-himalaya-900">{s.name}</h2>
-              <p className="mt-3 leading-relaxed text-himalaya-800/80">{s.summary}</p>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-16 rounded-2xl bg-himalaya-900 p-10 text-center text-white">
-          <h2 className="text-2xl font-bold">Entering the cannabis sector?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-himalaya-200">
-            Whether you are a farmer, cooperative, brand, or investor, we can support
-            you with seed, testing, compliance, and training.
-          </p>
+      <section className="border-t border-line-2 bg-ground-2">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-5 py-14">
+          <div>
+            <h2 className="text-2xl font-bold">Entering the cannabis sector?</h2>
+            <p className="mt-2 max-w-xl text-ink-2">
+              Whether you are a farmer, cooperative, brand, or investor, we can
+              support you with seed, testing, compliance, and training.
+            </p>
+          </div>
           <Link
             href="/contact"
-            className="mt-6 inline-block rounded-lg bg-white px-6 py-3 font-medium text-himalaya-900 hover:bg-himalaya-50"
+            className="rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
           >
             Talk to us
           </Link>

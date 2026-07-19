@@ -10,8 +10,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Licensed medical and industrial hemp from the Himalayan and hilly regions of Nepal.",
     start_url: "/",
     display: "standalone",
-    background_color: "#faf7f0",
-    theme_color: "#1b5e20",
+    background_color: "#122415",
+    theme_color: "#122415",
     icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml" }],
   };
 }

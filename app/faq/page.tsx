@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -59,41 +60,34 @@ export default function FaqPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="bg-himalaya-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <h1 className="text-4xl font-bold">Frequently Asked Questions</h1>
-          <p className="mt-3 max-w-2xl text-himalaya-200">
-            Straight answers about what we do — and what we don&apos;t.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Frequently Asked Questions"
+        lede="Straight answers about what we do — and what we don't."
+      />
 
-      <section className="mx-auto max-w-3xl px-4 py-16">
-        <div className="space-y-4">
+      <section className="mx-auto max-w-3xl px-5 py-12">
+        <div className="divide-y divide-line border-y border-line">
           {faqs.map((f) => (
-            <details
-              key={f.q}
-              className="group rounded-xl border border-himalaya-100 bg-white shadow-sm open:shadow-md"
-            >
-              <summary className="cursor-pointer list-none px-6 py-4 font-semibold text-himalaya-900 marker:content-none">
-                <span className="flex items-center justify-between gap-4">
+            <details key={f.q} className="group">
+              <summary className="cursor-pointer list-none py-5 font-bold marker:content-none">
+                <span className="flex items-baseline justify-between gap-4">
                   {f.q}
                   <span
                     aria-hidden
-                    className="text-himalaya-400 transition-transform group-open:rotate-45"
+                    className="text-marigold transition-transform group-open:rotate-45"
                   >
                     +
                   </span>
                 </span>
               </summary>
-              <p className="px-6 pb-5 leading-relaxed text-himalaya-800/80">{f.a}</p>
+              <p className="pb-6 leading-relaxed text-ink-2">{f.a}</p>
             </details>
           ))}
         </div>
 
-        <p className="mt-10 text-center text-himalaya-800/70">
+        <p className="mt-10 text-ink-2">
           Something else?{" "}
-          <Link href="/contact" className="font-medium text-himalaya-600 hover:underline">
+          <Link href="/contact" className="font-semibold text-marigold hover:text-ink">
             Ask us directly
           </Link>
           .

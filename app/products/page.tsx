@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 import { productCategories } from "@/lib/company";
 
 export const metadata: Metadata = {
@@ -11,70 +12,64 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
-      <section className="bg-himalaya-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <h1 className="text-4xl font-bold">Our Products</h1>
-          <p className="mt-3 max-w-2xl text-himalaya-200">
-            Every product line below is built on licensed cultivation and certified
-            laboratory testing. Categories marked &ldquo;planned&rdquo; launch as the
-            corresponding licences are obtained.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Our Products"
+        lede="Every line below is built on licensed cultivation and certified laboratory testing. Categories marked planned launch as the corresponding licences are obtained."
+      />
 
-      <section className="mx-auto max-w-6xl space-y-10 px-4 py-16">
-        {productCategories.map((cat) => (
+      <section className="mx-auto max-w-6xl px-5 py-8">
+        {productCategories.map((cat, i) => (
           <article
             key={cat.slug}
             id={cat.slug}
-            className="scroll-mt-24 rounded-2xl border border-himalaya-100 bg-white p-8 shadow-sm"
+            className="grid scroll-mt-24 gap-6 border-b border-line py-14 last:border-b-0 lg:grid-cols-[4rem_1.2fr_1fr]"
           >
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <h2 className="text-2xl font-bold text-himalaya-900">
-                {cat.name}
+            <span className="text-sm font-semibold text-ink-3 tabular-nums">
+              0{i + 1}
+            </span>
+            <div>
+              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                <h2 className="text-[clamp(1.5rem,2.8vw,2.2rem)] font-bold tracking-[-0.01em]">
+                  {cat.name}
+                </h2>
                 {cat.nameNepali && (
-                  <span className="ml-3 text-lg font-normal text-himalaya-500">
-                    {cat.nameNepali}
-                  </span>
+                  <span className="text-lg text-ink-3">{cat.nameNepali}</span>
                 )}
-              </h2>
-              <span
-                className={`rounded-full px-3 py-1 text-xs font-medium uppercase tracking-wide ${
-                  cat.status === "in-development"
-                    ? "bg-himalaya-100 text-himalaya-800"
-                    : "bg-amber-100 text-amber-800"
+              </div>
+              <p
+                className={`mt-2 text-xs font-semibold uppercase tracking-[0.14em] ${
+                  cat.status === "in-development" ? "text-leaf" : "text-ink-3"
                 }`}
               >
                 {cat.status === "in-development" ? "In development" : "Planned"}
-              </span>
+              </p>
+              <p className="mt-4 max-w-xl leading-relaxed text-ink-2">
+                {cat.summary}
+              </p>
             </div>
-            <p className="mt-4 max-w-3xl leading-relaxed text-himalaya-800/80">
-              {cat.summary}
-            </p>
-            <ul className="mt-6 flex flex-wrap gap-2">
+            <ul className="self-center border-l border-line pl-6 text-sm leading-loose text-ink-2">
               {cat.items.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-lg bg-himalaya-50 px-4 py-2 text-sm text-himalaya-800"
-                >
-                  {item}
-                </li>
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
         ))}
+      </section>
 
-        <div className="rounded-2xl bg-himalaya-50 p-8 text-center">
-          <h2 className="text-xl font-semibold text-himalaya-900">
-            Wholesale, retail partnership, or export?
-          </h2>
-          <p className="mx-auto mt-2 max-w-xl text-himalaya-800/70">
-            We supply on a wholesale and retail basis through physical and online
-            channels, subject to prevailing law. Tell us what you need.
-          </p>
+      <section className="border-t border-line-2 bg-ground-2">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-5 py-14">
+          <div>
+            <h2 className="text-2xl font-bold">
+              Wholesale, retail partnership, or export?
+            </h2>
+            <p className="mt-2 max-w-xl text-ink-2">
+              We supply on a wholesale and retail basis through physical and
+              online channels, subject to prevailing law.
+            </p>
+          </div>
           <Link
             href="/contact"
-            className="mt-6 inline-block rounded-lg bg-himalaya-600 px-6 py-3 font-medium text-white shadow hover:bg-himalaya-700"
+            className="rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
           >
             Make an inquiry
           </Link>

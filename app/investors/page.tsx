@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
 
 export const metadata: Metadata = {
@@ -36,18 +37,9 @@ const useOfFunds = [
 
 const companyFacts = [
   { label: "Company", value: company.name },
-  {
-    label: "Structure",
-    value: "Single-shareholder private limited company",
-  },
-  {
-    label: "Incorporation",
-    value: "Companies Act, 2063 (2006 A.D.), Nepal",
-  },
-  {
-    label: "Registered office",
-    value: company.registeredOffice,
-  },
+  { label: "Structure", value: "Single-shareholder private limited company" },
+  { label: "Incorporation", value: "Companies Act, 2063 (2006 A.D.), Nepal" },
+  { label: "Registered office", value: company.registeredOffice },
   {
     label: "Authorised capital",
     value: "NPR 1,00,00,000 (one crore) — 1,00,000 ordinary shares of NPR 100",
@@ -62,104 +54,97 @@ const companyFacts = [
 export default function InvestorsPage() {
   return (
     <>
-      <section className="bg-himalaya-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <h1 className="text-4xl font-bold">Invest in Himalaya Cannabis</h1>
-          <p className="mt-3 max-w-2xl text-himalaya-200">
-            We are seeking aligned investors and strategic partners to build
-            Nepal&apos;s compliance-first hemp and medical cannabis company — from
-            licensed Himalayan cultivation to lab-tested products for home and
-            export markets.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Invest in Himalaya Cannabis"
+        lede="We are seeking aligned investors and strategic partners to build Nepal's compliance-first hemp and medical cannabis company — from licensed Himalayan cultivation to lab-tested products for home and export markets."
+      />
 
-      {/* Why invest */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-2xl font-bold text-himalaya-900">The opportunity</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {whyPoints.map((p) => (
-            <article
-              key={p.title}
-              className="rounded-2xl border border-himalaya-100 bg-white p-7 shadow-sm"
-            >
-              <h3 className="font-semibold text-himalaya-900">{p.title}</h3>
-              <p className="mt-2 leading-relaxed text-himalaya-800/80">{p.body}</p>
-            </article>
-          ))}
-        </div>
+      {/* The opportunity */}
+      <section className="mx-auto max-w-6xl px-5 py-8">
+        {whyPoints.map((p, i) => (
+          <article
+            key={p.title}
+            className="grid gap-4 border-b border-line py-10 last:border-b-0 sm:grid-cols-[4rem_1fr]"
+          >
+            <span className="text-sm font-semibold text-ink-3 tabular-nums">
+              0{i + 1}
+            </span>
+            <div>
+              <h2 className="text-xl font-bold">{p.title}</h2>
+              <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">{p.body}</p>
+            </div>
+          </article>
+        ))}
       </section>
 
       {/* Use of funds */}
-      <section className="bg-himalaya-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-2xl font-bold">What investment builds</h2>
-          <ul className="mt-8 space-y-4">
+      <section className="border-y border-line-2 bg-ground-2">
+        <div className="mx-auto max-w-6xl px-5 py-20">
+          <h2 className="text-[clamp(1.7rem,3vw,2.4rem)] font-bold tracking-[-0.01em]">
+            What investment builds
+          </h2>
+          <ol className="mt-10 max-w-3xl space-y-5">
             {useOfFunds.map((u, i) => (
-              <li key={u} className="flex items-start gap-4">
-                <span className="mt-0.5 grid size-8 shrink-0 place-items-center rounded-full bg-himalaya-600 text-sm font-semibold">
-                  {i + 1}
+              <li key={u} className="flex items-baseline gap-5">
+                <span className="text-sm font-semibold text-marigold tabular-nums">
+                  0{i + 1}
                 </span>
-                <span className="leading-relaxed text-himalaya-100">{u}</span>
+                <span className="leading-relaxed text-ink-2">{u}</span>
               </li>
             ))}
-          </ul>
+          </ol>
         </div>
       </section>
 
       {/* Company facts */}
-      <section className="mx-auto max-w-4xl px-4 py-16">
-        <h2 className="text-2xl font-bold text-himalaya-900">
-          Company facts for investors
-        </h2>
-        <dl className="mt-6 divide-y divide-himalaya-100 rounded-xl border border-himalaya-100 bg-white shadow-sm">
+      <section className="mx-auto max-w-3xl px-5 py-20">
+        <h2 className="text-2xl font-bold">Company facts for investors</h2>
+        <dl className="mt-6 divide-y divide-line border-y border-line">
           {companyFacts.map((f) => (
-            <div key={f.label} className="grid gap-1 px-6 py-4 sm:grid-cols-3">
-              <dt className="text-sm font-medium uppercase tracking-wide text-himalaya-500">
+            <div key={f.label} className="grid gap-1 py-4 sm:grid-cols-3">
+              <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-3">
                 {f.label}
               </dt>
-              <dd className="sm:col-span-2 text-himalaya-900">{f.value}</dd>
+              <dd className="sm:col-span-2">{f.value}</dd>
             </div>
           ))}
         </dl>
-        <p className="mt-4 text-sm text-himalaya-800/60">
+        <p className="mt-4 text-sm text-ink-3">
           English translations of the Memorandum and Articles of Association are
-          available to serious investors on request. The Nepali originals filed with
-          the Office of the Company Registrar govern.
+          available to serious investors on request. The Nepali originals filed
+          with the Office of the Company Registrar govern.
         </p>
-      </section>
 
-      {/* How to approach */}
-      <section className="mx-auto max-w-4xl px-4 pb-16">
-        <div className="rounded-2xl bg-himalaya-50 p-10 text-center">
-          <h2 className="text-2xl font-bold text-himalaya-900">Start a conversation</h2>
-          <p className="mx-auto mt-3 max-w-xl text-himalaya-800/80">
+        <div className="mt-16 border-t border-line pt-10">
+          <h2 className="text-2xl font-bold">Start a conversation</h2>
+          <p className="mt-3 max-w-xl leading-relaxed text-ink-2">
             Write to us with a short introduction — who you are, your investment
-            focus, and what you&apos;d like to explore. We respond to every serious
-            inquiry with our investor pack and a call.
+            focus, and what you&apos;d like to explore. We respond to every
+            serious inquiry with our investor pack and a call.
           </p>
           <a
             href={`mailto:${company.email}?subject=${encodeURIComponent(
               "[Investment] Introduction"
             )}`}
-            className="mt-6 inline-block rounded-lg bg-himalaya-600 px-8 py-3 font-medium text-white shadow hover:bg-himalaya-700"
+            className="mt-6 inline-block rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
           >
             {company.email}
           </a>
         </div>
 
-        <p className="mt-8 rounded-xl border border-himalaya-100 bg-white p-6 text-xs leading-relaxed text-himalaya-800/60">
-          <strong>Important notice.</strong> {company.name} is a private limited
-          company. Nothing on this page or website constitutes a public offering,
-          invitation, or solicitation to subscribe for securities, in Nepal or any
-          other jurisdiction. Any investment would take place only through private,
-          individually negotiated transactions with a limited number of persons, in
+        <p className="mt-14 border-t border-line pt-6 text-xs leading-relaxed text-ink-3">
+          <strong className="text-ink-2">Important notice.</strong> {company.name}{" "}
+          is a private limited company. Nothing on this page or website
+          constitutes a public offering, invitation, or solicitation to
+          subscribe for securities, in Nepal or any other jurisdiction. Any
+          investment would take place only through private, individually
+          negotiated transactions with a limited number of persons, in
           accordance with the Companies Act, 2063 and other prevailing laws of
           Nepal, and subject to definitive documentation and due diligence. This
           page contains forward-looking statements about planned activities that
-          depend on licences and approvals not yet obtained; no assurance is given
-          that they will be obtained. Nothing here is investment, legal, or tax
-          advice.
+          depend on licences and approvals not yet obtained; no assurance is
+          given that they will be obtained. Nothing here is investment, legal,
+          or tax advice.
         </p>
       </section>
     </>

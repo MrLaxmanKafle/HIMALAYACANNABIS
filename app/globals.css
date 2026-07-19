@@ -1,21 +1,34 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/fonts/bricolage-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215;
+}
+
 @theme {
-  --color-himalaya-50: #f0f7f0;
-  --color-himalaya-100: #dcecdc;
-  --color-himalaya-200: #b9d9ba;
-  --color-himalaya-300: #8fc092;
-  --color-himalaya-400: #5fa163;
-  --color-himalaya-500: #3f8944;
-  --color-himalaya-600: #2e7d32;
-  --color-himalaya-700: #256428;
-  --color-himalaya-800: #1b5e20;
-  --color-himalaya-900: #143c17;
-  --color-himalaya-950: #0a2a0d;
-  --color-cream: #faf7f0;
-  --color-earth: #6d4c2f;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Devanagari", sans-serif;
+  /* Drenched forest ground */
+  --color-ground: oklch(0.19 0.032 152);
+  --color-ground-2: oklch(0.23 0.036 150);
+  --color-ground-3: oklch(0.27 0.04 148);
+  /* Ink */
+  --color-ink: oklch(0.95 0.018 120);
+  --color-ink-2: oklch(0.8 0.045 140);
+  --color-ink-3: oklch(0.68 0.05 142);
+  /* Accents */
+  --color-leaf: oklch(0.74 0.14 145);
+  --color-leaf-deep: oklch(0.55 0.12 148);
+  --color-marigold: oklch(0.8 0.14 78);
+  /* Hairlines */
+  --color-line: oklch(0.95 0.018 120 / 0.14);
+  --color-line-2: oklch(0.95 0.018 120 / 0.07);
+
+  --font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, "Segoe UI",
+    Roboto, "Noto Sans", "Noto Sans Devanagari", sans-serif;
 }
 
 html {
@@ -23,7 +36,49 @@ html {
 }
 
 body {
-  background: var(--color-cream);
-  color: #1c2a1d;
+  background: var(--color-ground);
+  color: var(--color-ink);
   font-family: var(--font-sans);
+  font-optical-sizing: auto;
+}
+
+::selection {
+  background: var(--color-marigold);
+  color: var(--color-ground);
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-marigold);
+  outline-offset: 3px;
+}
+
+/* Hero entrance choreography — enhances an already-visible default */
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .rise-1 { animation-delay: 0.06s; }
+  .rise-2 { animation-delay: 0.16s; }
+  .rise-3 { animation-delay: 0.28s; }
+  .rise-4 { animation-delay: 0.4s; }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

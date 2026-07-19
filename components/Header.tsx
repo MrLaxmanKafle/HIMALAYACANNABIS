@@ -7,7 +7,6 @@ import { company } from "@/lib/company";
 import Logo from "@/components/Logo";
 
 const nav = [
-  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
   { href: "/services", label: "Lab & Services" },
@@ -21,28 +20,29 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-himalaya-900 text-white shadow-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <header className="sticky top-0 z-50 border-b border-line-2 bg-ground/85 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Logo className="size-10" />
+          <Logo className="size-9" />
           <span className="leading-tight">
-            <span className="block font-semibold tracking-wide">HIMALAYA CANNABIS</span>
-            <span className="block text-xs text-himalaya-200">{company.nameNepali}</span>
+            <span className="block text-sm font-bold tracking-[0.14em]">
+              HIMALAYA CANNABIS
+            </span>
+            <span className="block text-[11px] text-ink-3">{company.nameNepali}</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Main">
+        <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
           {nav.map((item) => {
-            const active =
-              item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            const active = pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-md px-3 py-2 text-sm transition-colors ${
+                className={`text-sm transition-colors ${
                   active
-                    ? "bg-himalaya-600 font-medium"
-                    : "text-himalaya-100 hover:bg-himalaya-800 hover:text-white"
+                    ? "font-semibold text-marigold"
+                    : "text-ink-2 hover:text-ink"
                 }`}
               >
                 {item.label}
@@ -53,7 +53,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="rounded-md p-2 hover:bg-himalaya-800 md:hidden"
+          className="rounded-md p-2 text-ink-2 hover:text-ink md:hidden"
           aria-expanded={open}
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
@@ -69,13 +69,13 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-himalaya-800 px-4 pb-4 md:hidden" aria-label="Mobile">
+        <nav className="border-t border-line-2 px-5 pb-4 md:hidden" aria-label="Mobile">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="block rounded-md px-3 py-2 text-himalaya-100 hover:bg-himalaya-800 hover:text-white"
+              className="block py-2.5 text-ink-2 hover:text-ink"
             >
               {item.label}
             </Link>
