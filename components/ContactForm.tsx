@@ -7,6 +7,7 @@ const inquiryTypes = [
   "Wholesale supply",
   "Retail partnership",
   "Export inquiry",
+  "Land offer (sell / lease / partner)",
   "Laboratory / testing",
   "Consultancy / training",
   "Investment",
