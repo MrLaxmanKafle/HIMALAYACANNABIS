@@ -1,4 +1,5 @@
 import { articles } from "@/lib/articles";
+import { landingPages } from "@/lib/landing";
 import { company, productCategories, services } from "@/lib/company";
 
 export const dynamic = "force-static";
@@ -27,6 +28,12 @@ Key facts:
 - [Land](${base}/land/): Hemp and cannabis farmland in Nepal — landowners sell/lease hill land; buyers register interest in licensed hemp farmland
 - [Compliance](${base}/compliance/): Licensing commitments and Nepal's legal framework
 - [FAQ](${base}/faq/): Common questions about legality, products, and supply
+
+## Markets & Services
+
+${landingPages
+  .map((p) => `- [${p.h1}](${base}/${p.slug}/): ${p.description}`)
+  .join("\n")}
 
 ## Learn — Cannabis & Hemp in Nepal
 

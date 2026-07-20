@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { company } from "@/lib/company";
+import { landingPages } from "@/lib/landing";
 
 export default function Footer() {
   return (
     <footer className="border-t border-line-2">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-bold tracking-wide">{company.name}</p>
           <p className="text-sm text-ink-3">{company.nameNepali}</p>
@@ -27,6 +28,21 @@ export default function Footer() {
             <li><Link href="/compliance" className="text-ink-2 hover:text-ink">Compliance & Licensing</Link></li>
             <li><Link href="/faq" className="text-ink-2 hover:text-ink">FAQ</Link></li>
             <li><Link href="/contact" className="text-ink-2 hover:text-ink">B2B & Export Inquiries</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-ink-3">
+            Markets & Services
+          </p>
+          <ul className="mt-4 space-y-2.5 text-sm">
+            {landingPages.map((p) => (
+              <li key={p.slug}>
+                <Link href={`/${p.slug}`} className="text-ink-2 hover:text-ink">
+                  {p.h1}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
