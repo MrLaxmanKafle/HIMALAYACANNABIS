@@ -24,6 +24,7 @@ Key facts:
 - [Products](${base}/products/): Hemp textiles, seed foods (bhango), CBD wellness, ayurvedic, cosmetics
 - [Lab & Services](${base}/services/): THC/CBD testing laboratory, seed supply, seed-to-sale systems, consultancy
 - [Investors](${base}/investors/): Investment opportunity and company facts (private discussions only; not a public offering)
+- [Land](${base}/land/): Hemp and cannabis farmland in Nepal — landowners sell/lease hill land; buyers register interest in licensed hemp farmland
 - [Compliance](${base}/compliance/): Licensing commitments and Nepal's legal framework
 - [FAQ](${base}/faq/): Common questions about legality, products, and supply
 

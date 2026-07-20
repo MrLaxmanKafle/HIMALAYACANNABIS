@@ -4,15 +4,20 @@ import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "Land & Farmer Partnerships",
+  title: "Hemp & Cannabis Farm Land in Nepal — Buy, Sell, or Lease",
   description:
-    "Offer your hill land for sale, lease, or farming partnership with Himalaya Cannabis — licensed hemp cultivation in Nepal's Himalayan and hilly regions with fair terms for landowners and farmers.",
+    "The hub for hemp and cannabis farmland in Nepal. Landowners: sell or lease your hill land for licensed hemp cultivation. Buyers & investors: register interest in licensed hemp farmland. Compliance-first, licensed activities only.",
   keywords: [
-    "lease land Nepal",
-    "sell land Nepal hills",
-    "farming partnership Nepal",
+    "hemp farm land Nepal",
+    "cannabis land for sale Nepal",
+    "cannabis farmland Nepal",
+    "hemp farmland lease Nepal",
+    "buy agricultural land Nepal",
+    "lease land Nepal hills",
     "hemp farming Nepal",
+    "marijuana farm land Nepal",
     "contract farming Nepal",
+    "farmland investment Nepal",
   ],
 };
 
@@ -39,75 +44,174 @@ const lookFor = [
   "Communities interested in long-term agricultural employment",
 ];
 
+const faqs = [
+  {
+    q: "Can I buy cannabis or hemp farm land in Nepal?",
+    a: "You can buy agricultural land in Nepal, but cultivating cannabis on it — including industrial hemp — is legal only under the licences prescribed by prevailing law. Land itself is not licensed; the cultivation activity is. The practical route is to acquire suitable hill land and cultivate through a licensed operator such as Himalaya Cannabis.",
+  },
+  {
+    q: "Can foreigners buy farmland in Nepal?",
+    a: "Generally no — Nepali law does not permit foreign individuals to own land in Nepal. Foreign participation typically happens through investment in a Nepali company (subject to foreign investment approval) or long-term lease structures. Seek Nepali legal advice for your specific situation.",
+  },
+  {
+    q: "How can I sell or lease my land for hemp farming?",
+    a: "Tell us the district, area (ropani/bigha), altitude if known, road access, and whether you want to lease, partner, or sell. We evaluate every serious offer, conduct legal due diligence at the Land Revenue Office, and agree transparent terms. Use the contact form or email with subject 'Land offer'.",
+  },
+  {
+    q: "Is hemp farming profitable in Nepal?",
+    a: "Hemp suits Nepal's marginal hill land: it grows with low inputs, and its fibre, seed (bhango), and extract markets carry export demand with Himalayan provenance as a premium. Returns depend on licensing, altitude, and market access — which is why we operate on lease and contract-farming models that share risk with landowners.",
+  },
+  {
+    q: "What makes land suitable for hemp cultivation?",
+    a: "Mid-hill terraced land with year-round water, workable road access, and clear title. South-facing aspects help. Altitude drives what the land is best for — fibre, seed, or extract cultivars.",
+  },
+  {
+    q: "Do you already hold cultivation licences?",
+    a: "We operate strictly licence-first: cultivation begins only once the licences required under prevailing law are issued. We are building our land bank and partnerships now so licensed planting can start without delay — early landowner partners are first in line.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      name: "Hemp & Cannabis Farm Land in Nepal — Buy, Sell, or Lease",
+      description:
+        "Landowners sell or lease hill land for licensed hemp cultivation; buyers and investors register interest in licensed hemp farmland in Nepal.",
+      url: "https://himalayacannabis.com/land/",
+      provider: { "@type": "Organization", name: company.name },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
+};
+
 export default function LandPage() {
   return (
     <>
-      <PageHero
-        title="Land & Farmer Partnerships"
-        lede="Our cultivation will grow on Nepal's hillsides — with the people who own them. If you have hill land, we want to hear from you."
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="mx-auto max-w-6xl px-5 py-8">
-        {models.map((m, i) => (
-          <article
-            key={m.title}
-            className="grid gap-4 border-b border-line py-10 last:border-b-0 sm:grid-cols-[4rem_1fr]"
-          >
-            <span className="text-sm font-semibold text-ink-3 tabular-nums">
-              0{i + 1}
-            </span>
-            <div>
-              <h2 className="text-xl font-bold">{m.title}</h2>
-              <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">{m.body}</p>
-            </div>
-          </article>
-        ))}
-      </section>
+      <PageHero
+        title="Hemp & cannabis farmland in Nepal"
+        lede="The meeting point for Nepal's licensed hemp land market: landowners with hill land to offer, and buyers and investors who want licensed cultivation on it. Every transaction compliance-first."
+      />
 
-      <section className="border-y border-line-2 bg-ground-2">
-        <div className="mx-auto max-w-6xl px-5 py-16">
-          <h2 className="text-2xl font-bold">What we look for</h2>
-          <ul className="mt-6 max-w-2xl space-y-3">
-            {lookFor.map((l) => (
-              <li key={l} className="flex gap-3 leading-relaxed text-ink-2">
-                <span aria-hidden className="text-marigold">—</span>
-                {l}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8 max-w-2xl text-sm leading-relaxed text-ink-3">
-            Cultivation begins only under the licences required by prevailing
-            law. Until then, we are building our land bank and partnerships so
-            that licensed planting can start without delay. All transactions
-            follow full legal due diligence and registration at the Land Revenue
-            Office.
+      {/* Two-sided entry */}
+      <section className="mx-auto grid max-w-6xl gap-8 px-5 py-16 lg:grid-cols-2">
+        <div className="border-t-2 border-marigold pt-6">
+          <h2 className="text-2xl font-bold">I have land to sell or lease</h2>
+          <p className="mt-3 leading-relaxed text-ink-2">
+            Hill land in the mid-hills or Himalayan districts? We lease, buy,
+            and contract-farm — fair terms, registered agreements, and full
+            legal due diligence. Your land can join Nepal&apos;s licensed hemp
+            economy.
           </p>
+          <Link
+            href="/contact"
+            className="mt-6 inline-block rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
+          >
+            Offer your land
+          </Link>
+        </div>
+        <div className="border-t-2 border-leaf pt-6">
+          <h2 className="text-2xl font-bold">I want licensed hemp farmland</h2>
+          <p className="mt-3 leading-relaxed text-ink-2">
+            Investors and buyers: register your interest in Nepali hemp
+            farmland. We match capital with vetted parcels and licensed
+            cultivation — land acquisition, lease structuring, and
+            seed-to-sale compliance under one roof.
+          </p>
+          <a
+            href={`mailto:${company.email}?subject=${encodeURIComponent(
+              "[Land buyer] Interest in hemp farmland"
+            )}`}
+            className="mt-6 inline-block rounded-full border border-line px-7 py-3 font-medium transition-colors hover:border-ink"
+          >
+            Register buyer interest
+          </a>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16">
-        <div className="flex flex-wrap items-center justify-between gap-6">
-          <div>
-            <h2 className="text-2xl font-bold">Have land to offer?</h2>
-            <p className="mt-2 max-w-xl text-ink-2">
-              Tell us the district, area (ropani/bigha), altitude if known, road
-              access, and whether you want to lease, partner, or sell. We reply
-              to every serious offer.
-            </p>
+      {/* Models */}
+      <section className="border-y border-line-2 bg-ground-2">
+        <div className="mx-auto max-w-6xl px-5 py-16">
+          <h2 className="text-2xl font-bold">Three ways to work with us</h2>
+          <div className="mt-4 divide-y divide-line">
+            {models.map((m, i) => (
+              <article
+                key={m.title}
+                className="grid gap-4 py-8 sm:grid-cols-[4rem_1fr]"
+              >
+                <span className="text-sm font-semibold text-ink-3 tabular-nums">
+                  0{i + 1}
+                </span>
+                <div>
+                  <h3 className="text-xl font-bold">{m.title}</h3>
+                  <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">{m.body}</p>
+                </div>
+              </article>
+            ))}
           </div>
-          <div className="flex flex-wrap gap-4">
+        </div>
+      </section>
+
+      {/* Criteria */}
+      <section className="mx-auto max-w-6xl px-5 py-16">
+        <h2 className="text-2xl font-bold">What we look for in land</h2>
+        <ul className="mt-6 max-w-2xl space-y-3">
+          {lookFor.map((l) => (
+            <li key={l} className="flex gap-3 leading-relaxed text-ink-2">
+              <span aria-hidden className="text-marigold">—</span>
+              {l}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-ink-3">
+          Cultivation begins only under the licences required by prevailing law.
+          Until then, we are building our land bank and partnerships so that
+          licensed planting can start without delay. All transactions follow
+          full legal due diligence and registration at the Land Revenue Office.
+        </p>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-t border-line-2">
+        <div className="mx-auto max-w-3xl px-5 py-16">
+          <h2 className="text-2xl font-bold">
+            Common questions about hemp land in Nepal
+          </h2>
+          <dl className="mt-8 divide-y divide-line border-y border-line">
+            {faqs.map((f) => (
+              <div key={f.q} className="py-6">
+                <dt className="font-bold">{f.q}</dt>
+                <dd className="mt-2 leading-relaxed text-ink-2">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <div className="mt-12 flex flex-wrap gap-4">
             <Link
               href="/contact"
               className="rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
             >
               Offer your land
             </Link>
-            <a
-              href={`mailto:${company.email}?subject=${encodeURIComponent("[Land offer] ")}`}
+            <Link
+              href="/learn"
               className="rounded-full border border-line px-7 py-3 font-medium transition-colors hover:border-ink"
             >
-              Email us directly
-            </a>
+              Learn about hemp in Nepal
+            </Link>
           </div>
         </div>
       </section>
