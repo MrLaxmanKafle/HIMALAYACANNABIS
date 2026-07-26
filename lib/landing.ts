@@ -518,4 +518,169 @@ export const landingPages: LandingPage[] = [
     inquirySubject: "[Farmland] Land inquiry",
     related: ["cannabis-license-consulting-nepal", "hemp-seeds-nepal", "thc-testing-lab-nepal"],
   },
+  {
+    slug: "hemp-farmland-gandaki",
+    h1: "Hemp farmland in Gandaki Province",
+    metaTitle: "Hemp Farmland Gandaki — Land & Licensed Cultivation in Gandaki Province",
+    description:
+      "Gandaki Province leads Nepal's medical and industrial cannabis framework. Hemp farmland, leases, and cultivation partnerships in Gandaki's mid-hill districts.",
+    keywords: [
+      "hemp farmland Gandaki",
+      "Gandaki cannabis framework",
+      "hemp farming Gandaki Province",
+      "land lease Gandaki",
+      "cannabis Gandaki Nepal",
+    ],
+    lede: "Gandaki is where Nepal's cannabis framework moved first — the province named in our own founding documents. That makes its mid-hill districts the natural starting line for licensed hemp cultivation.",
+    status: "available",
+    statusNote:
+      "Land partnerships in Gandaki are our first priority. Cultivation begins under the licences required by the provincial and federal frameworks.",
+    sections: [
+      {
+        h: "Why Gandaki first",
+        ps: [
+          "Gandaki Province developed a medical and industrial cannabis framework ahead of the rest of the country — the same framework referenced in Himalaya Cannabis's Memorandum of Association. Operating where the regulatory groundwork is furthest along shortens the path from land to licensed harvest.",
+          "The province's geography helps too: mid-hill districts such as Lamjung, Gorkha, Tanahun, Baglung, and Myagdi combine terraced agricultural land, road corridors, and altitude bands suited to fibre and seed cultivars alike.",
+        ],
+      },
+      {
+        h: "For Gandaki landowners",
+        ps: [
+          "If you hold terraced hill land in Gandaki with water and road access, you are in our first-priority zone. We lease, contract-farm, and purchase select parcels — registered agreements, full due diligence at the Land Revenue Office, and licence-contingent terms that protect both sides.",
+        ],
+      },
+    ],
+    offer: {
+      title: "Gandaki programme",
+      items: [
+        "First-priority leases in mid-hill districts",
+        "Contract farming with seed, training, and a committed buyer",
+        "Early coordination with local governments",
+        "Licence-contingent structures for early partners",
+        "Facility-site scouting for processing and testing",
+      ],
+    },
+    faq: [
+      {
+        q: "Why is Gandaki Province important for cannabis in Nepal?",
+        a: "Gandaki developed a provincial medical and industrial cannabis framework ahead of other provinces, making it the most advanced regulatory environment for licensed hemp cultivation in Nepal.",
+      },
+      {
+        q: "Which Gandaki districts suit hemp farming?",
+        a: "Mid-hill districts with terraced land, water, and road access — Lamjung, Gorkha, Tanahun, Baglung, and Myagdi among them. Altitude determines whether fibre, seed, or extract cultivars fit best.",
+      },
+    ],
+    inquirySubject: "[Farmland Gandaki] Land inquiry",
+    related: ["hemp-farmland-nepal", "hemp-farmland-karnali", "cannabis-license-consulting-nepal"],
+  },
+  {
+    slug: "hemp-farmland-karnali",
+    h1: "Hemp farmland in Karnali Province",
+    metaTitle: "Hemp Farmland Karnali — High-Altitude Hemp in Karnali Province",
+    description:
+      "Karnali's high-altitude valleys grow some of Nepal's strongest wild cannabis. Hemp farmland, leases, and high-value cultivation partnerships in Karnali Province.",
+    keywords: [
+      "hemp farmland Karnali",
+      "hemp farming Karnali",
+      "Jumla organic farming",
+      "high altitude hemp",
+      "cannabis Karnali Nepal",
+    ],
+    lede: "Karnali is Nepal's high country — remote, organic by default, and home to some of the strongest wild cannabis growth in the Himalaya. For high-value hemp, altitude is an asset, not an obstacle.",
+    status: "available",
+    statusNote:
+      "Karnali partnerships are being scouted now. Cultivation begins under the licences required by prevailing law.",
+    sections: [
+      {
+        h: "The high-altitude advantage",
+        ps: [
+          "Karnali's valleys — Jumla, Kalikot, Dailekh, Surkhet's hills — sit at altitudes where the plant has grown wild for centuries. High-altitude, low-input cultivation is a premium story in global wellness and extract markets, and Karnali's established organic reputation (Jumla is synonymous with organic farming in Nepal) strengthens it further.",
+          "Remoteness cuts both ways: land and labour are available, but road access and processing distance must be planned honestly. Our model pairs Karnali cultivation with consolidation points on the road corridors.",
+        ],
+      },
+      {
+        h: "For Karnali landowners and communities",
+        ps: [
+          "We work through communities as much as individual owners in Karnali — cooperative leases and contract-farming groups fit the province's landholding patterns. If your village holds suitable land, one conversation with us can bring seed, training, and a committed buyer to the whole group.",
+        ],
+      },
+    ],
+    offer: {
+      title: "Karnali programme",
+      items: [
+        "Cooperative and community leases",
+        "High-altitude cultivar selection",
+        "Organic-practice cultivation protocols",
+        "Consolidation and transport planning",
+        "Training programmes for farming groups",
+      ],
+    },
+    faq: [
+      {
+        q: "Is Karnali suitable for hemp farming?",
+        a: "Yes — its high-altitude valleys have grown cannabis wild for centuries, and low-input, organic-by-default conditions suit premium hemp. Logistics need honest planning, which is why we build consolidation points into every Karnali partnership.",
+      },
+      {
+        q: "Do you work with farming cooperatives?",
+        a: "Preferentially, in Karnali. Cooperative leases and contract-farming groups match how land and labour are organised in the province — and they spread the benefit across the community.",
+      },
+    ],
+    inquirySubject: "[Farmland Karnali] Land inquiry",
+    related: ["hemp-farmland-nepal", "hemp-farmland-gandaki", "hemp-seeds-nepal"],
+  },
+  {
+    slug: "hemp-farmland-sudurpashchim",
+    h1: "Hemp farmland in Sudurpashchim",
+    metaTitle: "Hemp Farmland Sudurpashchim — Nepal's Hemp Weaving Heartland",
+    description:
+      "Bajhang, Bajura, Darchula, Achham — Sudurpashchim is Nepal's living hemp-weaving heartland. Farmland, leases, and fibre partnerships in the far west.",
+    keywords: [
+      "hemp farmland Sudurpashchim",
+      "hemp weaving Nepal",
+      "Bajhang hemp cloth",
+      "hemp fibre far west Nepal",
+      "allo hemp Nepal",
+    ],
+    lede: "Nepal's far west never stopped weaving hemp. Bajhang, Bajura, Darchula, Achham — this is where the craft survived prohibition. For fibre cultivation, there is no better-prepared region in the country.",
+    status: "available",
+    statusNote:
+      "Fibre-focused partnerships in Sudurpashchim are being formed now. Cultivation begins under the licences required by prevailing law.",
+    sections: [
+      {
+        h: "The weaving heartland",
+        ps: [
+          "Hand-woven hemp cloth is a living tradition in Sudurpashchim's hill districts — skills passed through generations that most countries lost a century ago. That means fibre cultivation here feeds directly into local spinning and weaving, keeping processing value in the district instead of exporting raw material.",
+          "Our textile line is built on exactly this chain: licensed fibre cultivation, local processing and weaving partnerships, and finished fabric that carries a heritage story global brands pay premiums for.",
+        ],
+      },
+      {
+        h: "For far-western landowners and weavers",
+        ps: [
+          "We want both sides of the chain: terraced land for fibre cultivation, and weaving households and groups for processing partnerships. If you farm, weave, or both, the far west is our fibre priority — and early partners shape the programme.",
+        ],
+      },
+    ],
+    offer: {
+      title: "Sudurpashchim programme",
+      items: [
+        "Fibre-cultivar leases and contract farming",
+        "Weaver partnerships with committed offtake",
+        "Fibre processing equipment and training",
+        "Heritage-craft branding for woven goods",
+        "Blended-fibre development (hemp, allo, wool)",
+      ],
+    },
+    faq: [
+      {
+        q: "Where is hemp cloth still woven in Nepal?",
+        a: "The far-western hill districts — Bajhang, Bajura, Darchula, and Achham among them — maintain living hand-weaving traditions for hemp cloth, which is why Sudurpashchim anchors our fibre and textile programme.",
+      },
+      {
+        q: "Do you buy hand-woven hemp cloth?",
+        a: "We form weaver partnerships with committed offtake — steady purchase agreements rather than one-off buying — so weaving households can plan production. Contact us to join the programme.",
+      },
+    ],
+    inquirySubject: "[Farmland Sudurpashchim] Land inquiry",
+    related: ["hemp-fabric-nepal", "hemp-farmland-nepal", "hemp-clothing-manufacturer-nepal"],
+  },
 ];

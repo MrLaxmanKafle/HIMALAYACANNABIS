@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "bhango",
     "CBD Nepal",
   ],
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", languages: { en: "/", ne: "/ne" } },
   openGraph: {
     type: "website",
     url: "https://himalayacannabis.com",

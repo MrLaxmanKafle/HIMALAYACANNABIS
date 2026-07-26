@@ -14,6 +14,7 @@ const nav = [
   { href: "/learn", label: "Learn" },
   { href: "/compliance", label: "Compliance" },
   { href: "/contact", label: "Contact" },
+  { href: "/ne", label: "नेपाली" },
 ];
 
 export default function Header() {

@@ -28,6 +28,7 @@ Key facts:
 - [Land](${base}/land/): Hemp and cannabis farmland in Nepal — landowners sell/lease hill land; buyers register interest in licensed hemp farmland
 - [Compliance](${base}/compliance/): Licensing commitments and Nepal's legal framework
 - [FAQ](${base}/faq/): Common questions about legality, products, and supply
+- [नेपाली](${base}/ne/): Nepali-language company page with FAQ (गाँजा कानून, भाङ्गो, लाइसेन्स, जग्गा)
 
 ## Markets & Services
 
