@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
 
@@ -91,6 +92,13 @@ export default function CareersPage() {
           >
             {company.email}
           </a>
+          <p className="mt-6 text-sm text-ink-3">
+            Not looking for paid work? See our{" "}
+            <Link href="/volunteer" className="font-semibold text-marigold hover:text-ink">
+              Volunteer & Work-Exchange
+            </Link>{" "}
+            programme.
+          </p>
         </div>
       </section>
     </>

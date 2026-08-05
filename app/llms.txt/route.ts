@@ -28,6 +28,7 @@ Key facts:
 - [Land](${base}/land/): Hemp and cannabis farmland in Nepal — landowners sell/lease hill land; buyers register interest in licensed hemp farmland
 - [Hemp Wellness Valley](${base}/hemp-wellness-valley/): Concept — a planned 500-ropani flagship site combining ayurvedic hemp spa, farm-to-table dining, transparency tours, eco-lodges, farmer training, and a heritage pavilion
 - [Careers](${base}/careers/): Cultivation, laboratory, product, compliance, hospitality, and sales roles as licensed operations come online
+- [Volunteer & Work-Exchange](${base}/volunteer/): Work-exchange placements, hospitality apprenticeships, research placements, corporate volunteer days, and NGO partnerships
 - [Compliance](${base}/compliance/): Licensing commitments and Nepal's legal framework
 - [FAQ](${base}/faq/): Common questions about legality, products, and supply
 - [नेपाली](${base}/ne/): Nepali-language company page with FAQ (गाँजा कानून, भाङ्गो, लाइसेन्स, जग्गा)

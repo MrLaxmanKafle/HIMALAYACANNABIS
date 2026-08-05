@@ -9,6 +9,8 @@ const inquiryTypes = [
   "Export inquiry",
   "Land offer (sell / lease / partner)",
   "Land buyer / farmland investment",
+  "Volunteer / work-exchange",
+  "Corporate / NGO partnership",
   "Laboratory / testing",
   "Consultancy / training",
   "Investment",
