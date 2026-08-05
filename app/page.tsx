@@ -149,6 +149,38 @@ export default function HomePage() {
           Our story
         </Link>
       </section>
+
+      {/* Explore the ecosystem — quick links into every part of the site */}
+      <section className="border-t border-line-2 bg-ground-2">
+        <div className="mx-auto max-w-6xl px-5 py-20">
+          <h2 className="text-[clamp(1.5rem,2.8vw,2.2rem)] font-bold tracking-[-0.01em]">
+            Explore more
+          </h2>
+          <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { href: "/learn", label: "Learn: Cannabis in Nepal", body: "Plain-language guides to the law, the history, and the plant." },
+              { href: "/land", label: "Hemp Farmland", body: "Landowners and buyers — lease, sell, or invest in licensed hemp land." },
+              { href: "/hemp-wellness-valley", label: "Hemp Wellness Valley", body: "A planned 500-ropani wellness and agritourism destination." },
+              { href: "/careers", label: "Careers", body: "Cultivation, lab, product, and hospitality roles as we grow." },
+              { href: "/volunteer", label: "Volunteer & Work-Exchange", body: "Work-exchange placements and partnerships for universities and NGOs." },
+              { href: "/press", label: "Press & Media", body: "Boilerplate, company facts, and media contact." },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group block border-t border-line pt-5"
+              >
+                <span className="font-bold transition-colors group-hover:text-marigold">
+                  {item.label} →
+                </span>
+                <span className="mt-1.5 block text-sm leading-relaxed text-ink-2">
+                  {item.body}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

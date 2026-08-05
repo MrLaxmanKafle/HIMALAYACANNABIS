@@ -3,10 +3,16 @@ import PageHero from "@/components/PageHero";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Compliance & Licensing",
+  title: "Cannabis Compliance & Licensing — Nepal Hemp Law",
   description:
     "How Himalaya Cannabis operates within Nepal's legal framework: licensed activities only, THC below 0.3%, mandatory lab testing, no recreational transactions.",
-
+  keywords: [
+    "cannabis compliance Nepal",
+    "hemp licensing Nepal",
+    "Nepal cannabis regulation",
+    "THC limit Nepal law",
+    "cannabis law Nepal 2033",
+  ],
   alternates: { canonical: "/compliance" },
 };
 

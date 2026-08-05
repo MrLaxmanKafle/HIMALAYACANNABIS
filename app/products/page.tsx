@@ -5,11 +5,31 @@ import { company, productCategories } from "@/lib/company";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Products",
+  title: "Hemp Products Nepal — Textiles, Oil & CBD",
   description:
     "Hemp textiles and fibre, hemp seed foods (bhango), CBD and wellness products, ayurvedic formulations, and hemp cosmetics — lab-tested and produced under licence in Nepal.",
-
+  keywords: [
+    "hemp products Nepal",
+    "buy hemp products Nepal",
+    "wholesale hemp Nepal",
+    "hemp textiles seed oil CBD Nepal",
+    "Nepal hemp brand",
+  ],
   alternates: { canonical: "/products" },
+};
+
+const relatedLinks: Record<string, { href: string; label: string }[]> = {
+  "textiles-fibre": [
+    { href: "/hemp-fabric-nepal", label: "Hemp fabric & textiles →" },
+    { href: "/hemp-clothing-manufacturer-nepal", label: "Clothing manufacturing →" },
+  ],
+  "seed-food": [
+    { href: "/hemp-seeds-nepal", label: "Hemp seeds (bhango) →" },
+    { href: "/hemp-seed-oil-nepal", label: "Hemp seed oil →" },
+  ],
+  "cbd-wellness": [{ href: "/cbd-oil-nepal", label: "CBD oil in Nepal →" }],
+  ayurvedic: [{ href: "/learn/hemp-products-guide", label: "Hemp products guide →" }],
+  cosmetics: [{ href: "/hemp-seed-oil-nepal", label: "Hemp seed oil (base ingredient) →" }],
 };
 
 const jsonLd = {
@@ -79,11 +99,27 @@ export default function ProductsPage() {
                 {cat.summary}
               </p>
             </div>
-            <ul className="self-center border-l border-line pl-6 text-sm leading-loose text-ink-2">
-              {cat.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            <div className="self-center border-l border-line pl-6">
+              <ul className="text-sm leading-loose text-ink-2">
+                {cat.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              {relatedLinks[cat.slug] && (
+                <ul className="mt-3 space-y-1.5 border-t border-line pt-3">
+                  {relatedLinks[cat.slug].map((l) => (
+                    <li key={l.href}>
+                      <Link
+                        href={l.href}
+                        className="text-sm font-semibold text-marigold hover:text-ink"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </article>
         ))}
       </section>

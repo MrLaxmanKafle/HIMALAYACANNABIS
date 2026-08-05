@@ -4,10 +4,15 @@ import { company } from "@/lib/company";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Investors",
+  title: "Invest in Nepal Hemp — For Investors",
   description:
     "Partner with Himalaya Cannabis Pvt. Ltd. — a licensed-track Nepali medical and industrial hemp company. Private investment discussions with serious investors.",
-
+  keywords: [
+    "invest Nepal cannabis",
+    "hemp investment Nepal",
+    "cannabis investment opportunity Nepal",
+    "Nepal hemp startup investor",
+  ],
   alternates: { canonical: "/investors" },
 };
 

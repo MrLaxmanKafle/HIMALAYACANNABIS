@@ -5,10 +5,16 @@ import { services } from "@/lib/company";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Lab & Services",
+  title: "Hemp Services Nepal — Lab, Seed, Consultancy",
   description:
     "THC/CBD testing laboratory, seed supply, seed-to-sale tracking, and consultancy — Himalaya Cannabis as a resource centre for Nepal's cannabis sector.",
-
+  keywords: [
+    "cannabis testing lab Nepal",
+    "hemp consultancy Nepal",
+    "seed to sale Nepal",
+    "hemp industry services Nepal",
+    "cannabis compliance systems Nepal",
+  ],
   alternates: { canonical: "/services" },
 };
 
@@ -16,6 +22,23 @@ const breadcrumbJsonLd_services = breadcrumbJsonLd([
   { name: "Home", path: "/" },
   { name: "Lab & Services", path: "/services" },
 ]);
+
+const relatedLinks: Record<string, { href: string; label: string }[]> = {
+  "THC/CBD Testing Laboratory": [
+    { href: "/thc-testing-lab-nepal", label: "More on our testing laboratory →" },
+  ],
+  "Seed Supply & Genetics": [
+    { href: "/hemp-seeds-nepal", label: "Hemp seeds & cultivars →" },
+    { href: "/hemp-farmland-nepal", label: "Farmland for cultivation →" },
+  ],
+  "Seed-to-Sale & Compliance Systems": [
+    { href: "/cannabis-license-consulting-nepal", label: "Licensing consultancy →" },
+  ],
+  "Consultancy & Training": [
+    { href: "/cannabis-license-consulting-nepal", label: "Licensing consultancy →" },
+    { href: "/careers", label: "Join our team →" },
+  ],
+};
 
 export default function ServicesPage() {
   return (
@@ -44,6 +67,20 @@ export default function ServicesPage() {
                 {s.name}
               </h2>
               <p className="mt-3 max-w-2xl leading-relaxed text-ink-2">{s.summary}</p>
+              {relatedLinks[s.name] && (
+                <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-1.5">
+                  {relatedLinks[s.name].map((l) => (
+                    <li key={l.href}>
+                      <Link
+                        href={l.href}
+                        className="text-sm font-semibold text-marigold hover:text-ink"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </article>
         ))}

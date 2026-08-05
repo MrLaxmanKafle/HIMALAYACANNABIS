@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us — Nepal Hemp Company",
   description:
     "Himalaya Cannabis is a Nepali company cultivating and processing licensed medical and industrial hemp in the Himalayan and hilly regions of Nepal.",
-
+  keywords: [
+    "Himalaya Cannabis company",
+    "Nepal hemp company",
+    "hemp company Kathmandu",
+    "cannabis company Nepal",
+    "Nepal hemp business",
+  ],
   alternates: { canonical: "/about" },
 };
 
@@ -54,16 +61,38 @@ export default function AboutPage() {
             for export.
           </p>
           <p>
-            We are equally committed to building the sector around us: a
-            certified THC/CBD testing laboratory, seed supply, seed-to-sale
-            tracking software, compliance systems, consultancy, and training —
-            so that farmers and enterprises across Nepal can participate in this
-            industry safely and legally.
+            We are equally committed to building the sector around us: a{" "}
+            <Link href="/services" className="font-semibold text-marigold hover:text-ink">
+              certified THC/CBD testing laboratory, seed supply, seed-to-sale
+              tracking software, compliance systems, consultancy, and training
+            </Link>{" "}
+            — so that farmers and enterprises across Nepal can participate in
+            this industry safely and legally. See exactly how we stay within
+            the law on our{" "}
+            <Link href="/compliance" className="font-semibold text-marigold hover:text-ink">
+              Compliance & Licensing
+            </Link>{" "}
+            page.
           </p>
           <p className="border-t border-line pt-6 text-xl font-bold text-ink">
             Our purpose, written into our founding documents, is simple: to
             generate employment through the cannabis business and thereby make
             the country more self-reliant.
+          </p>
+          <p className="text-base">
+            Want to be part of it?{" "}
+            <Link href="/careers" className="font-semibold text-marigold hover:text-ink">
+              See open roles
+            </Link>
+            ,{" "}
+            <Link href="/volunteer" className="font-semibold text-marigold hover:text-ink">
+              volunteer with us
+            </Link>
+            , or{" "}
+            <Link href="/investors" className="font-semibold text-marigold hover:text-ink">
+              explore investing
+            </Link>
+            .
           </p>
         </div>
 

@@ -4,10 +4,15 @@ import PageHero from "@/components/PageHero";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "Hemp & Cannabis FAQ — Nepal",
   description:
     "Frequently asked questions about Himalaya Cannabis Pvt. Ltd. — legality, products, THC limits, wholesale, export, and investment.",
-
+  keywords: [
+    "hemp FAQ Nepal",
+    "cannabis legal FAQ Nepal",
+    "is hemp legal in Nepal FAQ",
+    "cannabis company FAQ Nepal",
+  ],
   alternates: { canonical: "/faq" },
 };
 

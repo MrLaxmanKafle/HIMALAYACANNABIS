@@ -13,7 +13,7 @@ import {
 } from "@/components/illustrations/ValleyArt";
 
 export const metadata: Metadata = {
-  title: "Himalaya Hemp Wellness Valley — Concept",
+  title: { absolute: "Himalaya Hemp Wellness Valley — Concept" },
   description:
     "A planned 500-ropani flagship destination in Nepal's hills: ayurvedic hemp spa, farm-to-table dining, eco-lodges, and farmer training. Concept stage, licence-gated.",
   keywords: [

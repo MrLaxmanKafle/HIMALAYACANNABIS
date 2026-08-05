@@ -5,10 +5,15 @@ import ContactForm from "@/components/ContactForm";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Contact & Inquiries",
+  title: "Contact Us — Nepal Hemp Inquiries",
   description:
     "Contact Himalaya Cannabis Pvt. Ltd. in Kathmandu, Nepal for wholesale, retail partnership, export, laboratory, and consultancy inquiries.",
-
+  keywords: [
+    "contact hemp company Nepal",
+    "Himalaya Cannabis contact",
+    "Nepal hemp wholesale inquiry",
+    "hemp supplier contact Nepal",
+  ],
   alternates: { canonical: "/contact" },
 };
 
