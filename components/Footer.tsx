@@ -25,6 +25,7 @@ export default function Footer() {
             <li><Link href="/investors" className="text-ink-2 hover:text-ink">Investors</Link></li>
             <li><Link href="/land" className="text-ink-2 hover:text-ink">Land & Farmer Partnerships</Link></li>
             <li><Link href="/hemp-wellness-valley" className="text-ink-2 hover:text-ink">Hemp Wellness Valley</Link></li>
+            <li><Link href="/careers" className="text-ink-2 hover:text-ink">Careers</Link></li>
             <li><Link href="/learn" className="text-ink-2 hover:text-ink">Learn: Cannabis in Nepal</Link></li>
             <li><Link href="/compliance" className="text-ink-2 hover:text-ink">Compliance & Licensing</Link></li>
             <li><Link href="/faq" className="text-ink-2 hover:text-ink">FAQ</Link></li>

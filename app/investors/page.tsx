@@ -49,6 +49,35 @@ const companyFacts = [
     value:
       "No restriction on sale or transfer of shares under the Memorandum of Association",
   },
+  {
+    label: "Legal personality",
+    value:
+      "Separate legal personality with perpetual succession and independent existence, per the Articles of Association",
+  },
+  {
+    label: "Governance",
+    value:
+      "Currently governed by written decision of the sole shareholder in place of a general meeting or board of directors, as permitted for a single-shareholder company under the Articles. We expect to move to a conventional board structure as we bring in outside investors.",
+  },
+  {
+    label: "Liability",
+    value:
+      "Shareholder liability is limited to the value of shares purchased or agreed to be purchased",
+  },
+  {
+    label: "Financing",
+    value:
+      "The Articles permit both equity and debt financing (loans from banks and financial institutions)",
+  },
+  {
+    label: "Financial year",
+    value: "1 Shrawan to end of Ashad (mid-July to mid-July)",
+  },
+  {
+    label: "Corporate flexibility",
+    value:
+      "The Articles permit merger with another company in either direction, subject to Office of the Company Registrar approval — relevant to future strategic or exit scenarios",
+  },
 ];
 
 export default function InvestorsPage() {

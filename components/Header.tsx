@@ -13,6 +13,7 @@ const nav = [
   { href: "/investors", label: "Investors" },
   { href: "/hemp-wellness-valley", label: "Wellness Valley" },
   { href: "/learn", label: "Learn" },
+  { href: "/careers", label: "Careers" },
   { href: "/compliance", label: "Compliance" },
   { href: "/contact", label: "Contact" },
   { href: "/ne", label: "नेपाली" },

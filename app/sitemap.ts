@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/investors",
     "/land",
     "/hemp-wellness-valley",
+    "/careers",
     "/ne",
     ...landingPages.map((p) => `/${p.slug}`),
     "/learn",

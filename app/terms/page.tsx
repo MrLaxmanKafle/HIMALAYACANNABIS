@@ -26,7 +26,7 @@ const sections = [
   },
   {
     h: "5. Intellectual property",
-    body: "The Himalaya Cannabis name, logo, and website content are the property of the Company. You may not reproduce them for commercial purposes without written permission.",
+    body: "The Himalaya Cannabis name, logo, and website content are the property of the Company. You may not reproduce them for commercial purposes without written permission. Consistent with our Memorandum of Association, the Company registers and protects its trademarks, designs, and other commercial interests under prevailing Nepali law.",
   },
   {
     h: "6. Limitation of liability",
