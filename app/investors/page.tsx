@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
 import { breadcrumbJsonLd } from "@/lib/seo";
+import InvestorInterestForm from "@/components/InvestorInterestForm";
 
 export const metadata: Metadata = {
   title: "Invest in Nepal Hemp — For Investors",
@@ -165,18 +166,22 @@ export default function InvestorsPage() {
         <div className="mt-16 border-t border-line pt-10">
           <h2 className="text-2xl font-bold">Start a conversation</h2>
           <p className="mt-3 max-w-xl leading-relaxed text-ink-2">
-            Write to us with a short introduction — who you are, your investment
-            focus, and what you&apos;d like to explore. We respond to every
-            serious inquiry with our investor pack and a call.
+            Tell us who you are, your investment focus, and the range you&apos;d
+            consider — we respond to every serious inquiry with our investor
+            pack and a call. Prefer plain email?{" "}
+            <a
+              href={`mailto:${company.email}?subject=${encodeURIComponent(
+                "[Investment] Introduction"
+              )}`}
+              className="font-semibold text-marigold hover:text-ink"
+            >
+              {company.email}
+            </a>
           </p>
-          <a
-            href={`mailto:${company.email}?subject=${encodeURIComponent(
-              "[Investment] Introduction"
-            )}`}
-            className="mt-6 inline-block rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
-          >
-            {company.email}
-          </a>
+        </div>
+
+        <div className="mt-8">
+          <InvestorInterestForm />
         </div>
 
         <p className="mt-14 border-t border-line pt-6 text-xs leading-relaxed text-ink-3">
