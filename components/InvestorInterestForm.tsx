@@ -13,10 +13,11 @@ const investorTypes = [
 ];
 
 const rangeOptions = [
-  "Under $10,000",
-  "$10,000 – $50,000",
-  "$50,000 – $250,000",
-  "$250,000+",
+  "Under NPR 10 lakh",
+  "NPR 10 lakh – 50 lakh",
+  "NPR 50 lakh – 2 crore",
+  "NPR 2 crore – 5 crore",
+  "NPR 5 crore+",
   "Prefer to discuss",
 ];
 
