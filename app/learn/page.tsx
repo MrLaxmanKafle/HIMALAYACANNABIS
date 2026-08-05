@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { articles } from "@/lib/articles";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Learn — Cannabis & Hemp in Nepal",
@@ -15,11 +16,22 @@ export const metadata: Metadata = {
     "bhango",
     "Nepal cannabis law",
   ],
+
+  alternates: { canonical: "/learn" },
 };
 
 export default function LearnPage() {
+  const jsonLd = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Learn", path: "/learn" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHero
         title="Learn: Cannabis & Hemp in Nepal"
         lede="Plain-language, compliance-first guides to the plant, the law, and the industry — from the people building Nepal's licensed hemp sector."

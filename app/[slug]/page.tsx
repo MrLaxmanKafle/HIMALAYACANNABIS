@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { landingPages } from "@/lib/landing";
 import { company } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -19,9 +20,10 @@ export async function generateMetadata({
   const page = landingPages.find((p) => p.slug === slug);
   if (!page) return {};
   return {
-    title: page.metaTitle,
+    title: { absolute: page.metaTitle },
     description: page.description,
     keywords: page.keywords,
+    alternates: { canonical: `/${page.slug}` },
   };
 }
 
@@ -62,6 +64,10 @@ export default async function KeywordLandingPage({
           acceptedAnswer: { "@type": "Answer", text: f.a },
         })),
       },
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: page.h1, path: `/${page.slug}` },
+      ]),
     ],
   };
 

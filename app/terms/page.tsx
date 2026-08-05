@@ -5,6 +5,8 @@ import { company } from "@/lib/company";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms governing use of the Himalaya Cannabis website.",
+
+  alternates: { canonical: "/terms" },
 };
 
 const sections = [

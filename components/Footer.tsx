@@ -30,6 +30,7 @@ export default function Footer() {
             <li><Link href="/learn" className="text-ink-2 hover:text-ink">Learn: Cannabis in Nepal</Link></li>
             <li><Link href="/compliance" className="text-ink-2 hover:text-ink">Compliance & Licensing</Link></li>
             <li><Link href="/faq" className="text-ink-2 hover:text-ink">FAQ</Link></li>
+            <li><Link href="/press" className="text-ink-2 hover:text-ink">Press & Media</Link></li>
             <li><Link href="/contact" className="text-ink-2 hover:text-ink">B2B & Export Inquiries</Link></li>
           </ul>
         </div>

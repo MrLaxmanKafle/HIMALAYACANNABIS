@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Investors",
   description:
     "Partner with Himalaya Cannabis Pvt. Ltd. — a licensed-track Nepali medical and industrial hemp company. Private investment discussions with serious investors.",
+
+  alternates: { canonical: "/investors" },
 };
 
 const whyPoints = [
@@ -80,9 +83,19 @@ const companyFacts = [
   },
 ];
 
+const breadcrumbJsonLd_investors = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Investors", path: "/investors" },
+]);
+
 export default function InvestorsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_investors) }}
+      />
+
       <PageHero
         title="Invest in Himalaya Cannabis"
         lede="We are seeking aligned investors and strategic partners to build Nepal's compliance-first hemp and medical cannabis company — from licensed Himalayan cultivation to lab-tested products for home and export markets."

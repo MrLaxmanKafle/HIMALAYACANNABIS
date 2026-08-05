@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Careers at Himalaya Cannabis Pvt. Ltd. — cultivation, laboratory, product, and hospitality roles building Nepal's licensed hemp sector. Employment is written into our founding mission.",
+    "Careers at Himalaya Cannabis — cultivation, laboratory, product, and hospitality roles building Nepal's licensed hemp sector.",
   keywords: [
     "hemp jobs Nepal",
     "cannabis jobs Nepal",
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
     "agriculture jobs Nepal",
     "hemp company careers",
   ],
+
+  alternates: { canonical: "/careers" },
 };
 
 const areas = [
@@ -43,9 +46,19 @@ const areas = [
   },
 ];
 
+const breadcrumbJsonLd_careers = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Careers", path: "/careers" },
+]);
+
 export default function CareersPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_careers) }}
+      />
+
       <PageHero
         title="Careers at Himalaya Cannabis"
         lede="Generating employment through the cannabis business — and making Nepal more self-reliant — is written into our founding objectives, not a slogan added after the fact."

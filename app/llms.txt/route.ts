@@ -31,6 +31,7 @@ Key facts:
 - [Volunteer & Work-Exchange](${base}/volunteer/): Work-exchange placements, hospitality apprenticeships, research placements, corporate volunteer days, and NGO partnerships
 - [Compliance](${base}/compliance/): Licensing commitments and Nepal's legal framework
 - [FAQ](${base}/faq/): Common questions about legality, products, and supply
+- [Press & Media](${base}/press/): Boilerplate, company facts, and media contact
 - [नेपाली](${base}/ne/): Nepali-language company page with FAQ (गाँजा कानून, भाङ्गो, लाइसेन्स, जग्गा)
 
 ## Markets & Services

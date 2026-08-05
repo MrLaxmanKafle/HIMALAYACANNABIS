@@ -5,6 +5,8 @@ import { company } from "@/lib/company";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How Himalaya Cannabis Pvt. Ltd. handles personal information.",
+
+  alternates: { canonical: "/privacy" },
 };
 
 const sections = [

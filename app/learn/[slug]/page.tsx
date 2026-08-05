@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles } from "@/lib/articles";
 import { company } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -17,9 +18,10 @@ export async function generateMetadata({
   const article = articles.find((a) => a.slug === slug);
   if (!article) return {};
   return {
-    title: article.metaTitle,
+    title: { absolute: article.metaTitle },
     description: article.description,
     keywords: article.keywords,
+    alternates: { canonical: `/learn/${article.slug}` },
     openGraph: {
       type: "article",
       title: article.metaTitle,
@@ -60,6 +62,11 @@ export default async function ArticlePage({
           acceptedAnswer: { "@type": "Answer", text: f.a },
         })),
       },
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Learn", path: "/learn" },
+        { name: article.title, path: `/learn/${article.slug}` },
+      ]),
     ],
   };
 

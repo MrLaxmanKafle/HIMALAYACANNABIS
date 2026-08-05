@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Compliance & Licensing",
   description:
-    "How Himalaya Cannabis Pvt. Ltd. operates within Nepal's legal framework: licensed activities only, THC below 0.3% for industrial hemp, mandatory laboratory testing, and no recreational transactions.",
+    "How Himalaya Cannabis operates within Nepal's legal framework: licensed activities only, THC below 0.3%, mandatory lab testing, no recreational transactions.",
+
+  alternates: { canonical: "/compliance" },
 };
 
 const commitments = [
@@ -33,9 +36,19 @@ const framework = [
   "All other federal and provincial laws of Nepal in force for the time being",
 ];
 
+const breadcrumbJsonLd_compliance = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Compliance & Licensing", path: "/compliance" },
+]);
+
 export default function CompliancePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_compliance) }}
+      />
+
       <PageHero
         title="Compliance & Licensing"
         lede="Operating legally is not a constraint on our business — it is our business. Here is exactly how we work."

@@ -7,11 +7,11 @@ import { company } from "@/lib/company";
 export const metadata: Metadata = {
   metadataBase: new URL("https://himalayacannabis.com"),
   title: {
-    default: `${company.name} — Himalayan Hemp & Medical Cannabis, Nepal`,
-    template: `%s — ${company.name}`,
+    default: "Himalaya Cannabis — Himalayan Hemp, Nepal",
+    template: "%s — Himalaya Cannabis",
   },
   description:
-    "Himalaya Cannabis Pvt. Ltd. cultivates and processes licensed medical and industrial cannabis (hemp) in Nepal — hemp textiles, seed foods, CBD wellness, ayurvedic products, and cannabis-sector services. Lab-tested. No recreational sales.",
+    "Licensed medical and industrial hemp from Nepal — textiles, seed foods, CBD wellness, and ayurvedic products. Lab-tested. No recreational sales.",
   keywords: [
     "Himalaya Cannabis",
     "Nepal hemp",

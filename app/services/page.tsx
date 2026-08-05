@@ -2,16 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { services } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Lab & Services",
   description:
-    "THC/CBD testing laboratory, seed supply, seed-to-sale tracking, compliance systems, consultancy, and training — Himalaya Cannabis as a resource centre for Nepal's cannabis sector.",
+    "THC/CBD testing laboratory, seed supply, seed-to-sale tracking, and consultancy — Himalaya Cannabis as a resource centre for Nepal's cannabis sector.",
+
+  alternates: { canonical: "/services" },
 };
+
+const breadcrumbJsonLd_services = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Lab & Services", path: "/services" },
+]);
 
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_services) }}
+      />
+
       <PageHero
         title="Laboratory & Industry Services"
         lede="A legal cannabis industry needs more than growers — it needs testing, traceability, and know-how. We're building all three."

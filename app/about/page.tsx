@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Himalaya Cannabis Pvt. Ltd. is a Nepali company cultivating and processing licensed medical and industrial cannabis (hemp) in the Himalayan and hilly regions of Nepal.",
+    "Himalaya Cannabis is a Nepali company cultivating and processing licensed medical and industrial hemp in the Himalayan and hilly regions of Nepal.",
+
+  alternates: { canonical: "/about" },
 };
 
 const facts = [
@@ -15,9 +18,19 @@ const facts = [
   { label: "Nature of business", value: company.natureOfBusiness },
 ];
 
+const breadcrumbJsonLd_about = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+]);
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_about) }}
+      />
+
       <PageHero
         title="About Himalaya Cannabis"
         lede="A Nepali company bringing the Himalaya's oldest crop into the legal, lab-tested economy."

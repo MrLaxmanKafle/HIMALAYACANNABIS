@@ -1,17 +1,49 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { productCategories } from "@/lib/company";
+import { company, productCategories } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Products",
   description:
     "Hemp textiles and fibre, hemp seed foods (bhango), CBD and wellness products, ayurvedic formulations, and hemp cosmetics — lab-tested and produced under licence in Nepal.",
+
+  alternates: { canonical: "/products" },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Products", path: "/products" },
+    ]),
+    {
+      "@type": "ItemList",
+      itemListElement: productCategories.map((cat, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Product",
+          name: cat.name,
+          description: cat.summary,
+          brand: { "@type": "Organization", name: company.name },
+          url: `https://himalayacannabis.com/products/#${cat.slug}`,
+        },
+      })),
+    },
+  ],
 };
 
 export default function ProductsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <PageHero
         title="Our Products"
         lede="Every line below is built on licensed cultivation and certified laboratory testing. Categories marked planned launch as the corresponding licences are obtained."

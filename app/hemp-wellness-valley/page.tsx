@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { company } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import {
   ValleyHero,
   SpaArt,
@@ -14,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Himalaya Hemp Wellness Valley — Concept",
   description:
-    "A planned 500-ropani flagship destination in Nepal's hills: ayurvedic hemp spa, farm-to-table bhango dining, transparency tours, eco-lodges, farmer training, and a hemp heritage pavilion — licence-gated, concept stage.",
+    "A planned 500-ropani flagship destination in Nepal's hills: ayurvedic hemp spa, farm-to-table dining, eco-lodges, and farmer training. Concept stage, licence-gated.",
   keywords: [
     "hemp wellness retreat Nepal",
     "ayurvedic hemp spa Nepal",
@@ -23,6 +24,8 @@ export const metadata: Metadata = {
     "wellness retreat Nepal hills",
     "hemp farm tour Nepal",
   ],
+
+  alternates: { canonical: "/hemp-wellness-valley" },
 };
 
 const zones = [
@@ -100,6 +103,10 @@ const jsonLd = {
         acceptedAnswer: { "@type": "Answer", text: f.a },
       })),
     },
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Hemp Wellness Valley", path: "/hemp-wellness-valley" },
+    ]),
   ],
 };
 

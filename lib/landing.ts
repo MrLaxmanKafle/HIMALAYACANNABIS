@@ -359,7 +359,7 @@ export const landingPages: LandingPage[] = [
     h1: "Cannabis licence & compliance consulting in Nepal",
     metaTitle: "Cannabis License Nepal — Licensing & Compliance Consulting",
     description:
-      "Entering Nepal's licensed cannabis sector? Licensing guidance, compliance systems, seed-to-sale tracking, and training from Himalaya Cannabis — the sector's resource centre.",
+      "Entering Nepal's licensed cannabis sector? Licensing guidance, compliance systems, and training from Himalaya Cannabis.",
     keywords: [
       "cannabis license Nepal",
       "hemp license Nepal",
@@ -521,7 +521,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "hemp-farmland-gandaki",
     h1: "Hemp farmland in Gandaki Province",
-    metaTitle: "Hemp Farmland Gandaki — Land & Licensed Cultivation in Gandaki Province",
+    metaTitle: "Hemp Farmland Gandaki — Licensed Cultivation, Nepal",
     description:
       "Gandaki Province leads Nepal's medical and industrial cannabis framework. Hemp farmland, leases, and cultivation partnerships in Gandaki's mid-hill districts.",
     keywords: [

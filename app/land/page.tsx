@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Hemp & Cannabis Farm Land in Nepal — Buy, Sell, or Lease",
+  title: "Hemp & Cannabis Farmland — Buy, Sell, or Lease",
   description:
-    "The hub for hemp and cannabis farmland in Nepal. Landowners: sell or lease your hill land for licensed hemp cultivation. Buyers & investors: register interest in licensed hemp farmland. Compliance-first, licensed activities only.",
+    "Hemp and cannabis farmland in Nepal. Landowners: sell or lease hill land for licensed hemp cultivation. Buyers & investors: register interest in licensed farmland.",
   keywords: [
     "hemp farm land Nepal",
     "cannabis land for sale Nepal",
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
     "contract farming Nepal",
     "farmland investment Nepal",
   ],
+
+  alternates: { canonical: "/land" },
 };
 
 const models = [
@@ -90,6 +93,10 @@ const jsonLd = {
         acceptedAnswer: { "@type": "Answer", text: f.a },
       })),
     },
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Land & Farmer Partnerships", path: "/land" },
+    ]),
   ],
 };
 

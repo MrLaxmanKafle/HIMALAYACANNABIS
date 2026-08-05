@@ -2,16 +2,29 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
 import ContactForm from "@/components/ContactForm";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Contact & Inquiries",
   description:
     "Contact Himalaya Cannabis Pvt. Ltd. in Kathmandu, Nepal for wholesale, retail partnership, export, laboratory, and consultancy inquiries.",
+
+  alternates: { canonical: "/contact" },
 };
+
+const breadcrumbJsonLd_contact = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Contact", path: "/contact" },
+]);
 
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_contact) }}
+      />
+
       <PageHero
         title="Contact & Inquiries"
         lede="Wholesale, retail partnership, export, testing, or consultancy — we respond to every serious inquiry."

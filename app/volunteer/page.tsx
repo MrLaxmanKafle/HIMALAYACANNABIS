@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { company } from "@/lib/company";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Volunteer & Work-Exchange",
   description:
-    "Work-exchange placements on a licensed Himalayan hemp farm, hospitality apprenticeships at our planned Wellness Valley, and structured programmes for universities, companies, and nonprofits.",
+    "Work-exchange placements on a licensed Himalayan hemp farm, hospitality apprenticeships, and programmes for universities, companies, and nonprofits.",
   keywords: [
     "volunteer Nepal farm",
     "work exchange Nepal",
@@ -16,6 +17,8 @@ export const metadata: Metadata = {
     "volunteer agriculture Nepal",
     "NGO partnership Nepal",
   ],
+
+  alternates: { canonical: "/volunteer" },
 };
 
 const tracks = [
@@ -70,12 +73,20 @@ const faqs = [
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Volunteer & Work-Exchange", path: "/volunteer" },
+    ]),
+  ],
 };
 
 export default function VolunteerPage() {
