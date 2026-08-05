@@ -3,8 +3,7 @@ export const company = {
   nameNepali: "हिमालय क्यानाबिस प्रा.लि.",
   domain: "himalayacannabis.com",
   tagline: "Himalayan hemp, grown right.",
-  registeredOffice:
-    "Kathmandu Metropolitan City, Ward No. 32, Kathmandu, Bagmati Province, Nepal",
+  registeredOffice: "Kathmandu, Bagmati Province, Nepal",
   incorporation:
     "Incorporated under the Companies Act, 2063 (2006 A.D.), Nepal",
   email: "info@himalayacannabis.com",

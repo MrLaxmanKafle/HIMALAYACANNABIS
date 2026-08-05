@@ -41,8 +41,8 @@ const companyFacts = [
   { label: "Incorporation", value: "Companies Act, 2063 (2006 A.D.), Nepal" },
   { label: "Registered office", value: company.registeredOffice },
   {
-    label: "Authorised capital",
-    value: "NPR 1,00,00,000 (one crore) — 1,00,000 ordinary shares of NPR 100",
+    label: "Capital structure",
+    value: "Available to serious investors on request, during due diligence",
   },
   {
     label: "Share transferability",

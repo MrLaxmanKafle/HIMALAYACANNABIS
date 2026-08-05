@@ -54,7 +54,7 @@ const organizationJsonLd = {
   description: company.natureOfBusiness,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Kathmandu Metropolitan City, Ward No. 32",
+    addressLocality: "Kathmandu",
     addressRegion: "Bagmati Province",
     addressCountry: "NP",
   },
