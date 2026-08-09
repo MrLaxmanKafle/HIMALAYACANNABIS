@@ -352,7 +352,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Testing lab] Service inquiry",
-    related: ["cannabis-license-consulting-nepal", "hemp-seeds-nepal", "cbd-oil-nepal"],
+    related: ["agri-food-testing-lab-nepal", "cannabis-license-consulting-nepal", "hemp-seeds-nepal"],
   },
   {
     slug: "cannabis-license-consulting-nepal",
@@ -682,5 +682,119 @@ export const landingPages: LandingPage[] = [
     ],
     inquirySubject: "[Farmland Sudurpashchim] Land inquiry",
     related: ["hemp-fabric-nepal", "hemp-farmland-nepal", "hemp-clothing-manufacturer-nepal"],
+  },
+  {
+    slug: "allo-fibre-nepal",
+    h1: "Allo (Himalayan nettle) fibre processing in Nepal",
+    metaTitle: "Allo Fibre Nepal — Himalayan Nettle & Natural Bast Fibre Processing",
+    description:
+      "Allo (Himalayan nettle), banana, and jute fibre processing from Nepal — legal, uncontrolled, and available now. Decortication, cottonising, and yarn for wholesale and export.",
+    keywords: [
+      "allo fibre Nepal",
+      "Himalayan nettle fibre",
+      "allo processing Nepal",
+      "natural fibre Nepal",
+      "banana fibre Nepal",
+      "jute fibre Nepal",
+      "sustainable fibre Nepal",
+    ],
+    lede: "Long before any cannabis licence, Nepal's hills were already growing fibre worth processing — allo (Himalayan nettle), banana stem, and jute. We are building the decortication, cottonising, and spinning capacity to turn household fibre into wholesale-grade yarn, starting now, with no cannabis licence required.",
+    status: "in-development",
+    statusNote:
+      "In development. Allo, banana, and jute are uncontrolled natural fibres — this line requires no cannabis cultivation licence and proceeds independently of licensed hemp cultivation.",
+    sections: [
+      {
+        h: "Why start here",
+        ps: [
+          "Allo has been hand-processed in Nepal's hills for generations — a wild-harvested nettle fibre already established as a Nepali export product. Banana stem and jute round out a multi-bast processing line: one plant, several legal fibre streams, no licensing gate.",
+          "The same decortication, cottonising, and spinning equipment that will eventually process licensed hemp fibre runs these crops today — so the facility earns from day one instead of waiting on a cultivation licence that does not yet exist for anyone.",
+        ],
+      },
+      {
+        h: "Who this is for",
+        ps: [
+          "Household growers and gatherers with existing allo, banana fibre, or jute supply looking for a committed buyer and fair aggregation terms; textile and homeware brands wanting a traceable, sustainably grown natural fibre with a genuine Himalayan story; and exporters of natural fibre products.",
+        ],
+      },
+    ],
+    offer: {
+      title: "What we're building",
+      items: [
+        "Fibre aggregation from household and community suppliers",
+        "Decortication, cottonising, and spinning capacity",
+        "Allo, banana, and jute yarn and processed bast fibre",
+        "Committed offtake agreements for suppliers",
+        "Export documentation and consolidated shipping",
+      ],
+    },
+    faq: [
+      {
+        q: "Is allo fibre related to cannabis or hemp?",
+        a: "No. Allo is Himalayan nettle (Girardinia diversifolia) — a completely different, uncontrolled plant, already a legal Nepali export product. We process it on the same equipment line we are building for licensed hemp fibre, but allo itself needs no cannabis licence.",
+      },
+      {
+        q: "Do you buy allo, banana fibre, or jute directly from growers?",
+        a: "Yes — we are forming aggregation and offtake agreements with household and community suppliers now, ahead of full plant capacity. Contact us with your volumes and location.",
+      },
+    ],
+    inquirySubject: "[Allo & Fibre] Supply or wholesale inquiry",
+    related: ["hemp-fabric-nepal", "hemp-farmland-sudurpashchim", "hemp-exporter-nepal"],
+  },
+  {
+    slug: "agri-food-testing-lab-nepal",
+    h1: "Agri-food testing laboratory in Nepal",
+    metaTitle: "Agri-Food Testing Lab Nepal — Pesticide, Aflatoxin & Heavy Metal Testing",
+    description:
+      "A certified agri-food testing laboratory for Nepal's coffee, tea, honey, and spice exporters — pesticide residue, aflatoxin, and heavy metal testing, built alongside our cannabis-sector lab.",
+    keywords: [
+      "agri food testing lab Nepal",
+      "pesticide residue testing Nepal",
+      "aflatoxin testing Nepal",
+      "coffee testing lab Nepal",
+      "tea testing Nepal",
+      "spice export testing Nepal",
+      "heavy metal testing Nepal",
+    ],
+    lede: "Nepal's coffee, tea, honey, and spice exporters face the same problem the cannabis sector will: no accredited domestic lab for pesticide residue, aflatoxin, or heavy metal testing. We are building one laboratory that serves both — a real customer base today, independent of any cannabis licence.",
+    status: "planned",
+    statusNote:
+      "Planned. Accreditation for food-safety testing runs independently of cannabis licensing, and the lab is designed to serve Nepal's existing agro-export sector from day one.",
+    sections: [
+      {
+        h: "A gap that isn't about cannabis",
+        ps: [
+          "Coffee, tea, honey, and spice exporters routinely need pesticide residue, aflatoxin, and heavy metal certificates to clear destination markets — and today, that testing has to go abroad, adding cost and delay to every shipment. Nepal has no accredited domestic lab for it.",
+          "We are building a general agri-food testing laboratory to close that gap — the same facility that will eventually run mandatory THC/CBD compliance testing for licensed cannabis runs pesticide, aflatoxin, and heavy-metal panels for the export crops Nepal already grows and sells.",
+        ],
+      },
+      {
+        h: "Who this serves",
+        ps: [
+          "Coffee, tea, honey, and spice exporters needing certificates accepted in destination markets; cooperatives and processors managing quality control; and, once cannabis licensing is operative, licensed growers and processors needing THC/CBD compliance testing under the same roof.",
+        ],
+      },
+    ],
+    offer: {
+      title: "Planned services",
+      items: [
+        "Pesticide residue screening",
+        "Aflatoxin and mycotoxin testing",
+        "Heavy metal contaminant testing",
+        "Certificates of analysis accepted by destination markets",
+        "THC/CBD compliance testing, once cannabis licensing is operative",
+      ],
+    },
+    faq: [
+      {
+        q: "Is this the same as your cannabis testing lab?",
+        a: "It's the same planned facility, built to serve a broader purpose. Accreditation for food-safety testing (pesticide residue, aflatoxin, heavy metals) does not depend on cannabis licensing status, so this line can open first and earn from Nepal's existing coffee, tea, honey, and spice exporters.",
+      },
+      {
+        q: "How long until the lab is operating?",
+        a: "Accreditation for this kind of testing typically takes 12–24 months. Register your testing needs now — capacity planning starts with demand, and early partners help shape what we prioritise first.",
+      },
+    ],
+    inquirySubject: "[Agri-food testing] Service inquiry",
+    related: ["thc-testing-lab-nepal", "hemp-exporter-nepal", "cannabis-license-consulting-nepal"],
   },
 ];
