@@ -6,9 +6,23 @@ export const company = {
   registeredOffice: "Kathmandu, Bagmati Province, Nepal",
   incorporation:
     "Incorporated under the Companies Act, 2063 (2006 A.D.), Nepal",
+  foundingDate: "2026-07-15",
+  registrationNumber: "396894/83/84",
+  registrationAuthority: "Office of the Company Registrar, Government of Nepal",
   email: "info@himalayacannabis.com",
   natureOfBusiness:
     "Cultivation, processing, and manufacturing of medical and industrial cannabis (hemp) and related products.",
+  knowsAbout: [
+    "industrial hemp",
+    "medical cannabis regulation in Nepal",
+    "hemp textiles and fibre",
+    "hemp seed (bhango)",
+    "CBD wellness products",
+    "THC and CBD testing",
+    "allo (Himalayan nettle) fibre",
+    "cannabis licensing in Nepal",
+    "hemp farmland and land leasing",
+  ],
 };
 
 export type ProductCategory = {

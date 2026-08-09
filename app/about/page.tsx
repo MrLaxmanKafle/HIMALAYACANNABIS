@@ -22,20 +22,33 @@ const facts = [
   { label: "Company", value: company.name },
   { label: "Registered office", value: company.registeredOffice },
   { label: "Incorporation", value: "Companies Act, 2063 (2006 A.D.), Nepal" },
+  { label: "Registration number", value: `${company.registrationNumber} (${company.registrationAuthority})` },
+  { label: "Founded", value: "15 July 2026" },
   { label: "Nature of business", value: company.natureOfBusiness },
 ];
 
-const breadcrumbJsonLd_about = breadcrumbJsonLd([
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-]);
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      name: "About Himalaya Cannabis",
+      url: "https://himalayacannabis.com/about/",
+      mainEntity: { "@id": "https://himalayacannabis.com/#organization" },
+    },
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+    ]),
+  ],
+};
 
 export default function AboutPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_about) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       <PageHero

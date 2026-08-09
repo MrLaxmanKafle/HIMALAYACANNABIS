@@ -13,6 +13,8 @@ export function GET() {
 
 Key facts:
 - Registered office: ${company.registeredOffice}
+- Registration number: ${company.registrationNumber} (${company.registrationAuthority})
+- Founded: ${company.foundingDate}
 - Contact: ${company.email}
 - Product lines: ${productCategories.map((c) => c.name).join(", ")}
 - Industry services: ${services.map((s) => s.name).join(", ")}

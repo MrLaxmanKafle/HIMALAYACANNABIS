@@ -45,19 +45,47 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: company.name,
-  alternateName: company.nameNepali,
-  url: "https://himalayacannabis.com",
-  logo: "https://himalayacannabis.com/icon.svg",
-  email: company.email,
-  description: company.natureOfBusiness,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Kathmandu",
-    addressRegion: "Bagmati Province",
-    addressCountry: "NP",
-  },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://himalayacannabis.com/#organization",
+      name: company.name,
+      legalName: company.name,
+      alternateName: company.nameNepali,
+      slogan: company.tagline,
+      url: "https://himalayacannabis.com",
+      logo: "https://himalayacannabis.com/icon.svg",
+      email: company.email,
+      description: company.natureOfBusiness,
+      foundingDate: company.foundingDate,
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "OCR Registration Number",
+        value: company.registrationNumber,
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Kathmandu",
+        addressRegion: "Bagmati Province",
+        addressCountry: "NP",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Nepal",
+      },
+      knowsAbout: company.knowsAbout,
+      knowsLanguage: ["en", "ne"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://himalayacannabis.com/#website",
+      url: "https://himalayacannabis.com",
+      name: company.name,
+      description: company.natureOfBusiness,
+      inLanguage: ["en", "ne"],
+      publisher: { "@id": "https://himalayacannabis.com/#organization" },
+    },
+  ],
 };
 
 export default function RootLayout({
