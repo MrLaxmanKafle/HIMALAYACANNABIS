@@ -14,6 +14,19 @@ export const metadata: Metadata = {
     "Nepal hemp wholesale inquiry",
     "hemp supplier contact Nepal",
   ],
+    openGraph: {
+    title: "Contact Us — Himalaya Cannabis",
+    description:
+      "Contact Himalaya Cannabis Pvt. Ltd. in Kathmandu, Nepal for wholesale, retail partnership, export, laboratory, and consultancy inquiries.",
+    url: "https://himalayacannabis.com/contact",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us — Himalaya Cannabis",
+    description:
+      "Contact Himalaya Cannabis Pvt. Ltd. in Kathmandu, Nepal for wholesale, retail partnership, export, laboratory, and consultancy inquiries.",
+  },
   alternates: { canonical: "/contact" },
 };
 

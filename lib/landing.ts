@@ -84,7 +84,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "hemp-fabric-nepal",
     h1: "Hemp fabric & textiles from Nepal",
-    metaTitle: "Hemp Fabric Nepal — Himalayan Hemp Textiles, Wholesale & Export",
+    metaTitle: "Hemp Fabric Nepal — Himalayan Textiles, Wholesale & Export",
     description:
       "Himalayan hemp fabric, yarn, and fibre from Nepal — heritage hand-weaving meets lab-tested, licensed cultivation. Wholesale and export inquiries welcome.",
     keywords: [
@@ -254,7 +254,7 @@ export const landingPages: LandingPage[] = [
   {
     slug: "hemp-clothing-manufacturer-nepal",
     h1: "Hemp clothing manufacturing in Nepal",
-    metaTitle: "Hemp Clothing Manufacturer Nepal — Private Label & Partnerships",
+    metaTitle: "Hemp Clothing Manufacturer Nepal — Private Label",
     description:
       "Partner with Nepal's licensed hemp supply chain for hemp clothing and accessories — private label, heritage hand-woven fabric, and export-ready production.",
     keywords: [
@@ -608,9 +608,9 @@ export const landingPages: LandingPage[] = [
   {
     slug: "hemp-farmland-karnali",
     h1: "Hemp farmland in Karnali Province",
-    metaTitle: "Hemp Farmland Karnali — High-Altitude Hemp in Karnali Province",
+    metaTitle: "Hemp Farmland Karnali — High-Altitude Hemp, Nepal",
     description:
-      "Karnali's high-altitude valleys grow some of Nepal's strongest wild cannabis. Hemp farmland, leases, and high-value cultivation partnerships in Karnali Province.",
+      "Karnali's high-altitude valleys grow some of Nepal's strongest wild cannabis. Hemp farmland, leases, and cultivation partnerships in Karnali Province.",
     keywords: [
       "hemp farmland Karnali",
       "hemp farming Karnali",
@@ -718,9 +718,9 @@ export const landingPages: LandingPage[] = [
   {
     slug: "allo-fibre-nepal",
     h1: "Allo (Himalayan nettle) fibre processing in Nepal",
-    metaTitle: "Allo Fibre Nepal — Himalayan Nettle & Natural Bast Fibre Processing",
+    metaTitle: "Allo Fibre Nepal — Himalayan Nettle Fibre Processing",
     description:
-      "Allo (Himalayan nettle), banana, and jute fibre processing from Nepal — legal, uncontrolled, and available now. Decortication, cottonising, and yarn for wholesale and export.",
+      "Allo (Himalayan nettle), banana, and jute fibre processing from Nepal — legal, uncontrolled, available now. Yarn and processed bast for wholesale and export.",
     keywords: [
       "allo fibre Nepal",
       "Himalayan nettle fibre",
@@ -775,9 +775,9 @@ export const landingPages: LandingPage[] = [
   {
     slug: "agri-food-testing-lab-nepal",
     h1: "Agri-food testing laboratory in Nepal",
-    metaTitle: "Agri-Food Testing Lab Nepal — Pesticide, Aflatoxin & Heavy Metal Testing",
+    metaTitle: "Agri-Food Testing Lab Nepal — Pesticide & Aflatoxin Testing",
     description:
-      "A certified agri-food testing laboratory for Nepal's coffee, tea, honey, and spice exporters — pesticide residue, aflatoxin, and heavy metal testing, built alongside our cannabis-sector lab.",
+      "A certified agri-food testing laboratory for Nepal's coffee, tea, honey, and spice exporters — pesticide residue, aflatoxin, and heavy metal testing.",
     keywords: [
       "agri food testing lab Nepal",
       "pesticide residue testing Nepal",
@@ -882,7 +882,7 @@ export const landingPages: LandingPage[] = [
     "slug": "refined-hemp-seed-oil-nepal",
     "h1": "Refined (RBD) hemp seed oil",
     "metaTitle": "Refined Hemp Seed Oil (RBD) — Cosmetic-Grade Bulk Supply",
-    "description": "Refined, bleached, and deodorized (RBD) hemp seed oil from Nepal — a neutral color and scent for formulators who don't want the raw oil's natural character in their finished product.",
+    "description": "Refined (RBD) hemp seed oil from Nepal — neutral color and scent for formulators who don't want the raw oil's natural character in their finished product.",
     "keywords": [
       "refined hemp seed oil",
       "RBD hemp oil",
@@ -931,7 +931,7 @@ export const landingPages: LandingPage[] = [
     "slug": "organic-hemp-seed-oil-nepal",
     "h1": "Organic hemp seed oil",
     "metaTitle": "Organic Hemp Seed Oil — Wholesale from Nepal",
-    "description": "Organic hemp seed oil from Nepal, grown without synthetic pesticides or fertilizers — for clean-label food and cosmetic brands. Organic certification is part of our roadmap.",
+    "description": "Organic hemp seed oil from Nepal, grown without synthetic pesticides or fertilizers — for clean-label food and cosmetic brands.",
     "keywords": [
       "organic hemp seed oil",
       "organic hemp oil wholesale",
@@ -980,7 +980,7 @@ export const landingPages: LandingPage[] = [
     "slug": "winterized-hemp-seed-oil-nepal",
     "h1": "Winterized hemp seed oil",
     "metaTitle": "Winterized Hemp Seed Oil — Clear Grade for Serums & Softgels",
-    "description": "Winterized hemp seed oil from Nepal — cold-filtered to remove waxes, staying clear even at refrigerator temperature. Built for serums, softgels, and any product that can't show cloudiness.",
+    "description": "Winterized hemp seed oil from Nepal — cold-filtered to remove waxes, staying clear at refrigerator temperature. Built for serums and softgels.",
     "keywords": [
       "winterized hemp seed oil",
       "clear hemp oil",
@@ -1174,7 +1174,7 @@ export const landingPages: LandingPage[] = [
     "slug": "food-grade-hemp-seed-oil-nepal",
     "h1": "Food-grade hemp seed oil",
     "metaTitle": "Food-Grade Hemp Seed Oil — Certified Bulk Supply, Nepal",
-    "description": "Food-grade hemp seed oil from Nepal, documented to food-safety standards for culinary and nutritional use — for food brands, kitchens, and supplement manufacturers.",
+    "description": "Food-grade hemp seed oil from Nepal, documented to food-safety standards for culinary and nutritional use — for food brands and manufacturers.",
     "keywords": [
       "food grade hemp seed oil supplier",
       "hemp cooking oil bulk",
@@ -1222,7 +1222,7 @@ export const landingPages: LandingPage[] = [
     "slug": "pharmaceutical-grade-hemp-seed-oil-nepal",
     "h1": "Pharmaceutical-grade hemp seed oil",
     "metaTitle": "Pharma-Grade Hemp Seed Oil — Nepal, Roadmap Documentation",
-    "description": "Pharmaceutical-grade hemp seed oil from Nepal — the highest documentation and purity tier, built toward on our development roadmap for buyers with pharmaceutical-adjacent sourcing requirements.",
+    "description": "Pharmaceutical-grade hemp seed oil from Nepal — the highest documentation and purity tier, on our development roadmap for pharma-adjacent buyers.",
     "keywords": [
       "pharmaceutical grade hemp seed oil",
       "pharma grade hemp oil",
@@ -1270,7 +1270,7 @@ export const landingPages: LandingPage[] = [
     "slug": "hemp-carrier-oil-nepal",
     "h1": "Hemp carrier oil",
     "metaTitle": "Hemp Carrier Oil — Bulk for Skincare Formulation, Nepal",
-    "description": "Hemp seed oil as a cosmetic carrier oil from Nepal — a base for diluting essential oils, massage oils, and serums, with a favourable fatty-acid profile for skin.",
+    "description": "Hemp seed oil as a cosmetic carrier oil from Nepal — a base for diluting essential oils and serums, with a favourable fatty-acid profile for skin.",
     "keywords": [
       "hemp carrier oil bulk",
       "hemp oil for essential oils",
@@ -1318,7 +1318,7 @@ export const landingPages: LandingPage[] = [
     "slug": "high-gla-hemp-seed-oil-nepal",
     "h1": "High-GLA hemp seed oil",
     "metaTitle": "High-GLA Hemp Seed Oil — Gamma-Linolenic Acid Grade, Nepal",
-    "description": "High-GLA hemp seed oil from Nepal — hemp is one of the few plant seed oils containing meaningful gamma-linolenic acid, valued in nutraceutical and skincare formulation.",
+    "description": "High-GLA hemp seed oil from Nepal — one of few plant seed oils containing meaningful gamma-linolenic acid, valued in nutraceutical and skincare formulation.",
     "keywords": [
       "high GLA hemp seed oil",
       "gamma linolenic acid hemp oil",
@@ -1462,8 +1462,8 @@ export const landingPages: LandingPage[] = [
   {
     "slug": "private-label-hemp-seed-oil-nepal",
     "h1": "Private label hemp seed oil",
-    "metaTitle": "Private Label Hemp Seed Oil — White Label Manufacturing, Nepal",
-    "description": "Private label hemp seed oil manufacturing from Nepal — your brand, our licensed Himalayan supply chain, for retailers and brands building their own hemp oil product line.",
+    "metaTitle": "Private Label Hemp Seed Oil — White Label, Nepal",
+    "description": "Private label hemp seed oil manufacturing from Nepal — your brand, our licensed Himalayan supply chain, for retailers building their own product line.",
     "keywords": [
       "hemp seed oil private label",
       "white label hemp oil",
@@ -1558,7 +1558,7 @@ export const landingPages: LandingPage[] = [
   {
     "slug": "cannabis-sativa-seed-oil-nepal",
     "h1": "Cannabis Sativa Seed Oil (INCI)",
-    "metaTitle": "Cannabis Sativa Seed Oil (INCI) — Verified Bulk Supplier, Nepal",
+    "metaTitle": "Cannabis Sativa Seed Oil (INCI) — Bulk Supplier, Nepal",
     "description": "Cannabis Sativa Seed Oil — the exact INCI ingredient name cosmetic formulators search for and put on their labels. Verified Himalayan supply from Nepal.",
     "keywords": [
       "cannabis sativa seed oil supplier",
@@ -2313,7 +2313,7 @@ export const landingPages: LandingPage[] = [
     "slug": "nano-emulsified-cbd-nepal",
     "h1": "Nano-emulsified CBD",
     "metaTitle": "Nano Emulsified CBD Powder — Planned, Nepal",
-    "description": "Nano-emulsified CBD — cannabinoid particles reduced to nanoscale for faster absorption and water dispersibility, planned for Himalaya Cannabis's cannabinoid line.",
+    "description": "Nano-emulsified CBD — cannabinoid particles reduced to nanoscale for faster absorption and water dispersibility. Planned for our cannabinoid line.",
     "keywords": [
       "nano emulsified cbd powder",
       "nano cbd Nepal"

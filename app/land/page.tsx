@@ -21,6 +21,19 @@ export const metadata: Metadata = {
     "farmland investment Nepal",
   ],
 
+    openGraph: {
+    title: "Hemp & Cannabis Farmland — Himalaya Cannabis",
+    description:
+      "Hemp and cannabis farmland in Nepal. Landowners: sell or lease hill land for licensed hemp cultivation. Buyers & investors: register interest in licensed farmland.",
+    url: "https://himalayacannabis.com/land",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hemp & Cannabis Farmland — Himalaya Cannabis",
+    description:
+      "Hemp and cannabis farmland in Nepal. Landowners: sell or lease hill land for licensed hemp cultivation. Buyers & investors: register interest in licensed farmland.",
+  },
   alternates: { canonical: "/land" },
 };
 

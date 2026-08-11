@@ -6,6 +6,19 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How Himalaya Cannabis Pvt. Ltd. handles personal information.",
 
+    openGraph: {
+    title: "Privacy Policy — Himalaya Cannabis",
+    description:
+      "How Himalaya Cannabis Pvt. Ltd. handles personal information.",
+    url: "https://himalayacannabis.com/privacy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy — Himalaya Cannabis",
+    description:
+      "How Himalaya Cannabis Pvt. Ltd. handles personal information.",
+  },
   alternates: { canonical: "/privacy" },
 };
 

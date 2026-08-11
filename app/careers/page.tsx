@@ -16,6 +16,19 @@ export const metadata: Metadata = {
     "hemp company careers",
   ],
 
+    openGraph: {
+    title: "Careers — Himalaya Cannabis",
+    description:
+      "Careers at Himalaya Cannabis — cultivation, laboratory, product, and hospitality roles building Nepal's licensed hemp sector.",
+    url: "https://himalayacannabis.com/careers",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers — Himalaya Cannabis",
+    description:
+      "Careers at Himalaya Cannabis — cultivation, laboratory, product, and hospitality roles building Nepal's licensed hemp sector.",
+  },
   alternates: { canonical: "/careers" },
 };
 

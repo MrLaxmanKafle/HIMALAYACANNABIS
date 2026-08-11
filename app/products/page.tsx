@@ -15,6 +15,19 @@ export const metadata: Metadata = {
     "hemp textiles seed oil CBD Nepal",
     "Nepal hemp brand",
   ],
+    openGraph: {
+    title: "Hemp Products Nepal — Himalaya Cannabis",
+    description:
+      "Hemp textiles and fibre, hemp seed foods (bhango), CBD and wellness products, ayurvedic formulations, and hemp cosmetics — lab-tested and produced under licence in Nepal.",
+    url: "https://himalayacannabis.com/products",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hemp Products Nepal — Himalaya Cannabis",
+    description:
+      "Hemp textiles and fibre, hemp seed foods (bhango), CBD and wellness products, ayurvedic formulations, and hemp cosmetics — lab-tested and produced under licence in Nepal.",
+  },
   alternates: { canonical: "/products" },
 };
 
@@ -22,14 +35,37 @@ const relatedLinks: Record<string, { href: string; label: string }[]> = {
   "textiles-fibre": [
     { href: "/hemp-fabric-nepal", label: "Hemp fabric & textiles →" },
     { href: "/hemp-clothing-manufacturer-nepal", label: "Clothing manufacturing →" },
+    { href: "/allo-fibre-nepal", label: "Allo & natural bast fibre →" },
   ],
   "seed-food": [
     { href: "/hemp-seeds-nepal", label: "Hemp seeds (bhango) →" },
-    { href: "/hemp-seed-oil-nepal", label: "Hemp seed oil →" },
+    { href: "/hemp-seed-oil-nepal", label: "Hemp seed oil — all grades →" },
+    { href: "/cannabis-sativa-seed-oil-nepal", label: "Cannabis Sativa Seed Oil (INCI) →" },
+    { href: "/hulled-hemp-hearts-nepal", label: "Hulled hemp hearts →" },
+    { href: "/hemp-protein-powder-nepal", label: "Hemp protein powder →" },
+    { href: "/hemp-flour-nepal", label: "Hemp flour →" },
+    { href: "/hemp-culinary-oil-nepal", label: "Hemp culinary oil (retail) →" },
   ],
-  "cbd-wellness": [{ href: "/cbd-oil-nepal", label: "CBD oil in Nepal →" }],
-  ayurvedic: [{ href: "/learn/hemp-products-guide", label: "Hemp products guide →" }],
-  cosmetics: [{ href: "/hemp-seed-oil-nepal", label: "Hemp seed oil (base ingredient) →" }],
+  "cbd-wellness": [
+    { href: "/cbd-oil-nepal", label: "CBD oil in Nepal →" },
+    { href: "/full-spectrum-hemp-extract-nepal", label: "Full-spectrum hemp extract →" },
+    { href: "/cbd-isolate-nepal", label: "CBD isolate →" },
+    { href: "/cbd-distillate-nepal", label: "CBD distillate →" },
+    { href: "/water-soluble-cbd-nepal", label: "Water-soluble CBD →" },
+    { href: "/minor-cannabinoids-nepal", label: "Minor cannabinoids (CBG, CBN, CBC…) →" },
+  ],
+  ayurvedic: [
+    { href: "/learn/hemp-products-guide", label: "Hemp products guide →" },
+    { href: "/hemp-essential-oil-nepal", label: "Hemp essential oil →" },
+    { href: "/hemp-hydrosol-nepal", label: "Hemp hydrosol →" },
+  ],
+  cosmetics: [
+    { href: "/hemp-carrier-oil-nepal", label: "Hemp carrier oil →" },
+    { href: "/hemp-face-oil-nepal", label: "Hemp face oil →" },
+    { href: "/hemp-soap-nepal", label: "Hemp soap →" },
+    { href: "/hemp-body-butter-nepal", label: "Hemp body butter →" },
+    { href: "/hemp-gift-sets-nepal", label: "Himalayan gift sets →" },
+  ],
 };
 
 const jsonLd = {

@@ -15,6 +15,19 @@ export const metadata: Metadata = {
     "hemp industry services Nepal",
     "cannabis compliance systems Nepal",
   ],
+    openGraph: {
+    title: "Hemp Services Nepal — Himalaya Cannabis",
+    description:
+      "THC/CBD testing laboratory, seed supply, seed-to-sale tracking, and consultancy — Himalaya Cannabis as a resource centre for Nepal's cannabis sector.",
+    url: "https://himalayacannabis.com/services",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hemp Services Nepal — Himalaya Cannabis",
+    description:
+      "THC/CBD testing laboratory, seed supply, seed-to-sale tracking, and consultancy — Himalaya Cannabis as a resource centre for Nepal's cannabis sector.",
+  },
   alternates: { canonical: "/services" },
 };
 
@@ -26,6 +39,7 @@ const breadcrumbJsonLd_services = breadcrumbJsonLd([
 const relatedLinks: Record<string, { href: string; label: string }[]> = {
   "THC/CBD Testing Laboratory": [
     { href: "/thc-testing-lab-nepal", label: "More on our testing laboratory →" },
+    { href: "/agri-food-testing-lab-nepal", label: "Agri-food testing (coffee, tea, spice) →" },
   ],
   "Seed Supply & Genetics": [
     { href: "/hemp-seeds-nepal", label: "Hemp seeds & cultivars →" },

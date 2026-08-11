@@ -15,6 +15,19 @@ export const metadata: Metadata = {
     "cannabis company Nepal",
     "Nepal hemp business",
   ],
+    openGraph: {
+    title: "About Himalaya Cannabis — Nepal Hemp Company",
+    description:
+      "Himalaya Cannabis is a Nepali company cultivating and processing licensed medical and industrial hemp in the Himalayan and hilly regions of Nepal.",
+    url: "https://himalayacannabis.com/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Himalaya Cannabis — Nepal Hemp Company",
+    description:
+      "Himalaya Cannabis is a Nepali company cultivating and processing licensed medical and industrial hemp in the Himalayan and hilly regions of Nepal.",
+  },
   alternates: { canonical: "/about" },
 };
 

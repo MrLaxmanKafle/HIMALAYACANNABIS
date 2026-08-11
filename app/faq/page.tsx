@@ -13,6 +13,19 @@ export const metadata: Metadata = {
     "is hemp legal in Nepal FAQ",
     "cannabis company FAQ Nepal",
   ],
+    openGraph: {
+    title: "Hemp & Cannabis FAQ — Himalaya Cannabis",
+    description:
+      "Frequently asked questions about Himalaya Cannabis Pvt. Ltd. — legality, products, THC limits, wholesale, export, and investment.",
+    url: "https://himalayacannabis.com/faq",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hemp & Cannabis FAQ — Himalaya Cannabis",
+    description:
+      "Frequently asked questions about Himalaya Cannabis Pvt. Ltd. — legality, products, THC limits, wholesale, export, and investment.",
+  },
   alternates: { canonical: "/faq" },
 };
 

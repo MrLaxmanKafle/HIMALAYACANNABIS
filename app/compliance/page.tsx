@@ -13,6 +13,19 @@ export const metadata: Metadata = {
     "THC limit Nepal law",
     "cannabis law Nepal 2033",
   ],
+    openGraph: {
+    title: "Cannabis Compliance & Licensing — Himalaya Cannabis",
+    description:
+      "How Himalaya Cannabis operates within Nepal's legal framework: licensed activities only, THC below 0.3%, mandatory lab testing, no recreational transactions.",
+    url: "https://himalayacannabis.com/compliance",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cannabis Compliance & Licensing — Himalaya Cannabis",
+    description:
+      "How Himalaya Cannabis operates within Nepal's legal framework: licensed activities only, THC below 0.3%, mandatory lab testing, no recreational transactions.",
+  },
   alternates: { canonical: "/compliance" },
 };
 

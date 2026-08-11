@@ -15,9 +15,9 @@ export const articles: Article[] = [
   {
     slug: "is-cannabis-legal-in-nepal",
     title: "Is Cannabis Legal in Nepal?",
-    metaTitle: "Is Cannabis (Weed/Marijuana) Legal in Nepal? The Law Explained",
+    metaTitle: "Is Cannabis Legal in Nepal? The Law, Explained",
     description:
-      "What Nepali law actually says about cannabis, weed, marijuana, and hemp — the Narcotic Drugs (Control) Act 2033, medical and industrial licensing, and what is and isn't permitted.",
+      "What Nepali law actually says about cannabis, weed, marijuana, and hemp — the Narcotic Drugs (Control) Act 2033 and what is and isn't permitted.",
     keywords: [
       "is cannabis legal in Nepal",
       "is weed legal in Nepal",
@@ -77,9 +77,9 @@ export const articles: Article[] = [
   {
     slug: "hemp-vs-marijuana-difference",
     title: "Hemp vs Marijuana: What's the Difference?",
-    metaTitle: "Hemp vs Marijuana vs Cannabis — The Difference, Explained Simply",
+    metaTitle: "Hemp vs Marijuana vs Cannabis — The Difference",
     description:
-      "Hemp, marijuana, weed, cannabis, ganja — the same plant, very different meanings. THC thresholds, legal definitions, and why the difference decides what's legal in Nepal.",
+      "Hemp, marijuana, weed, cannabis, ganja — the same plant, different meanings. THC thresholds and legal definitions, and why it decides what's legal in Nepal.",
     keywords: [
       "hemp vs marijuana",
       "hemp vs weed difference",
@@ -134,7 +134,7 @@ export const articles: Article[] = [
     title: "Hemp in Nepal: A Himalayan Heritage",
     metaTitle: "Hemp in Nepal — History, Bhango, and Himalayan Hemp Textiles",
     description:
-      "From bhango chutney to hand-woven hemp cloth of the far-western hills, cannabis has been part of Himalayan life for centuries. The history of hemp in Nepal and its modern revival.",
+      "From bhango chutney to hand-woven hemp cloth of the far-western hills — the history of cannabis in Himalayan life, and its modern legal revival.",
     keywords: [
       "Nepal hemp",
       "Himalayan hemp",
@@ -190,7 +190,7 @@ export const articles: Article[] = [
     title: "Medical Cannabis in Nepal: The Emerging Framework",
     metaTitle: "Medical Cannabis in Nepal — Licensing, Framework & Future",
     description:
-      "How Nepal's medical cannabis framework is taking shape: provincial initiatives, licensing requirements, laboratory testing, and what a legal medical cannabis sector could mean.",
+      "How Nepal's medical cannabis framework is taking shape: provincial initiatives, licensing requirements, lab testing, and what a legal sector could mean.",
     keywords: [
       "medical cannabis Nepal",
       "medical marijuana Nepal",
@@ -298,9 +298,9 @@ export const articles: Article[] = [
   {
     slug: "hemp-products-guide",
     title: "What Can Hemp Make? A Guide to Hemp Products",
-    metaTitle: "Hemp Products Guide — Textiles, Seed Oil, Bhango Foods, Cosmetics",
+    metaTitle: "Hemp Products Guide — Textiles, Oil, Bhango, Cosmetics",
     description:
-      "Fibre, yarn, fabric, hemp seed oil, bhango foods, CBD wellness, ayurvedic oils, and cosmetics — a practical guide to everything the hemp plant can make, from Nepal.",
+      "Fibre, yarn, fabric, hemp seed oil, bhango foods, CBD wellness, ayurvedic oils, and cosmetics — a practical guide to what the hemp plant can make.",
     keywords: [
       "hemp products",
       "hemp seed oil Nepal",
@@ -360,7 +360,7 @@ export const articles: Article[] = [
     title: "Hemp Seed Oil vs CBD Oil: What's the Difference?",
     metaTitle: "Hemp Seed Oil vs CBD Oil — The Difference, Explained",
     description:
-      "Hemp seed oil and CBD oil are not the same product — different part of the plant, different composition, different legal footing in Nepal. Here's how to tell them apart.",
+      "Hemp seed oil and CBD oil are not the same product — different part of the plant, different composition, different legal footing. How to tell them apart.",
     keywords: [
       "hemp seed oil vs cbd oil",
       "hemp oil vs cbd oil",

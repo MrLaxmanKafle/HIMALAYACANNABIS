@@ -14,6 +14,19 @@ export const metadata: Metadata = {
     "cannabis investment opportunity Nepal",
     "Nepal hemp startup investor",
   ],
+    openGraph: {
+    title: "Invest in Nepal Hemp — Himalaya Cannabis",
+    description:
+      "Partner with Himalaya Cannabis Pvt. Ltd. — a licensed-track Nepali medical and industrial hemp company. Private investment discussions with serious investors.",
+    url: "https://himalayacannabis.com/investors",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Invest in Nepal Hemp — Himalaya Cannabis",
+    description:
+      "Partner with Himalaya Cannabis Pvt. Ltd. — a licensed-track Nepali medical and industrial hemp company. Private investment discussions with serious investors.",
+  },
   alternates: { canonical: "/investors" },
 };
 

@@ -25,6 +25,19 @@ export const metadata: Metadata = {
     "hemp farm tour Nepal",
   ],
 
+  openGraph: {
+    title: "Himalaya Hemp Wellness Valley — Concept",
+    description:
+      "A planned 500-ropani flagship destination in Nepal's hills: ayurvedic hemp spa, farm-to-table dining, eco-lodges, and farmer training. Concept stage, licence-gated.",
+    url: "https://himalayacannabis.com/hemp-wellness-valley",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Himalaya Hemp Wellness Valley — Concept",
+    description:
+      "A planned 500-ropani flagship destination in Nepal's hills: ayurvedic hemp spa, farm-to-table dining, eco-lodges, and farmer training.",
+  },
   alternates: { canonical: "/hemp-wellness-valley" },
 };
 

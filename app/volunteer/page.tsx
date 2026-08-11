@@ -18,6 +18,19 @@ export const metadata: Metadata = {
     "NGO partnership Nepal",
   ],
 
+    openGraph: {
+    title: "Volunteer & Work-Exchange — Himalaya Cannabis",
+    description:
+      "Work-exchange placements on a licensed Himalayan hemp farm, hospitality apprenticeships, and programmes for universities, companies, and nonprofits.",
+    url: "https://himalayacannabis.com/volunteer",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Volunteer & Work-Exchange — Himalaya Cannabis",
+    description:
+      "Work-exchange placements on a licensed Himalayan hemp farm, hospitality apprenticeships, and programmes for universities, companies, and nonprofits.",
+  },
   alternates: { canonical: "/volunteer" },
 };
 
