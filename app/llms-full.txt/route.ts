@@ -26,7 +26,7 @@ Status: ${p.status}
 ${p.lede}
 
 ${p.sections.map((s) => `## ${s.h}\n\n${s.ps.join("\n\n")}`).join("\n\n")}
-
+${p.howTo ? `\nSteps:\n${p.howTo.map((s, i) => `${i + 1}. ${s.name} — ${s.text}`).join("\n")}\n` : ""}
 ${p.offer.title}:
 ${p.offer.items.map((i) => `- ${i}`).join("\n")}
 

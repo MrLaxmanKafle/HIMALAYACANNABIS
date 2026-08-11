@@ -68,6 +68,21 @@ export default async function KeywordLandingPage({
         { name: "Home", path: "/" },
         { name: page.h1, path: `/${page.slug}` },
       ]),
+      ...(page.howTo
+        ? [
+            {
+              "@type": "HowTo",
+              name: page.h1,
+              description: page.description,
+              step: page.howTo.map((s, i) => ({
+                "@type": "HowToStep",
+                position: i + 1,
+                name: s.name,
+                text: s.text,
+              })),
+            },
+          ]
+        : []),
     ],
   };
 
@@ -101,6 +116,30 @@ export default async function KeywordLandingPage({
           </a>
         </div>
       </section>
+
+      {page.howTo && (
+        <section className="border-b border-line-2 bg-ground-2">
+          <div className="mx-auto max-w-3xl px-5 py-16">
+            <h2 className="text-2xl font-bold">{page.h1}: step by step</h2>
+            <ol className="mt-8 space-y-8">
+              {page.howTo.map((s, i) => (
+                <li key={s.name} className="flex gap-5">
+                  <span
+                    aria-hidden
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-marigold text-sm font-bold text-ground"
+                  >
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="font-bold text-ink">{s.name}</p>
+                    <p className="mt-1.5 leading-relaxed text-ink-2">{s.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto grid max-w-6xl gap-14 px-5 py-16 lg:grid-cols-[1.5fr_1fr]">
         <div>

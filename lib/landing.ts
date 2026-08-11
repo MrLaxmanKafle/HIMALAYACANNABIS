@@ -12,6 +12,7 @@ export type LandingPage = {
   faq: { q: string; a: string }[];
   inquirySubject: string;
   related: string[];
+  howTo?: { name: string; text: string }[];
 };
 
 export const landingPages: LandingPage[] = [
@@ -408,6 +409,32 @@ export const landingPages: LandingPage[] = [
     ],
     inquirySubject: "[Consulting] Licence readiness inquiry",
     related: ["thc-testing-lab-nepal", "hemp-seeds-nepal", "hemp-farmland-nepal"],
+    howTo: [
+      {
+        name: "Form or use a registered company",
+        text: "Provincial frameworks such as Gandaki's licence registered companies only, not individuals or households — and require no drug-related conviction in the preceding ten years.",
+      },
+      {
+        name: "Secure consolidated, controllable land",
+        text: "Applications favour a small number of consolidated, secured blocks over many small dispersed plots — perimeter and security cost scale with the number of boundaries, not just total area.",
+      },
+      {
+        name: "Build the required security infrastructure",
+        text: "A perimeter wall or fencing and CCTV must be built and pass inspection before a licence is granted — this is capital spent ahead of approval, not after.",
+      },
+      {
+        name: "Source THC-compliant, traceable seed",
+        text: "Cultivation seed must keep THC below the legal threshold (0.3% for industrial use in Gandaki's framework), with provenance you can document.",
+      },
+      {
+        name: "Arrange certified laboratory testing",
+        text: "Prevailing law requires chemical testing at a certified laboratory before harvest, processing, or sale. Line this up before you apply, not after.",
+      },
+      {
+        name: "Apply once your district is designated, and pass inspection",
+        text: "Licensing authorities approve specific districts by gazette notice — not every district is eligible yet. Apply once yours is designated, complete the site inspection, and expect a fixed licence term (five years under Gandaki's framework) with renewal conditions.",
+      },
+    ],
   },
   {
     slug: "hemp-exporter-nepal",
