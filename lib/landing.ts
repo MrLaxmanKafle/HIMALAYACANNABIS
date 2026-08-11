@@ -29,6 +29,7 @@ export const landingPages: LandingPage[] = [
       "hemp oil wholesale",
       "hemp oil exporter Nepal",
       "bhango oil",
+      "cannabis sativa seed oil supplier",
     ],
     lede: "Cold-pressed from Himalayan bhango seed, our hemp seed oil line is built for food, cosmetic, and wellness buyers — lab-tested, traceable, and carrying provenance no lowland crop can match.",
     status: "in-development",
@@ -45,7 +46,7 @@ export const landingPages: LandingPage[] = [
       {
         h: "Who this is for",
         ps: [
-          "Food brands and retailers seeking a distinctive culinary oil; cosmetic formulators using hemp oil as a carrier and active base; and importers building Himalayan or ayurvedic product lines. We supply wholesale domestically and for export, subject to prevailing law.",
+          "Food brands and retailers seeking a distinctive culinary oil; cosmetic formulators using hemp oil as a carrier and active base — listed on ingredient labels by its INCI name, Cannabis Sativa Seed Oil; and importers building Himalayan or ayurvedic product lines. We supply wholesale domestically and for export, subject to prevailing law.",
         ],
       },
     ],
@@ -71,6 +72,10 @@ export const landingPages: LandingPage[] = [
       {
         q: "What is the minimum order quantity?",
         a: "We are taking wholesale commitments now, ahead of licensed production. Tell us your volumes and format and we will structure supply accordingly.",
+      },
+      {
+        q: "What's the INCI name for hemp seed oil?",
+        a: "Cannabis Sativa Seed Oil — the exact string cosmetic formulators use on ingredient labels and in sourcing searches. It's the same product as hemp seed oil, named for regulatory labelling purposes. See our hemp seed oil vs CBD oil guide if you're unsure which ingredient you actually need.",
       },
     ],
     inquirySubject: "[Hemp seed oil] Wholesale inquiry",

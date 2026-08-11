@@ -355,4 +355,133 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "hemp-seed-oil-vs-cbd-oil",
+    title: "Hemp Seed Oil vs CBD Oil: What's the Difference?",
+    metaTitle: "Hemp Seed Oil vs CBD Oil — The Difference, Explained",
+    description:
+      "Hemp seed oil and CBD oil are not the same product — different part of the plant, different composition, different legal footing in Nepal. Here's how to tell them apart.",
+    keywords: [
+      "hemp seed oil vs cbd oil",
+      "hemp oil vs cbd oil",
+      "is hemp oil the same as cbd oil",
+      "difference between hemp oil and cbd oil",
+      "hemp seed oil Nepal",
+      "CBD oil Nepal",
+    ],
+    date: "2026-08-11",
+    lede: "The single most confused pair of terms in the entire hemp industry — different part of the plant, different chemistry, different legal status. Here is the actual difference, plainly stated.",
+    keyPoints: [
+      "Hemp seed oil is cold-pressed from the seed and contains no meaningful THC or CBD — it is a food and cosmetic oil.",
+      "CBD oil is extracted from the flower and leaf, and contains cannabinoids — it falls under cannabis licensing law.",
+      "Hemp seed oil is valued for its omega-3 and omega-6 fatty-acid profile; CBD oil's value is its cannabinoid content.",
+      "In Nepal, hemp seed oil and CBD oil sit on different points of the same licensing pathway, not different plants.",
+    ],
+    sections: [
+      {
+        h: "Different part of the plant",
+        ps: [
+          "Hemp seed oil is cold-pressed from the plant's seed — the same part of the plant Himalayan kitchens have roasted and ground into bhango for generations. Seeds contain negligible cannabinoids, whether THC or CBD, because cannabinoids form in the plant's resin glands, concentrated in the flower and surrounding leaf — not the seed.",
+          "CBD oil, by contrast, is extracted from flower and leaf material specifically to capture those cannabinoids. It is a plant extract, not a pressed food oil, and its entire value proposition is the cannabinoid content hemp seed oil simply doesn't have.",
+        ],
+      },
+      {
+        h: "Different composition, different use",
+        ps: [
+          "Hemp seed oil's profile is dominated by polyunsaturated fatty acids — omega-3 and omega-6 in a favourable ratio — which is why it is used as a food oil, a culinary finishing oil, and a cosmetic carrier oil. It will not produce any cannabinoid-related effect, because it essentially doesn't contain any.",
+          "CBD oil is valued specifically for cannabidiol, sometimes alongside minor cannabinoids, formulated into tinctures, topicals, and wellness products. The two oils can look similar in a bottle and are routinely confused in casual conversation and in search — but they are made for, and formulated for, entirely different purposes.",
+        ],
+      },
+      {
+        h: "Different legal footing in Nepal",
+        ps: [
+          "Hemp seed, pressed for oil, is a food product — the same plant part Nepali kitchens have used without controversy for generations. CBD, extracted from flower, sits inside Nepal's cannabis licensing framework: production and sale become lawful only through the medical and industrial pathway, with certified laboratory testing, once the relevant licences are in place.",
+          "Practically, this means the two products move on different timelines. See our hemp seed oil and CBD oil pages for the current status of each.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Is hemp oil the same as CBD oil?",
+        a: "No — 'hemp oil' usually refers to hemp seed oil, a food and cosmetic oil pressed from the seed with no meaningful cannabinoid content. CBD oil is a cannabinoid extract from the flower and leaf. That ambiguity in the phrase 'hemp oil' is exactly why we always specify which one we mean.",
+      },
+      {
+        q: "Does hemp seed oil get you high?",
+        a: "No. Hemp seed oil contains negligible THC or CBD, because cannabinoids form in the flower's resin glands, not the seed. It has no intoxicating or cannabinoid effect.",
+      },
+      {
+        q: "Which one should I use for skincare formulation?",
+        a: "Hemp seed oil is a widely used cosmetic carrier oil (INCI name: Cannabis Sativa Seed Oil), valued for its fatty-acid profile. CBD oil is chosen specifically for cannabinoid-related formulations. Tell us your application and we can advise which fits.",
+      },
+    ],
+  },
+  {
+    slug: "hemp-cannabis-glossary-nepal",
+    title: "Hemp & Cannabis Glossary — Key Terms Explained",
+    metaTitle: "Hemp & Cannabis Glossary Nepal — Bhango, THC, CBD & More",
+    description:
+      "A plain-language glossary of hemp and cannabis terms used in Nepal — bhango, THC, CBD, industrial hemp, allo, decortication, and more.",
+    keywords: [
+      "hemp glossary",
+      "cannabis terms Nepal",
+      "bhango meaning",
+      "what is THC",
+      "what is CBD",
+      "hemp terminology",
+    ],
+    date: "2026-08-11",
+    lede: "Cannabis and hemp carry a dense vocabulary — Nepali and English, botanical and legal. Here is what the terms you'll see across this site actually mean.",
+    keyPoints: [
+      "Bhango (भाङ्गो) is the Nepali word for hemp seed, not the plant itself.",
+      "THC and CBD are both cannabinoids, but only THC is intoxicating.",
+      "'Industrial hemp' is a legal category (THC below 0.3%), not a separate species.",
+      "Fibre-processing terms like decortication and cottonising describe turning raw stalk into usable fibre.",
+    ],
+    sections: [
+      {
+        h: "Plant & botanical terms",
+        ps: [
+          "Cannabis sativa — the plant species that includes both industrial hemp and higher-THC drug-type cannabis; the difference between them is chemistry, not botany.",
+          "Hemp — the common name for cannabis grown and regulated for its low THC content (below 0.3% under most industrial frameworks, including Nepal's), used for fibre, seed, and CBD.",
+          "Cultivar — a cultivated variety of the plant bred for specific traits: fibre yield, seed yield, or cannabinoid content.",
+          "Bast fibre — the strong outer fibre found in the stems of hemp and related plants (allo, jute, banana); the source of textile-grade hemp fibre.",
+        ],
+      },
+      {
+        h: "Cannabinoids & compounds",
+        ps: [
+          "THC (tetrahydrocannabinol) — the cannabinoid responsible for cannabis's intoxicating effect, and the compound Nepal's 0.3% industrial threshold measures.",
+          "CBD (cannabidiol) — a non-intoxicating cannabinoid used in wellness and cosmetic formulations, extracted mainly from flower and leaf.",
+          "Cannabinoid — any of the chemical compounds unique to the cannabis plant, of which THC and CBD are the best known.",
+        ],
+      },
+      {
+        h: "Nepali & regional terms",
+        ps: [
+          "Bhango (भाङ्गो) — the Nepali word for hemp seed, traditionally roasted and ground into achar in Himalayan hill kitchens. It refers to the seed, not the plant or any intoxicating compound.",
+          "Allo — the Nepali name for Himalayan nettle (Girardinia diversifolia), an unrelated bast-fibre plant long hand-processed in Nepal's hills, often blended with hemp fibre in textiles.",
+          "Ganja (गाँजा) — the Nepali legal and common term for cannabis, used in the Narcotic Drugs (Control) Act and in everyday speech alike.",
+        ],
+      },
+      {
+        h: "Processing & compliance terms",
+        ps: [
+          "Decortication — mechanically separating bast fibre from the woody core (hurd) of the stalk, the first processing step after harvest.",
+          "Cottonising — a further mechanical process that softens bast fibre to a texture closer to cotton, suited to fine spinning.",
+          "Certificate of analysis (COA) — a lab report verifying a product's cannabinoid content and purity; mandatory before licensed cannabis products can move under Nepal's framework.",
+          "Seed-to-sale tracking — record-keeping that traces a product from cultivation through processing to final sale, used to demonstrate regulatory compliance.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "What does bhango mean?",
+        a: "Bhango (भाङ्गो) is the Nepali word for hemp seed — the food product Himalayan kitchens have used for generations. It refers specifically to the seed, not the whole plant or any intoxicating compound.",
+      },
+      {
+        q: "What's the difference between THC and CBD?",
+        a: "Both are cannabinoids found in the cannabis plant. THC is intoxicating and is the compound THC-limit laws, including Nepal's 0.3% industrial threshold, regulate. CBD is non-intoxicating and used in wellness and cosmetic products.",
+      },
+    ],
+  },
 ];
