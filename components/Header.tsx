@@ -9,6 +9,7 @@ import Logo from "@/components/Logo";
 const nav = [
   { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
+  { href: "/quote", label: "Request Quote" },
   { href: "/services", label: "Lab & Services" },
   { href: "/investors", label: "Investors" },
   { href: "/hemp-wellness-valley", label: "Wellness Valley" },

@@ -21,6 +21,7 @@ export default function Footer() {
           </p>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li><Link href="/products" className="text-ink-2 hover:text-ink">Products</Link></li>
+            <li><Link href="/quote" className="text-ink-2 hover:text-ink">Request a Quote</Link></li>
             <li><Link href="/services" className="text-ink-2 hover:text-ink">Lab & Services</Link></li>
             <li><Link href="/investors" className="text-ink-2 hover:text-ink">Investors</Link></li>
             <li><Link href="/land" className="text-ink-2 hover:text-ink">Land & Farmer Partnerships</Link></li>

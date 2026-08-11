@@ -108,12 +108,20 @@ export default async function KeywordLandingPage({
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-2">
             {page.lede}
           </p>
-          <a
-            href={`mailto:${company.email}?subject=${encodeURIComponent(page.inquirySubject)}`}
-            className="mt-8 inline-block rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
-          >
-            Make an inquiry
-          </a>
+          <div className="mt-8 flex flex-wrap items-center gap-5">
+            <Link
+              href={`/quote?product=${page.slug}`}
+              className="inline-block rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
+            >
+              Request a quote
+            </Link>
+            <a
+              href={`mailto:${company.email}?subject=${encodeURIComponent(page.inquirySubject)}`}
+              className="text-sm font-semibold text-ink-2 hover:text-marigold"
+            >
+              or email us directly →
+            </a>
+          </div>
         </div>
       </section>
 

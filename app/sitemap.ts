@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/about",
     "/products",
+    "/quote",
     "/services",
     "/investors",
     "/land",
@@ -32,6 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}${route}/`.replace(/\/\/$/, "/"),
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : route === "/products" ? 0.9 : 0.7,
+    priority: route === "" ? 1 : route === "/products" || route === "/quote" ? 0.9 : 0.7,
   }));
 }
