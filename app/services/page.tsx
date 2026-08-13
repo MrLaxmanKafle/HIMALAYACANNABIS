@@ -15,18 +15,27 @@ export const metadata: Metadata = {
     "hemp industry services Nepal",
     "cannabis compliance systems Nepal",
   ],
-    openGraph: {
+  openGraph: {
     title: "Hemp Services Nepal — Himalaya Cannabis",
     description:
       "THC/CBD testing laboratory, seed supply, seed-to-sale tracking, and consultancy — Himalaya Cannabis as a resource centre for Nepal's cannabis sector.",
     url: "https://himalayacannabis.com/services",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/services/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hemp Services Nepal — Himalaya Cannabis",
     description:
       "THC/CBD testing laboratory, seed supply, seed-to-sale tracking, and consultancy — Himalaya Cannabis as a resource centre for Nepal's cannabis sector.",
+    images: ["https://himalayacannabis.com/services/opengraph-image.png"],
   },
   alternates: { canonical: "/services" },
 };
@@ -38,18 +47,30 @@ const breadcrumbJsonLd_services = breadcrumbJsonLd([
 
 const relatedLinks: Record<string, { href: string; label: string }[]> = {
   "THC/CBD Testing Laboratory": [
-    { href: "/thc-testing-lab-nepal", label: "More on our testing laboratory →" },
-    { href: "/agri-food-testing-lab-nepal", label: "Agri-food testing (coffee, tea, spice) →" },
+    {
+      href: "/thc-testing-lab-nepal",
+      label: "More on our testing laboratory →",
+    },
+    {
+      href: "/agri-food-testing-lab-nepal",
+      label: "Agri-food testing (coffee, tea, spice) →",
+    },
   ],
   "Seed Supply & Genetics": [
     { href: "/hemp-seeds-nepal", label: "Hemp seeds & cultivars →" },
     { href: "/hemp-farmland-nepal", label: "Farmland for cultivation →" },
   ],
   "Seed-to-Sale & Compliance Systems": [
-    { href: "/cannabis-license-consulting-nepal", label: "Licensing consultancy →" },
+    {
+      href: "/cannabis-license-consulting-nepal",
+      label: "Licensing consultancy →",
+    },
   ],
   "Consultancy & Training": [
-    { href: "/cannabis-license-consulting-nepal", label: "Licensing consultancy →" },
+    {
+      href: "/cannabis-license-consulting-nepal",
+      label: "Licensing consultancy →",
+    },
     { href: "/careers", label: "Join our team →" },
   ],
 };
@@ -59,7 +80,9 @@ export default function ServicesPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_services) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd_services),
+        }}
       />
 
       <PageHero
@@ -80,7 +103,9 @@ export default function ServicesPage() {
               <h2 className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold tracking-[-0.01em]">
                 {s.name}
               </h2>
-              <p className="mt-3 max-w-2xl leading-relaxed text-ink-2">{s.summary}</p>
+              <p className="mt-3 max-w-2xl leading-relaxed text-ink-2">
+                {s.summary}
+              </p>
               {relatedLinks[s.name] && (
                 <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-1.5">
                   {relatedLinks[s.name].map((l) => (
@@ -103,7 +128,9 @@ export default function ServicesPage() {
       <section className="border-t border-line-2 bg-ground-2">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-5 py-14">
           <div>
-            <h2 className="text-2xl font-bold">Entering the cannabis sector?</h2>
+            <h2 className="text-2xl font-bold">
+              Entering the cannabis sector?
+            </h2>
             <p className="mt-2 max-w-xl text-ink-2">
               Whether you are a farmer, cooperative, brand, or investor, we can
               support you with seed, testing, compliance, and training.

@@ -22,12 +22,21 @@ export const metadata: Metadata = {
     url: "https://himalayacannabis.com/ne",
     type: "website",
     locale: "ne_NP",
+    images: [
+      {
+        url: "https://himalayacannabis.com/ne/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "हिमालय क्यानाबिस — नेपालको इजाजत-केन्द्रित भाङ कम्पनी",
     description:
       "नेपालमा मेडिकल तथा औद्योगिक भाङको इजाजतप्राप्त खेती, प्रशोधन र उत्पादन। मनोरञ्जनात्मक कारोबार गरिँदैन।",
+    images: ["https://himalayacannabis.com/ne/opengraph-image.png"],
   },
   alternates: { canonical: "/ne", languages: { en: "/", ne: "/ne" } },
 };
@@ -80,14 +89,16 @@ export default function NepaliPage() {
 
       <section className="border-b border-line-2" lang="ne">
         <div className="mx-auto max-w-6xl px-5 pb-14 pt-20">
-          <p className="text-sm tracking-[0.2em] text-ink-2">{company.nameNepali}</p>
+          <p className="text-sm tracking-[0.2em] text-ink-2">
+            {company.nameNepali}
+          </p>
           <h1 className="mt-4 text-[clamp(2rem,5vw,3.6rem)] font-extrabold leading-tight">
             हिमाली भाङ, <span className="text-marigold">विधिसम्मत ढंगले।</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-2">
             हामी नेपालका हिमाली तथा पहाडी क्षेत्रमा इजाजतपत्र लिएर मेडिकल तथा
-            औद्योगिक भाङको खेती, प्रशोधन र उत्पादन गर्छौं — कपडा, भाङ्गो,
-            तेल, वेलनेस र आयुर्वेदिक उत्पादनसम्म। प्रत्येक उत्पादन प्रमाणित
+            औद्योगिक भाङको खेती, प्रशोधन र उत्पादन गर्छौं — कपडा, भाङ्गो, तेल,
+            वेलनेस र आयुर्वेदिक उत्पादनसम्म। प्रत्येक उत्पादन प्रमाणित
             प्रयोगशालाबाट परीक्षण गरिन्छ। मनोरञ्जनात्मक कारोबार गरिँदैन।
           </p>
         </div>
@@ -97,10 +108,22 @@ export default function NepaliPage() {
         <h2 className="text-2xl font-bold">हामी के गर्छौं</h2>
         <div className="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2">
           {[
-            ["भाङको कपडा र रेशा", "हिमाली भाङबाट धागो, कपडा र झोला — सुदूरपश्चिमको हातेबुनाइ परम्परालाई आधुनिक बजारसम्म।"],
-            ["भाङ्गो र खाद्य उत्पादन", "पहाडी भान्साको पौष्टिक बीउ — सफा, परीक्षण गरिएको, आधुनिक प्याकेजिङमा।"],
-            ["तेल, वेलनेस र आयुर्वेदिक", "चिसो प्रविधिबाट पेलिएको भाङ्गोको तेल; इजाजत प्राप्त भएपछि CBD तथा आयुर्वेदिक उत्पादन।"],
-            ["किसान साझेदारी र तालिम", "बीउ, तालिम, अनुपालन सहयोग र निश्चित बजार — पहाडका किसानसँग मिलेर।"],
+            [
+              "भाङको कपडा र रेशा",
+              "हिमाली भाङबाट धागो, कपडा र झोला — सुदूरपश्चिमको हातेबुनाइ परम्परालाई आधुनिक बजारसम्म।",
+            ],
+            [
+              "भाङ्गो र खाद्य उत्पादन",
+              "पहाडी भान्साको पौष्टिक बीउ — सफा, परीक्षण गरिएको, आधुनिक प्याकेजिङमा।",
+            ],
+            [
+              "तेल, वेलनेस र आयुर्वेदिक",
+              "चिसो प्रविधिबाट पेलिएको भाङ्गोको तेल; इजाजत प्राप्त भएपछि CBD तथा आयुर्वेदिक उत्पादन।",
+            ],
+            [
+              "किसान साझेदारी र तालिम",
+              "बीउ, तालिम, अनुपालन सहयोग र निश्चित बजार — पहाडका किसानसँग मिलेर।",
+            ],
           ].map(([h, p]) => (
             <div key={h} className="border-t border-line pt-4">
               <h3 className="font-bold">{h}</h3>

@@ -21,18 +21,27 @@ export const metadata: Metadata = {
     "farmland investment Nepal",
   ],
 
-    openGraph: {
+  openGraph: {
     title: "Hemp & Cannabis Farmland — Himalaya Cannabis",
     description:
       "Hemp and cannabis farmland in Nepal. Landowners: sell or lease hill land for licensed hemp cultivation. Buyers & investors: register interest in licensed farmland.",
     url: "https://himalayacannabis.com/land",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/land/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hemp & Cannabis Farmland — Himalaya Cannabis",
     description:
       "Hemp and cannabis farmland in Nepal. Landowners: sell or lease hill land for licensed hemp cultivation. Buyers & investors: register interest in licensed farmland.",
+    images: ["https://himalayacannabis.com/land/opengraph-image.png"],
   },
   alternates: { canonical: "/land" },
 };
@@ -148,12 +157,12 @@ export default function LandPage() {
           <p className="mt-3 leading-relaxed text-ink-2">
             Investors and buyers: register your interest in Nepali hemp
             farmland. We match capital with vetted parcels and licensed
-            cultivation — land acquisition, lease structuring, and
-            seed-to-sale compliance under one roof.
+            cultivation — land acquisition, lease structuring, and seed-to-sale
+            compliance under one roof.
           </p>
           <a
             href={`mailto:${company.email}?subject=${encodeURIComponent(
-              "[Land buyer] Interest in hemp farmland"
+              "[Land buyer] Interest in hemp farmland",
             )}`}
             className="mt-6 inline-block rounded-full border border-line px-7 py-3 font-medium transition-colors hover:border-ink"
           >
@@ -177,7 +186,9 @@ export default function LandPage() {
                 </span>
                 <div>
                   <h3 className="text-xl font-bold">{m.title}</h3>
-                  <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">{m.body}</p>
+                  <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">
+                    {m.body}
+                  </p>
                 </div>
               </article>
             ))}
@@ -191,7 +202,9 @@ export default function LandPage() {
         <ul className="mt-6 max-w-2xl space-y-3">
           {lookFor.map((l) => (
             <li key={l} className="flex gap-3 leading-relaxed text-ink-2">
-              <span aria-hidden className="text-marigold">—</span>
+              <span aria-hidden className="text-marigold">
+                —
+              </span>
               {l}
             </li>
           ))}

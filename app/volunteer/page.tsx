@@ -18,18 +18,27 @@ export const metadata: Metadata = {
     "NGO partnership Nepal",
   ],
 
-    openGraph: {
+  openGraph: {
     title: "Volunteer & Work-Exchange — Himalaya Cannabis",
     description:
       "Work-exchange placements on a licensed Himalayan hemp farm, hospitality apprenticeships, and programmes for universities, companies, and nonprofits.",
     url: "https://himalayacannabis.com/volunteer",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/volunteer/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Volunteer & Work-Exchange — Himalaya Cannabis",
     description:
       "Work-exchange placements on a licensed Himalayan hemp farm, hospitality apprenticeships, and programmes for universities, companies, and nonprofits.",
+    images: ["https://himalayacannabis.com/volunteer/opengraph-image.png"],
   },
   alternates: { canonical: "/volunteer" },
 };
@@ -126,7 +135,9 @@ export default function VolunteerPage() {
             </span>
             <div>
               <h2 className="text-lg font-bold">{t.title}</h2>
-              <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">{t.body}</p>
+              <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">
+                {t.body}
+              </p>
             </div>
           </article>
         ))}
@@ -142,7 +153,10 @@ export default function VolunteerPage() {
             experience — not wages. Core commercial and regulated work is done
             by paid, trained, and (where required) licence-registered staff.
             Looking for paid work instead?{" "}
-            <Link href="/careers" className="font-semibold text-marigold hover:text-ink">
+            <Link
+              href="/careers"
+              className="font-semibold text-marigold hover:text-ink"
+            >
               See Careers
             </Link>
             .
@@ -165,8 +179,8 @@ export default function VolunteerPage() {
           <h2 className="text-xl font-bold">Apply or propose a partnership</h2>
           <p className="mx-auto mt-2 max-w-xl text-ink-2">
             Tell us which track interests you, your availability, and (for
-            organisations) a short description of your company, university,
-            or nonprofit.
+            organisations) a short description of your company, university, or
+            nonprofit.
           </p>
           <a
             href={`mailto:${company.email}?subject=${encodeURIComponent("[Volunteer] Application / partnership")}`}

@@ -14,18 +14,27 @@ export const metadata: Metadata = {
     "Nepal hemp wholesale inquiry",
     "hemp supplier contact Nepal",
   ],
-    openGraph: {
+  openGraph: {
     title: "Contact Us — Himalaya Cannabis",
     description:
       "Contact Himalaya Cannabis Pvt. Ltd. in Kathmandu, Nepal for wholesale, retail partnership, export, laboratory, and consultancy inquiries.",
     url: "https://himalayacannabis.com/contact",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/contact/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact Us — Himalaya Cannabis",
     description:
       "Contact Himalaya Cannabis Pvt. Ltd. in Kathmandu, Nepal for wholesale, retail partnership, export, laboratory, and consultancy inquiries.",
+    images: ["https://himalayacannabis.com/contact/opengraph-image.png"],
   },
   alternates: { canonical: "/contact" },
 };
@@ -40,7 +49,9 @@ export default function ContactPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_contact) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd_contact),
+        }}
       />
 
       <PageHero

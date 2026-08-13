@@ -1,6 +1,10 @@
 import { ImageResponse } from "next/og";
 
-export const ogImageSize = { width: 1200, height: 630 };
+// Rendered at 2x the nominal 1200x630 so the card stays sharp on high-DPI
+// displays and after LinkedIn/X re-compress it. All geometry below is written
+// in nominal units and multiplied by S.
+const S = 2;
+export const ogImageSize = { width: 1200 * S, height: 630 * S };
 export const ogContentType = "image/png";
 
 const GROUND = "#0d1912";
@@ -34,10 +38,9 @@ export function renderOgImage({
           fontFamily: "sans-serif",
         }}
       >
-        {/* Mountain silhouette layers */}
         <svg
-          width="1200"
-          height="630"
+          width={1200 * S}
+          height={630 * S}
           viewBox="0 0 1200 630"
           style={{ position: "absolute", top: 0, left: 0 }}
         >
@@ -60,60 +63,68 @@ export function renderOgImage({
           />
         </svg>
 
-        {/* Top row */}
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: "48px 56px 0",
+            padding: `${48 * S}px ${56 * S}px 0`,
             position: "relative",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 14 * S }}>
             <div
               style={{
-                width: 40,
-                height: 40,
+                width: 40 * S,
+                height: 40 * S,
                 borderRadius: "50%",
                 background: RIDGE_NEAR,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: 20,
+                fontSize: 20 * S,
                 color: "#fff",
                 fontWeight: 700,
               }}
             >
               H
             </div>
-            <div style={{ display: "flex", fontSize: 24, fontWeight: 700, color: INK, letterSpacing: -0.5 }}>
+            <div
+              style={{
+                display: "flex",
+                fontSize: 24 * S,
+                fontWeight: 700,
+                color: INK,
+                letterSpacing: -0.5 * S,
+              }}
+            >
               HIMALAYA CANNABIS
             </div>
           </div>
-          <div style={{ display: "flex", fontSize: 20, color: INK_2 }}>himalayacannabis.com</div>
+          <div style={{ display: "flex", fontSize: 20 * S, color: INK_2 }}>
+            himalayacannabis.com
+          </div>
         </div>
 
-        {/* Main content */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             flex: 1,
             justifyContent: "center",
-            padding: "0 56px",
+            padding: `0 ${56 * S}px`,
             position: "relative",
           }}
         >
           <div
             style={{
               display: "flex",
-              fontSize: 22,
+              fontSize: 22 * S,
               fontWeight: 700,
               color: MARIGOLD,
               textTransform: "uppercase",
-              letterSpacing: 3,
-              marginBottom: 18,
+              letterSpacing: 3 * S,
+              marginBottom: 18 * S,
             }}
           >
             {eyebrow}
@@ -121,12 +132,12 @@ export function renderOgImage({
           <div
             style={{
               display: "flex",
-              fontSize: title.length > 42 ? 54 : 64,
+              fontSize: (title.length > 42 ? 54 : 64) * S,
               fontWeight: 800,
               color: INK,
               lineHeight: 1.08,
-              letterSpacing: -1.5,
-              maxWidth: 1000,
+              letterSpacing: -1.5 * S,
+              maxWidth: 1000 * S,
             }}
           >
             {title}
@@ -135,10 +146,10 @@ export function renderOgImage({
             <div
               style={{
                 display: "flex",
-                fontSize: 24,
+                fontSize: 24 * S,
                 color: INK_2,
-                marginTop: 24,
-                maxWidth: 880,
+                marginTop: 24 * S,
+                maxWidth: 880 * S,
                 lineHeight: 1.4,
               }}
             >

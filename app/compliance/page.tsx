@@ -13,18 +13,27 @@ export const metadata: Metadata = {
     "THC limit Nepal law",
     "cannabis law Nepal 2033",
   ],
-    openGraph: {
+  openGraph: {
     title: "Cannabis Compliance & Licensing — Himalaya Cannabis",
     description:
       "How Himalaya Cannabis operates within Nepal's legal framework: licensed activities only, THC below 0.3%, mandatory lab testing, no recreational transactions.",
     url: "https://himalayacannabis.com/compliance",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/compliance/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Cannabis Compliance & Licensing — Himalaya Cannabis",
     description:
       "How Himalaya Cannabis operates within Nepal's legal framework: licensed activities only, THC below 0.3%, mandatory lab testing, no recreational transactions.",
+    images: ["https://himalayacannabis.com/compliance/opengraph-image.png"],
   },
   alternates: { canonical: "/compliance" },
 };
@@ -65,7 +74,9 @@ export default function CompliancePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_compliance) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd_compliance),
+        }}
       />
 
       <PageHero
@@ -90,7 +101,9 @@ export default function CompliancePage() {
         <ul className="mt-6 space-y-3 leading-relaxed text-ink-2">
           {framework.map((f) => (
             <li key={f} className="flex gap-3">
-              <span aria-hidden className="text-marigold">—</span>
+              <span aria-hidden className="text-marigold">
+                —
+              </span>
               {f}
             </li>
           ))}

@@ -32,7 +32,13 @@ export async function generateMetadata({
       description: page.description,
       url,
       type: "website",
-      images: [{ url: image, width: 1200, height: 630, alt: page.h1 }],
+      siteName: "Himalaya Cannabis Pvt. Ltd.",
+      images: [{ url: image, width: 2400, height: 1260, alt: page.h1 }],
+    },
+    other: {
+      "article:published_time": "2026-08-13",
+      "article:modified_time": "2026-08-13",
+      "article:author": "Himalaya Cannabis Pvt. Ltd.",
     },
     twitter: {
       card: "summary_large_image",
@@ -66,7 +72,7 @@ export default async function KeywordLandingPage({
   const categoryLabel = categoryMeta?.label ?? "this range";
   const categoryHub = categoryMeta?.hub;
   const siblings = landingPages.filter(
-    (p) => p.category === page.category && p.slug !== page.slug
+    (p) => p.category === page.category && p.slug !== page.slug,
   );
 
   const jsonLd = {
@@ -163,7 +169,9 @@ export default async function KeywordLandingPage({
                   </span>
                   <div>
                     <p className="font-bold text-ink">{s.name}</p>
-                    <p className="mt-1.5 leading-relaxed text-ink-2">{s.text}</p>
+                    <p className="mt-1.5 leading-relaxed text-ink-2">
+                      {s.text}
+                    </p>
                   </div>
                 </li>
               ))}
@@ -195,8 +203,13 @@ export default async function KeywordLandingPage({
           </h2>
           <ul className="mt-4 space-y-3">
             {page.offer.items.map((item) => (
-              <li key={item} className="flex gap-3 text-sm leading-relaxed text-ink-2">
-                <span aria-hidden className="text-marigold">—</span>
+              <li
+                key={item}
+                className="flex gap-3 text-sm leading-relaxed text-ink-2"
+              >
+                <span aria-hidden className="text-marigold">
+                  —
+                </span>
                 {item}
               </li>
             ))}
@@ -232,7 +245,10 @@ export default async function KeywordLandingPage({
               {r.h1} →
             </Link>
           ))}
-          <Link href="/land" className="font-semibold text-marigold hover:text-ink">
+          <Link
+            href="/land"
+            className="font-semibold text-marigold hover:text-ink"
+          >
             Hemp &amp; cannabis farmland →
           </Link>
         </div>
@@ -248,7 +264,10 @@ export default async function KeywordLandingPage({
                 More in {categoryLabel}
               </h2>
               {categoryHub && categoryHub !== `/${page.slug}` && (
-                <Link href={categoryHub} className="text-sm font-semibold text-marigold hover:text-ink">
+                <Link
+                  href={categoryHub}
+                  className="text-sm font-semibold text-marigold hover:text-ink"
+                >
                   Category overview →
                 </Link>
               )}

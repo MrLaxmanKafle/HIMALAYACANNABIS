@@ -15,18 +15,27 @@ export const metadata: Metadata = {
     "cannabis company Nepal",
     "Nepal hemp business",
   ],
-    openGraph: {
+  openGraph: {
     title: "About Himalaya Cannabis — Nepal Hemp Company",
     description:
       "Himalaya Cannabis is a Nepali company cultivating and processing licensed medical and industrial hemp in the Himalayan and hilly regions of Nepal.",
     url: "https://himalayacannabis.com/about",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/about/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "About Himalaya Cannabis — Nepal Hemp Company",
     description:
       "Himalaya Cannabis is a Nepali company cultivating and processing licensed medical and industrial hemp in the Himalayan and hilly regions of Nepal.",
+    images: ["https://himalayacannabis.com/about/opengraph-image.png"],
   },
   alternates: { canonical: "/about" },
 };
@@ -35,7 +44,10 @@ const facts = [
   { label: "Company", value: company.name },
   { label: "Registered office", value: company.registeredOffice },
   { label: "Incorporation", value: "Companies Act, 2063 (2006 A.D.), Nepal" },
-  { label: "Registration number", value: `${company.registrationNumber} (${company.registrationAuthority})` },
+  {
+    label: "Registration number",
+    value: `${company.registrationNumber} (${company.registrationAuthority})`,
+  },
   { label: "Founded", value: "15 July 2026" },
   { label: "Nature of business", value: company.natureOfBusiness },
 ];
@@ -78,24 +90,30 @@ export default function AboutPage() {
             Himalayan kitchens, its oils used in traditional medicine.
           </p>
           <p>
-            <strong className="text-ink">Himalaya Cannabis Pvt. Ltd.</strong> was
-            founded to give that heritage a legal, modern future. We cultivate
-            and process medical and industrial cannabis — always under licence,
-            always within the THC limits prescribed by law — and turn it into
-            products Nepal can be proud of: textiles, foods, wellness goods,
-            ayurvedic formulations, and cosmetics, for the domestic market and
-            for export.
+            <strong className="text-ink">Himalaya Cannabis Pvt. Ltd.</strong>{" "}
+            was founded to give that heritage a legal, modern future. We
+            cultivate and process medical and industrial cannabis — always under
+            licence, always within the THC limits prescribed by law — and turn
+            it into products Nepal can be proud of: textiles, foods, wellness
+            goods, ayurvedic formulations, and cosmetics, for the domestic
+            market and for export.
           </p>
           <p>
             We are equally committed to building the sector around us: a{" "}
-            <Link href="/services" className="font-semibold text-marigold hover:text-ink">
+            <Link
+              href="/services"
+              className="font-semibold text-marigold hover:text-ink"
+            >
               certified THC/CBD testing laboratory, seed supply, seed-to-sale
               tracking software, compliance systems, consultancy, and training
             </Link>{" "}
             — so that farmers and enterprises across Nepal can participate in
-            this industry safely and legally. See exactly how we stay within
-            the law on our{" "}
-            <Link href="/compliance" className="font-semibold text-marigold hover:text-ink">
+            this industry safely and legally. See exactly how we stay within the
+            law on our{" "}
+            <Link
+              href="/compliance"
+              className="font-semibold text-marigold hover:text-ink"
+            >
               Compliance & Licensing
             </Link>{" "}
             page.
@@ -107,15 +125,24 @@ export default function AboutPage() {
           </p>
           <p className="text-base">
             Want to be part of it?{" "}
-            <Link href="/careers" className="font-semibold text-marigold hover:text-ink">
+            <Link
+              href="/careers"
+              className="font-semibold text-marigold hover:text-ink"
+            >
               See open roles
             </Link>
             ,{" "}
-            <Link href="/volunteer" className="font-semibold text-marigold hover:text-ink">
+            <Link
+              href="/volunteer"
+              className="font-semibold text-marigold hover:text-ink"
+            >
               volunteer with us
             </Link>
             , or{" "}
-            <Link href="/investors" className="font-semibold text-marigold hover:text-ink">
+            <Link
+              href="/investors"
+              className="font-semibold text-marigold hover:text-ink"
+            >
               explore investing
             </Link>
             .

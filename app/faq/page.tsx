@@ -13,18 +13,27 @@ export const metadata: Metadata = {
     "is hemp legal in Nepal FAQ",
     "cannabis company FAQ Nepal",
   ],
-    openGraph: {
+  openGraph: {
     title: "Hemp & Cannabis FAQ — Himalaya Cannabis",
     description:
       "Frequently asked questions about Himalaya Cannabis Pvt. Ltd. — legality, products, THC limits, wholesale, export, and investment.",
     url: "https://himalayacannabis.com/faq",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/faq/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hemp & Cannabis FAQ — Himalaya Cannabis",
     description:
       "Frequently asked questions about Himalaya Cannabis Pvt. Ltd. — legality, products, THC limits, wholesale, export, and investment.",
+    images: ["https://himalayacannabis.com/faq/opengraph-image.png"],
   },
   alternates: { canonical: "/faq" },
 };
@@ -116,7 +125,10 @@ export default function FaqPage() {
 
         <p className="mt-10 text-ink-2">
           Something else?{" "}
-          <Link href="/contact" className="font-semibold text-marigold hover:text-ink">
+          <Link
+            href="/contact"
+            className="font-semibold text-marigold hover:text-ink"
+          >
             Ask us directly
           </Link>
           .

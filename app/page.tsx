@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { company, productCategories, services } from "@/lib/company";
 import Mountains from "@/components/Mountains";
+
+const OG_IMAGE = "https://himalayacannabis.com/opengraph-image.png";
+
+// Set at page level so the .png URL wins over the extensionless URL that the
+// sibling opengraph-image file convention would otherwise inject.
+export const metadata: Metadata = {
+  openGraph: {
+    images: [
+      { url: OG_IMAGE, width: 2400, height: 1260, alt: "Himalaya Cannabis" },
+    ],
+  },
+  twitter: { images: [OG_IMAGE] },
+};
 
 export default function HomePage() {
   return (
@@ -44,9 +58,12 @@ export default function HomePage() {
       {/* Compliance line — one quiet sentence, not a badge strip */}
       <section className="border-y border-line-2">
         <p className="mx-auto max-w-6xl px-5 py-5 text-sm leading-relaxed text-ink-2">
-          <span className="font-semibold text-ink">Licensed activities only.</span>{" "}
-          Industrial hemp below 0.3% THC · every product laboratory-tested ·
-          no recreational sales, ever — it&apos;s written into our founding documents.
+          <span className="font-semibold text-ink">
+            Licensed activities only.
+          </span>{" "}
+          Industrial hemp below 0.3% THC · every product laboratory-tested · no
+          recreational sales, ever — it&apos;s written into our founding
+          documents.
         </p>
       </section>
 
@@ -65,7 +82,10 @@ export default function HomePage() {
 
         <ol className="mt-14">
           {productCategories.map((cat, i) => (
-            <li key={cat.slug} className="group border-t border-line last:border-b">
+            <li
+              key={cat.slug}
+              className="group border-t border-line last:border-b"
+            >
               <Link
                 href={`/products#${cat.slug}`}
                 className="grid gap-2 py-7 transition-colors sm:grid-cols-[4rem_1fr_auto] sm:items-baseline sm:gap-6"
@@ -91,7 +111,9 @@ export default function HomePage() {
                     cat.status === "in-development" ? "text-leaf" : "text-ink-3"
                   }`}
                 >
-                  {cat.status === "in-development" ? "In development" : "Planned"}
+                  {cat.status === "in-development"
+                    ? "In development"
+                    : "Planned"}
                 </span>
               </Link>
             </li>
@@ -158,12 +180,36 @@ export default function HomePage() {
           </h2>
           <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { href: "/learn", label: "Learn: Cannabis in Nepal", body: "Plain-language guides to the law, the history, and the plant." },
-              { href: "/land", label: "Hemp Farmland", body: "Landowners and buyers — lease, sell, or invest in licensed hemp land." },
-              { href: "/hemp-wellness-valley", label: "Hemp Wellness Valley", body: "A planned 500-ropani wellness and agritourism destination." },
-              { href: "/careers", label: "Careers", body: "Cultivation, lab, product, and hospitality roles as we grow." },
-              { href: "/volunteer", label: "Volunteer & Work-Exchange", body: "Work-exchange placements and partnerships for universities and NGOs." },
-              { href: "/press", label: "Press & Media", body: "Boilerplate, company facts, and media contact." },
+              {
+                href: "/learn",
+                label: "Learn: Cannabis in Nepal",
+                body: "Plain-language guides to the law, the history, and the plant.",
+              },
+              {
+                href: "/land",
+                label: "Hemp Farmland",
+                body: "Landowners and buyers — lease, sell, or invest in licensed hemp land.",
+              },
+              {
+                href: "/hemp-wellness-valley",
+                label: "Hemp Wellness Valley",
+                body: "A planned 500-ropani wellness and agritourism destination.",
+              },
+              {
+                href: "/careers",
+                label: "Careers",
+                body: "Cultivation, lab, product, and hospitality roles as we grow.",
+              },
+              {
+                href: "/volunteer",
+                label: "Volunteer & Work-Exchange",
+                body: "Work-exchange placements and partnerships for universities and NGOs.",
+              },
+              {
+                href: "/press",
+                label: "Press & Media",
+                body: "Boilerplate, company facts, and media contact.",
+              },
             ].map((item) => (
               <Link
                 key={item.href}

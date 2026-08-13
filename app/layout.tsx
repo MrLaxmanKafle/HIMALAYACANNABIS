@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     "bhango",
     "CBD Nepal",
   ],
+  authors: [{ name: company.name, url: "https://himalayacannabis.com" }],
+  creator: company.name,
+  publisher: company.name,
   alternates: { canonical: "/", languages: { en: "/", ne: "/ne" } },
   openGraph: {
     type: "website",
@@ -30,7 +33,7 @@ export const metadata: Metadata = {
     title: `${company.name} — Himalayan Hemp & Medical Cannabis, Nepal`,
     description:
       "Licensed medical and industrial hemp from the Himalayan and hilly regions of Nepal. Lab-tested textiles, seed foods, wellness products, and cannabis-sector services.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Himalaya Cannabis" }],
+    images: [{ url: "https://himalayacannabis.com/opengraph-image.png", width: 2400, height: 1260, alt: "Himalaya Cannabis" }],
     locale: "en_US",
   },
   twitter: {
@@ -38,7 +41,6 @@ export const metadata: Metadata = {
     title: `${company.name} — Himalayan Hemp, Nepal`,
     description:
       "Licensed medical and industrial hemp from the Himalayan regions of Nepal. Lab-tested. No recreational sales.",
-    images: ["/og.png"],
   },
   robots: { index: true, follow: true },
 };

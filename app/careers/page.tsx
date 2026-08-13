@@ -16,18 +16,27 @@ export const metadata: Metadata = {
     "hemp company careers",
   ],
 
-    openGraph: {
+  openGraph: {
     title: "Careers — Himalaya Cannabis",
     description:
       "Careers at Himalaya Cannabis — cultivation, laboratory, product, and hospitality roles building Nepal's licensed hemp sector.",
     url: "https://himalayacannabis.com/careers",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/careers/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Careers — Himalaya Cannabis",
     description:
       "Careers at Himalaya Cannabis — cultivation, laboratory, product, and hospitality roles building Nepal's licensed hemp sector.",
+    images: ["https://himalayacannabis.com/careers/opengraph-image.png"],
   },
   alternates: { canonical: "/careers" },
 };
@@ -69,7 +78,9 @@ export default function CareersPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_careers) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd_careers),
+        }}
       />
 
       <PageHero
@@ -81,9 +92,8 @@ export default function CareersPage() {
         <p className="leading-relaxed text-ink-2">
           Most roles open as licences, land, and facilities come online — from
           cultivation and our testing laboratory through to the Hemp Wellness
-          Valley. We are building the team ahead of each phase rather than
-          after it, so early conversations matter even before a formal
-          opening exists.
+          Valley. We are building the team ahead of each phase rather than after
+          it, so early conversations matter even before a formal opening exists.
         </p>
       </section>
 
@@ -98,7 +108,9 @@ export default function CareersPage() {
             </span>
             <div>
               <h2 className="text-lg font-bold">{a.title}</h2>
-              <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">{a.body}</p>
+              <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">
+                {a.body}
+              </p>
             </div>
           </article>
         ))}
@@ -106,7 +118,9 @@ export default function CareersPage() {
 
       <section className="border-t border-line-2 bg-ground-2">
         <div className="mx-auto max-w-3xl px-5 py-16 text-center">
-          <h2 className="text-2xl font-bold">No formal opening yet — reach out anyway</h2>
+          <h2 className="text-2xl font-bold">
+            No formal opening yet — reach out anyway
+          </h2>
           <p className="mx-auto mt-3 max-w-xl leading-relaxed text-ink-2">
             Tell us your background, the area you&apos;re interested in, and
             your location. We keep every serious inquiry on file and contact
@@ -120,7 +134,10 @@ export default function CareersPage() {
           </a>
           <p className="mt-6 text-sm text-ink-3">
             Not looking for paid work? See our{" "}
-            <Link href="/volunteer" className="font-semibold text-marigold hover:text-ink">
+            <Link
+              href="/volunteer"
+              className="font-semibold text-marigold hover:text-ink"
+            >
               Volunteer & Work-Exchange
             </Link>{" "}
             programme.

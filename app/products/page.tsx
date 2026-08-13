@@ -15,18 +15,27 @@ export const metadata: Metadata = {
     "hemp textiles seed oil CBD Nepal",
     "Nepal hemp brand",
   ],
-    openGraph: {
+  openGraph: {
     title: "Hemp Products Nepal — Himalaya Cannabis",
     description:
       "Hemp textiles and fibre, hemp seed foods (bhango), CBD and wellness products, ayurvedic formulations, and hemp cosmetics — lab-tested and produced under licence in Nepal.",
     url: "https://himalayacannabis.com/products",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/products/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hemp Products Nepal — Himalaya Cannabis",
     description:
       "Hemp textiles and fibre, hemp seed foods (bhango), CBD and wellness products, ayurvedic formulations, and hemp cosmetics — lab-tested and produced under licence in Nepal.",
+    images: ["https://himalayacannabis.com/products/opengraph-image.png"],
   },
   alternates: { canonical: "/products" },
 };
@@ -34,13 +43,19 @@ export const metadata: Metadata = {
 const relatedLinks: Record<string, { href: string; label: string }[]> = {
   "textiles-fibre": [
     { href: "/hemp-fabric-nepal", label: "Hemp fabric & textiles →" },
-    { href: "/hemp-clothing-manufacturer-nepal", label: "Clothing manufacturing →" },
+    {
+      href: "/hemp-clothing-manufacturer-nepal",
+      label: "Clothing manufacturing →",
+    },
     { href: "/allo-fibre-nepal", label: "Allo & natural bast fibre →" },
   ],
   "seed-food": [
     { href: "/hemp-seeds-nepal", label: "Hemp seeds (bhango) →" },
     { href: "/hemp-seed-oil-nepal", label: "Hemp seed oil — all grades →" },
-    { href: "/cannabis-sativa-seed-oil-nepal", label: "Cannabis Sativa Seed Oil (INCI) →" },
+    {
+      href: "/cannabis-sativa-seed-oil-nepal",
+      label: "Cannabis Sativa Seed Oil (INCI) →",
+    },
     { href: "/hulled-hemp-hearts-nepal", label: "Hulled hemp hearts →" },
     { href: "/hemp-protein-powder-nepal", label: "Hemp protein powder →" },
     { href: "/hemp-flour-nepal", label: "Hemp flour →" },
@@ -48,11 +63,17 @@ const relatedLinks: Record<string, { href: string; label: string }[]> = {
   ],
   "cbd-wellness": [
     { href: "/cbd-oil-nepal", label: "CBD oil in Nepal →" },
-    { href: "/full-spectrum-hemp-extract-nepal", label: "Full-spectrum hemp extract →" },
+    {
+      href: "/full-spectrum-hemp-extract-nepal",
+      label: "Full-spectrum hemp extract →",
+    },
     { href: "/cbd-isolate-nepal", label: "CBD isolate →" },
     { href: "/cbd-distillate-nepal", label: "CBD distillate →" },
     { href: "/water-soluble-cbd-nepal", label: "Water-soluble CBD →" },
-    { href: "/minor-cannabinoids-nepal", label: "Minor cannabinoids (CBG, CBN, CBC…) →" },
+    {
+      href: "/minor-cannabinoids-nepal",
+      label: "Minor cannabinoids (CBG, CBN, CBC…) →",
+    },
   ],
   ayurvedic: [
     { href: "/learn/hemp-products-guide", label: "Hemp products guide →" },

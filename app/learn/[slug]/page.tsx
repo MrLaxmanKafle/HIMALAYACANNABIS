@@ -27,12 +27,15 @@ export async function generateMetadata({
       title: article.metaTitle,
       description: article.description,
       url: `https://himalayacannabis.com/learn/${article.slug}/`,
+      siteName: "Himalaya Cannabis Pvt. Ltd.",
       publishedTime: article.date,
+      modifiedTime: article.date,
+      authors: ["Himalaya Cannabis Pvt. Ltd."],
       images: [
         {
           url: `https://himalayacannabis.com/learn/${article.slug}/opengraph-image.png`,
-          width: 1200,
-          height: 630,
+          width: 2400,
+          height: 1260,
           alt: article.title,
         },
       ],
@@ -131,13 +134,18 @@ export default async function ArticlePage({
 
       <section className="border-b border-line-2">
         <div className="mx-auto max-w-3xl px-5 pb-14 pt-16">
-          <Link href="/learn" className="text-sm font-semibold text-marigold hover:text-ink">
+          <Link
+            href="/learn"
+            className="text-sm font-semibold text-marigold hover:text-ink"
+          >
             ← Learn
           </Link>
           <h1 className="mt-6 text-[clamp(2rem,4.5vw,3.4rem)] font-extrabold leading-tight tracking-[-0.015em]">
             {article.title}
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-ink-2">{article.lede}</p>
+          <p className="mt-5 text-lg leading-relaxed text-ink-2">
+            {article.lede}
+          </p>
         </div>
       </section>
 
@@ -151,17 +159,24 @@ export default async function ArticlePage({
           <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-marigold">
             Short answer
           </h2>
-          <p className="mt-3 text-lg leading-relaxed text-ink">{article.answer}</p>
+          <p className="mt-3 text-lg leading-relaxed text-ink">
+            {article.answer}
+          </p>
         </section>
 
-        <section aria-label="Key points" className="mb-12 border-y border-line py-6">
+        <section
+          aria-label="Key points"
+          className="mb-12 border-y border-line py-6"
+        >
           <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-marigold">
             Key points
           </h2>
           <ul className="mt-4 space-y-2.5">
             {article.keyPoints.map((k) => (
               <li key={k} className="flex gap-3 leading-relaxed text-ink-2">
-                <span aria-hidden className="text-marigold">—</span>
+                <span aria-hidden className="text-marigold">
+                  —
+                </span>
                 {k}
               </li>
             ))}

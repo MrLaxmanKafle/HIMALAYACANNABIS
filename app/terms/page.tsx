@@ -6,18 +6,25 @@ export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms governing use of the Himalaya Cannabis website.",
 
-    openGraph: {
+  openGraph: {
     title: "Terms of Use — Himalaya Cannabis",
-    description:
-      "Terms governing use of the Himalaya Cannabis website.",
+    description: "Terms governing use of the Himalaya Cannabis website.",
     url: "https://himalayacannabis.com/terms",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/terms/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Terms of Use — Himalaya Cannabis",
-    description:
-      "Terms governing use of the Himalaya Cannabis website.",
+    description: "Terms governing use of the Himalaya Cannabis website.",
+    images: ["https://himalayacannabis.com/terms/opengraph-image.png"],
   },
   alternates: { canonical: "/terms" },
 };

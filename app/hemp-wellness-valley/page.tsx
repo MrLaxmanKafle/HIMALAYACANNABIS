@@ -31,12 +31,23 @@ export const metadata: Metadata = {
       "A planned 500-ropani flagship destination in Nepal's hills: ayurvedic hemp spa, farm-to-table dining, eco-lodges, and farmer training. Concept stage, licence-gated.",
     url: "https://himalayacannabis.com/hemp-wellness-valley",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/hemp-wellness-valley/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Himalaya Hemp Wellness Valley — Concept",
     description:
       "A planned 500-ropani flagship destination in Nepal's hills: ayurvedic hemp spa, farm-to-table dining, eco-lodges, and farmer training.",
+    images: [
+      "https://himalayacannabis.com/hemp-wellness-valley/opengraph-image.png",
+    ],
   },
   alternates: { canonical: "/hemp-wellness-valley" },
 };
@@ -55,7 +66,7 @@ const zones = [
   {
     Art: TourArt,
     title: "Field-to-lab transparency tours",
-    body: "Walk the route every product actually takes: cultivation rows, drying and processing, our certified testing laboratory, finished goods. Compliance you can see, not just read about — the clearest proof of \"licensed, lab-tested\" we can offer.",
+    body: 'Walk the route every product actually takes: cultivation rows, drying and processing, our certified testing laboratory, finished goods. Compliance you can see, not just read about — the clearest proof of "licensed, lab-tested" we can offer.',
   },
   {
     Art: LodgeArt,
@@ -140,13 +151,13 @@ export default function WellnessValleyPage() {
             Concept · Land acquisition in progress
           </p>
           <h1 className="mt-4 max-w-3xl text-[clamp(2.4rem,6vw,4.6rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
-            The Himalaya Hemp <span className="text-marigold">Wellness Valley</span>
+            The Himalaya Hemp{" "}
+            <span className="text-marigold">Wellness Valley</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-2">
             A planned 500-ropani flagship destination where licensed hemp
             cultivation, ayurvedic wellness, farm-to-table dining, and heritage
-            craft meet in one place — not just a farm, a place people travel
-            to.
+            craft meet in one place — not just a farm, a place people travel to.
           </p>
           <a
             href={`mailto:${company.email}?subject=${encodeURIComponent("[Wellness Valley] Register interest")}`}
@@ -164,8 +175,8 @@ export default function WellnessValleyPage() {
             Nepal already draws the world for two things: mountains and
             wellness. We are building the place where both meet a plant the
             Himalaya has known for centuries — grown under licence, tested in
-            our own laboratory, and finally given room to be more than a line
-            on a products page.
+            our own laboratory, and finally given room to be more than a line on
+            a products page.
           </p>
         </div>
       </section>
@@ -188,8 +199,12 @@ export default function WellnessValleyPage() {
                 <span className="text-sm font-semibold text-ink-3 tabular-nums">
                   0{i + 1}
                 </span>
-                <h2 className="mt-1 text-2xl font-bold tracking-[-0.01em]">{z.title}</h2>
-                <p className="mt-3 max-w-xl leading-relaxed text-ink-2">{z.body}</p>
+                <h2 className="mt-1 text-2xl font-bold tracking-[-0.01em]">
+                  {z.title}
+                </h2>
+                <p className="mt-3 max-w-xl leading-relaxed text-ink-2">
+                  {z.body}
+                </p>
               </div>
             </article>
           );
@@ -202,13 +217,13 @@ export default function WellnessValleyPage() {
           <h2 className="text-xl font-bold">Where this stands today</h2>
           <p className="mt-3 leading-relaxed text-ink-2">
             This is a concept, not a built facility. Land acquisition
-            (approximately 500 ropani) is in progress; hospitality and
-            tourism operations will require an amendment to our company&apos;s
-            objectives (or a dedicated affiliate) and the tourism, land-use,
-            and cannabis-sector licences applicable to each activity, all
-            under prevailing Nepali law. Nothing here is a booking, an offer,
-            or a guarantee of timeline. Illustrations on this page are concept
-            art, not photographs of an existing site.
+            (approximately 500 ropani) is in progress; hospitality and tourism
+            operations will require an amendment to our company&apos;s
+            objectives (or a dedicated affiliate) and the tourism, land-use, and
+            cannabis-sector licences applicable to each activity, all under
+            prevailing Nepali law. Nothing here is a booking, an offer, or a
+            guarantee of timeline. Illustrations on this page are concept art,
+            not photographs of an existing site.
           </p>
         </div>
       </section>

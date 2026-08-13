@@ -6,18 +6,27 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How Himalaya Cannabis Pvt. Ltd. handles personal information.",
 
-    openGraph: {
+  openGraph: {
     title: "Privacy Policy — Himalaya Cannabis",
     description:
       "How Himalaya Cannabis Pvt. Ltd. handles personal information.",
     url: "https://himalayacannabis.com/privacy",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/privacy/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy — Himalaya Cannabis",
     description:
       "How Himalaya Cannabis Pvt. Ltd. handles personal information.",
+    images: ["https://himalayacannabis.com/privacy/opengraph-image.png"],
   },
   alternates: { canonical: "/privacy" },
 };
@@ -30,7 +39,10 @@ const sections = [
         This website is operated by {company.name} ({company.nameNepali}),
         registered at {company.registeredOffice}. For any privacy question,
         contact us at{" "}
-        <a href={`mailto:${company.email}`} className="text-marigold hover:text-ink">
+        <a
+          href={`mailto:${company.email}`}
+          className="text-marigold hover:text-ink"
+        >
           {company.email}
         </a>
         .

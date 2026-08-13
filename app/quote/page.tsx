@@ -22,12 +22,21 @@ export const metadata: Metadata = {
       "Bulk and wholesale sourcing from Nepal — hemp seed oil, fibre, cannabinoid, and finished-goods lines. Tell us your volume, destination, and timeline.",
     url: "https://himalayacannabis.com/quote",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/quote/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Request a Quote — Himalaya Cannabis",
     description:
       "Bulk and wholesale sourcing from Nepal. Tell us your volume, destination, and timeline.",
+    images: ["https://himalayacannabis.com/quote/opengraph-image.png"],
   },
   alternates: { canonical: "/quote" },
 };
@@ -38,7 +47,8 @@ const jsonLd = {
     {
       "@type": "WebPage",
       name: "Request a Quote",
-      description: "Bulk and wholesale RFQ intake for Himalaya Cannabis's product lines.",
+      description:
+        "Bulk and wholesale RFQ intake for Himalaya Cannabis's product lines.",
       url: "https://himalayacannabis.com/quote/",
       provider: { "@id": "https://himalayacannabis.com/#organization" },
     },
@@ -76,7 +86,10 @@ export default function QuotePage() {
             {company.email}
           </a>
           . For investment discussions specifically, see our{" "}
-          <a href="/investors" className="font-semibold text-marigold hover:text-ink">
+          <a
+            href="/investors"
+            className="font-semibold text-marigold hover:text-ink"
+          >
             Investors page
           </a>
           .

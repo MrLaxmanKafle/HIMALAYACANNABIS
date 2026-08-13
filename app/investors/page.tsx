@@ -14,18 +14,27 @@ export const metadata: Metadata = {
     "cannabis investment opportunity Nepal",
     "Nepal hemp startup investor",
   ],
-    openGraph: {
+  openGraph: {
     title: "Invest in Nepal Hemp — Himalaya Cannabis",
     description:
       "Partner with Himalaya Cannabis Pvt. Ltd. — a licensed-track Nepali medical and industrial hemp company. Private investment discussions with serious investors.",
     url: "https://himalayacannabis.com/investors",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/investors/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Invest in Nepal Hemp — Himalaya Cannabis",
     description:
       "Partner with Himalaya Cannabis Pvt. Ltd. — a licensed-track Nepali medical and industrial hemp company. Private investment discussions with serious investors.",
+    images: ["https://himalayacannabis.com/investors/opengraph-image.png"],
   },
   alternates: { canonical: "/investors" },
 };
@@ -112,7 +121,9 @@ export default function InvestorsPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd_investors) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd_investors),
+        }}
       />
 
       <PageHero
@@ -132,7 +143,9 @@ export default function InvestorsPage() {
             </span>
             <div>
               <h2 className="text-xl font-bold">{p.title}</h2>
-              <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">{p.body}</p>
+              <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">
+                {p.body}
+              </p>
             </div>
           </article>
         ))}
@@ -184,7 +197,7 @@ export default function InvestorsPage() {
             pack and a call. Prefer plain email?{" "}
             <a
               href={`mailto:${company.email}?subject=${encodeURIComponent(
-                "[Investment] Introduction"
+                "[Investment] Introduction",
               )}`}
               className="font-semibold text-marigold hover:text-ink"
             >
@@ -198,9 +211,9 @@ export default function InvestorsPage() {
         </div>
 
         <p className="mt-14 border-t border-line pt-6 text-xs leading-relaxed text-ink-3">
-          <strong className="text-ink-2">Important notice.</strong> {company.name}{" "}
-          is a private limited company. Nothing on this page or website
-          constitutes a public offering, invitation, or solicitation to
+          <strong className="text-ink-2">Important notice.</strong>{" "}
+          {company.name} is a private limited company. Nothing on this page or
+          website constitutes a public offering, invitation, or solicitation to
           subscribe for securities, in Nepal or any other jurisdiction. Any
           investment would take place only through private, individually
           negotiated transactions with a limited number of persons, in

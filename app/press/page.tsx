@@ -7,18 +7,27 @@ export const metadata: Metadata = {
   title: "Press & Media",
   description:
     "Press kit and media contact for Himalaya Cannabis — Nepal's compliance-first medical and industrial hemp company. Boilerplate, brand assets, and interview requests.",
-    openGraph: {
+  openGraph: {
     title: "Press & Media — Himalaya Cannabis",
     description:
       "Press kit and media contact for Himalaya Cannabis — Nepal's compliance-first medical and industrial hemp company.",
     url: "https://himalayacannabis.com/press",
     type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/press/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Himalaya Cannabis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Press & Media — Himalaya Cannabis",
     description:
       "Press kit and media contact for Himalaya Cannabis — Nepal's compliance-first medical and industrial hemp company.",
+    images: ["https://himalayacannabis.com/press/opengraph-image.png"],
   },
   alternates: { canonical: "/press" },
 };
@@ -73,9 +82,9 @@ export default function PressPage() {
         <h2 className="mt-14 text-xl font-bold">Coverage</h2>
         <p className="mt-3 leading-relaxed text-ink-2">
           No press coverage yet — check back as our licensed operations come
-          online. Journalists covering Nepal&apos;s cannabis and hemp policy
-          are welcome to reach out for background, data, or interviews ahead
-          of publication.
+          online. Journalists covering Nepal&apos;s cannabis and hemp policy are
+          welcome to reach out for background, data, or interviews ahead of
+          publication.
         </p>
 
         <h2 className="mt-14 text-xl font-bold">Media inquiries</h2>
