@@ -26,7 +26,24 @@ export async function generateMetadata({
       type: "article",
       title: article.metaTitle,
       description: article.description,
+      url: `https://himalayacannabis.com/learn/${article.slug}/`,
       publishedTime: article.date,
+      images: [
+        {
+          url: `https://himalayacannabis.com/learn/${article.slug}/opengraph-image.png`,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.metaTitle,
+      description: article.description,
+      images: [
+        `https://himalayacannabis.com/learn/${article.slug}/opengraph-image.png`,
+      ],
     },
   };
 }
@@ -68,7 +85,7 @@ export default async function ArticlePage({
         datePublished: article.date,
         dateModified: article.date,
         inLanguage: "en",
-        image: `${url}opengraph-image`,
+        image: `${url}opengraph-image.png`,
         about: article.keywords.map((k) => ({ "@type": "Thing", name: k })),
         author: { "@id": "https://himalayacannabis.com/#organization" },
         publisher: { "@id": "https://himalayacannabis.com/#organization" },

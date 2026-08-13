@@ -20,11 +20,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const page = landingPages.find((p) => p.slug === slug);
   if (!page) return {};
+  const url = `https://himalayacannabis.com/${page.slug}/`;
+  const image = `${url}opengraph-image.png`;
   return {
     title: { absolute: page.metaTitle },
     description: page.description,
     keywords: page.keywords,
     alternates: { canonical: `/${page.slug}` },
+    openGraph: {
+      title: page.metaTitle,
+      description: page.description,
+      url,
+      type: "website",
+      images: [{ url: image, width: 1200, height: 630, alt: page.h1 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metaTitle,
+      description: page.description,
+      images: [image],
+    },
   };
 }
 

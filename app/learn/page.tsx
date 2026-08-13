@@ -16,7 +16,28 @@ export const metadata: Metadata = {
     "bhango",
     "Nepal cannabis law",
   ],
-
+  openGraph: {
+    title: "Learn — Cannabis & Hemp in Nepal",
+    description:
+      "Plain-language guides to cannabis, hemp, marijuana, and CBD in Nepal: the law, the history, the products, and the emerging medical and industrial framework.",
+    url: "https://himalayacannabis.com/learn/",
+    type: "website",
+    images: [
+      {
+        url: "https://himalayacannabis.com/learn/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Learn — Cannabis & Hemp in Nepal",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Learn — Cannabis & Hemp in Nepal",
+    description:
+      "Plain-language guides to cannabis, hemp, marijuana, and CBD in Nepal — the law, the history, and the products.",
+    images: ["https://himalayacannabis.com/learn/opengraph-image.png"],
+  },
   alternates: { canonical: "/learn" },
 };
 
