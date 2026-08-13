@@ -40,6 +40,22 @@ export default async function ArticlePage({
   const article = articles.find((a) => a.slug === slug);
   if (!article) notFound();
 
+  const url = `https://himalayacannabis.com/learn/${article.slug}/`;
+
+  // Glossary-style pages carry "Term — definition" lines; expose them as
+  // DefinedTerm entries so answer engines can cite individual definitions.
+  const definedTerms = article.sections
+    .flatMap((s) => s.ps)
+    .map((p) => {
+      const i = p.indexOf(" — ");
+      if (i === -1) return null;
+      const term = p.slice(0, i).trim();
+      const definition = p.slice(i + 3).trim();
+      if (!term || term.length > 60 || !definition) return null;
+      return { "@type": "DefinedTerm", name: term, description: definition };
+    })
+    .filter(Boolean);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -47,13 +63,32 @@ export default async function ArticlePage({
         "@type": "Article",
         headline: article.title,
         description: article.description,
-        abstract: article.keyPoints.join(" "),
+        abstract: article.answer,
+        articleBody: article.sections.flatMap((s) => s.ps).join(" "),
         datePublished: article.date,
         dateModified: article.date,
-        author: { "@type": "Organization", name: company.name },
-        publisher: { "@type": "Organization", name: company.name },
-        mainEntityOfPage: `https://himalayacannabis.com/learn/${article.slug}/`,
+        inLanguage: "en",
+        image: `${url}opengraph-image`,
+        about: article.keywords.map((k) => ({ "@type": "Thing", name: k })),
+        author: { "@id": "https://himalayacannabis.com/#organization" },
+        publisher: { "@id": "https://himalayacannabis.com/#organization" },
+        isPartOf: { "@id": "https://himalayacannabis.com/#website" },
+        mainEntityOfPage: url,
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["[data-answer]"],
+        },
       },
+      ...(definedTerms.length >= 4
+        ? [
+            {
+              "@type": "DefinedTermSet",
+              name: article.title,
+              url,
+              hasDefinedTerm: definedTerms,
+            },
+          ]
+        : []),
       {
         "@type": "FAQPage",
         mainEntity: article.faq.map((f) => ({
@@ -90,6 +125,18 @@ export default async function ArticlePage({
       </section>
 
       <article className="mx-auto max-w-3xl px-5 py-14">
+        {/* Direct answer — the passage answer engines extract. Kept first, short, and self-contained. */}
+        <section
+          aria-label="Short answer"
+          data-answer
+          className="mb-12 rounded-2xl border border-marigold/35 bg-ground-2 p-6"
+        >
+          <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-marigold">
+            Short answer
+          </h2>
+          <p className="mt-3 text-lg leading-relaxed text-ink">{article.answer}</p>
+        </section>
+
         <section aria-label="Key points" className="mb-12 border-y border-line py-6">
           <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-marigold">
             Key points

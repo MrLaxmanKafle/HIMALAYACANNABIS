@@ -51,6 +51,8 @@ Published: ${a.date}
 
 ${a.lede}
 
+ANSWER: ${a.answer}
+
 Key points:
 ${a.keyPoints.map((k) => `- ${k}`).join("\n")}
 
