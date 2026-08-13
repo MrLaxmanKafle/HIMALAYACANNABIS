@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { landingPages } from "@/lib/landing";
 import { company } from "@/lib/company";
 import { breadcrumbJsonLd } from "@/lib/seo";
+import { productCategories } from "@/lib/nav";
 
 export const dynamicParams = false;
 
@@ -45,6 +46,13 @@ export default async function KeywordLandingPage({
   const related = page.related
     .map((r) => landingPages.find((p) => p.slug === r))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
+
+  const categoryMeta = productCategories.find((c) => c.key === page.category);
+  const categoryLabel = categoryMeta?.label ?? "this range";
+  const categoryHub = categoryMeta?.hub;
+  const siblings = landingPages.filter(
+    (p) => p.category === page.category && p.slug !== page.slug
+  );
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -214,6 +222,37 @@ export default async function KeywordLandingPage({
           </Link>
         </div>
       </section>
+
+      {/* Full category index — keeps every page one click from its siblings
+          so nothing in the catalogue becomes an orphan. */}
+      {siblings.length > 0 && (
+        <section className="border-t border-line-2 bg-ground-2">
+          <div className="mx-auto max-w-6xl px-5 py-14">
+            <div className="flex flex-wrap items-baseline justify-between gap-3">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-3">
+                More in {categoryLabel}
+              </h2>
+              {categoryHub && categoryHub !== `/${page.slug}` && (
+                <Link href={categoryHub} className="text-sm font-semibold text-marigold hover:text-ink">
+                  Category overview →
+                </Link>
+              )}
+            </div>
+            <ul className="mt-5 grid gap-x-8 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-3">
+              {siblings.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    href={`/${s.slug}`}
+                    className="text-sm text-ink-2 hover:text-marigold"
+                  >
+                    {s.h1}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
     </>
   );
 }

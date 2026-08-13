@@ -1,3 +1,7 @@
+export type LandingCategory =
+  | "seed-oil" | "cannabinoid" | "seed-food" | "fibre"
+  | "essential-oil" | "finished" | "land" | "service";
+
 export type LandingPage = {
   slug: string;
   h1: string;
@@ -11,6 +15,7 @@ export type LandingPage = {
   offer: { title: string; items: string[] };
   faq: { q: string; a: string }[];
   inquirySubject: string;
+  category: LandingCategory;
   related: string[];
   howTo?: { name: string; text: string }[];
 };
@@ -79,6 +84,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     related: ["hemp-seeds-nepal", "hemp-fabric-nepal", "cbd-oil-nepal"],
   },
   {
@@ -135,6 +141,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Hemp fabric] Wholesale inquiry",
+    category: "fibre",
     related: ["hemp-clothing-manufacturer-nepal", "hemp-seed-oil-nepal", "hemp-exporter-nepal"],
   },
   {
@@ -191,6 +198,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Hemp seeds] Supply inquiry",
+    category: "seed-food",
     related: ["hemp-seed-oil-nepal", "cannabis-license-consulting-nepal", "hemp-farmland-nepal"],
   },
   {
@@ -249,6 +257,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[CBD] Wholesale interest",
+    category: "cannabinoid",
     related: ["hemp-seed-oil-nepal", "thc-testing-lab-nepal", "cannabis-license-consulting-nepal"],
   },
   {
@@ -303,6 +312,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Hemp clothing] Manufacturing inquiry",
+    category: "fibre",
     related: ["hemp-fabric-nepal", "hemp-exporter-nepal", "hemp-seed-oil-nepal"],
   },
   {
@@ -358,6 +368,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Testing lab] Service inquiry",
+    category: "service",
     related: ["agri-food-testing-lab-nepal", "cannabis-license-consulting-nepal", "hemp-seeds-nepal"],
   },
   {
@@ -413,6 +424,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Consulting] Licence readiness inquiry",
+    category: "service",
     related: ["thc-testing-lab-nepal", "hemp-seeds-nepal", "hemp-farmland-nepal"],
     howTo: [
       {
@@ -493,6 +505,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Export] Import partnership inquiry",
+    category: "service",
     related: ["hemp-fabric-nepal", "hemp-seed-oil-nepal", "hemp-clothing-manufacturer-nepal"],
   },
   {
@@ -548,6 +561,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Farmland] Land inquiry",
+    category: "land",
     related: ["cannabis-license-consulting-nepal", "hemp-seeds-nepal", "thc-testing-lab-nepal"],
   },
   {
@@ -603,6 +617,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Farmland Gandaki] Land inquiry",
+    category: "land",
     related: ["hemp-farmland-nepal", "hemp-farmland-karnali", "cannabis-license-consulting-nepal"],
   },
   {
@@ -658,6 +673,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Farmland Karnali] Land inquiry",
+    category: "land",
     related: ["hemp-farmland-nepal", "hemp-farmland-gandaki", "hemp-seeds-nepal"],
   },
   {
@@ -713,6 +729,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Farmland Sudurpashchim] Land inquiry",
+    category: "land",
     related: ["hemp-fabric-nepal", "hemp-farmland-nepal", "hemp-clothing-manufacturer-nepal"],
   },
   {
@@ -770,6 +787,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Allo & Fibre] Supply or wholesale inquiry",
+    category: "fibre",
     related: ["hemp-fabric-nepal", "hemp-farmland-sudurpashchim", "hemp-exporter-nepal"],
   },
   {
@@ -827,6 +845,7 @@ export const landingPages: LandingPage[] = [
       },
     ],
     inquirySubject: "[Agri-food testing] Service inquiry",
+    category: "service",
     related: ["thc-testing-lab-nepal", "hemp-exporter-nepal", "cannabis-license-consulting-nepal"],
   },
   {
@@ -872,6 +891,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Cold-pressed virgin hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "refined-hemp-seed-oil-nepal",
@@ -921,6 +941,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Refined (RBD) hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "cold-pressed-virgin-hemp-seed-oil-nepal",
@@ -970,6 +991,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Organic hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "cold-pressed-virgin-hemp-seed-oil-nepal",
@@ -1019,6 +1041,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Winterized hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "hemp-carrier-oil-nepal",
@@ -1067,6 +1090,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Unrefined crude hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "refined-hemp-seed-oil-nepal",
@@ -1116,6 +1140,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Dehulled kernel-pressed hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "hulled-hemp-hearts-nepal",
@@ -1164,6 +1189,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CO2-extracted hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "pharmaceutical-grade-hemp-seed-oil-nepal",
@@ -1212,6 +1238,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Food-grade hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "hemp-culinary-oil-nepal",
@@ -1260,6 +1287,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Pharmaceutical-grade hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "food-grade-hemp-seed-oil-nepal",
@@ -1308,6 +1336,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp carrier oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "winterized-hemp-seed-oil-nepal",
@@ -1356,6 +1385,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[High-GLA hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "cold-pressed-virgin-hemp-seed-oil-nepal",
@@ -1404,6 +1434,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Wild-harvested Himalayan hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "hemp-farmland-gandaki",
@@ -1453,6 +1484,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Bulk wholesale hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "unrefined-crude-hemp-seed-oil-nepal",
@@ -1501,6 +1533,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Private label hemp seed oil] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "bulk-wholesale-hemp-seed-oil-nepal",
@@ -1549,6 +1582,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp seed oil sample request] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "private-label-hemp-seed-oil-nepal",
@@ -1597,6 +1631,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Cannabis Sativa Seed Oil (INCI)] Wholesale inquiry",
+    category: "seed-oil",
     "related": [
       "hemp-seed-oil-nepal",
       "refined-hemp-seed-oil-nepal",
@@ -1644,6 +1679,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Full-spectrum hemp extract] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbd-oil-nepal",
       "broad-spectrum-cbd-distillate-nepal",
@@ -1691,6 +1727,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Broad-spectrum CBD distillate] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "full-spectrum-hemp-extract-nepal",
       "cbd-isolate-nepal",
@@ -1738,6 +1775,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBD crude extract] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "winterized-cbd-crude-nepal",
       "cbd-distillate-nepal",
@@ -1785,6 +1823,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Winterized CBD crude] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbd-crude-extract-nepal",
       "cbd-distillate-nepal",
@@ -1832,6 +1871,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBD distillate] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "winterized-cbd-crude-nepal",
       "crystal-resistant-cbd-distillate-nepal",
@@ -1879,6 +1919,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Crystal-resistant CBD distillate] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbd-distillate-nepal",
       "cbd-isolate-nepal",
@@ -1926,6 +1967,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[THC-free CBD distillate] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "broad-spectrum-cbd-distillate-nepal",
       "cbd-isolate-nepal",
@@ -1974,6 +2016,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBD isolate] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbg-isolate-nepal",
       "cbn-isolate-nepal",
@@ -2021,6 +2064,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBG isolate] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbd-isolate-nepal",
       "cbga-extract-nepal",
@@ -2068,6 +2112,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBN isolate] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbd-isolate-nepal",
       "cbg-isolate-nepal",
@@ -2115,6 +2160,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBC isolate] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbn-isolate-nepal",
       "cbg-isolate-nepal",
@@ -2162,6 +2208,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBDA raw hemp extract] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbga-extract-nepal",
       "full-spectrum-hemp-extract-nepal",
@@ -2209,6 +2256,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBGA extract] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbda-raw-hemp-extract-nepal",
       "cbg-isolate-nepal",
@@ -2256,6 +2304,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[THCV extract] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbga-extract-nepal",
       "minor-cannabinoids-nepal",
@@ -2303,6 +2352,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Water-soluble CBD] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "nano-emulsified-cbd-nepal",
       "cbd-isolate-nepal",
@@ -2350,6 +2400,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Nano-emulsified CBD] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "water-soluble-cbd-nepal",
       "cbd-in-mct-oil-nepal",
@@ -2397,6 +2448,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBD in MCT oil] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbd-in-hemp-seed-oil-tincture-nepal",
       "cbd-distillate-nepal",
@@ -2444,6 +2496,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[CBD in hemp seed oil tincture] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbd-in-mct-oil-nepal",
       "cbd-oil-nepal",
@@ -2492,6 +2545,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Minor cannabinoids] Wholesale interest",
+    category: "cannabinoid",
     "related": [
       "cbg-isolate-nepal",
       "cbn-isolate-nepal",
@@ -2539,6 +2593,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp flower essential oil] Wholesale interest",
+    category: "essential-oil",
     "related": [
       "hemp-terpene-blend-nepal",
       "hemp-hydrosol-nepal",
@@ -2586,6 +2641,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp terpene blend] Wholesale interest",
+    category: "essential-oil",
     "related": [
       "hemp-essential-oil-nepal",
       "cannabis-terpene-isolates-nepal",
@@ -2633,6 +2689,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Cannabis terpene isolates] Wholesale interest",
+    category: "essential-oil",
     "related": [
       "hemp-terpene-blend-nepal",
       "hemp-essential-oil-nepal",
@@ -2680,6 +2737,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp hydrosol] Wholesale interest",
+    category: "essential-oil",
     "related": [
       "hemp-essential-oil-nepal",
       "hemp-terpene-blend-nepal",
@@ -2727,6 +2785,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Whole hemp seed, bulk] Wholesale inquiry",
+    category: "seed-food",
     "related": [
       "hemp-seeds-nepal",
       "hulled-hemp-hearts-nepal",
@@ -2774,6 +2833,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hulled hemp hearts] Wholesale inquiry",
+    category: "seed-food",
     "related": [
       "whole-hemp-seed-bulk-nepal",
       "hemp-protein-powder-nepal",
@@ -2821,6 +2881,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp protein powder] Wholesale inquiry",
+    category: "seed-food",
     "related": [
       "hemp-press-cake-nepal",
       "hemp-flour-nepal",
@@ -2868,6 +2929,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp seed press cake] Wholesale inquiry",
+    category: "seed-food",
     "related": [
       "hemp-protein-powder-nepal",
       "hemp-flour-nepal",
@@ -2915,6 +2977,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp flour] Wholesale inquiry",
+    category: "seed-food",
     "related": [
       "hemp-press-cake-nepal",
       "hemp-protein-powder-nepal",
@@ -2961,6 +3024,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp face oil] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "cannabis-sativa-seed-oil-nepal",
       "hemp-body-butter-nepal",
@@ -3007,6 +3071,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp balm] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "hemp-face-oil-nepal",
       "hemp-lip-balm-nepal",
@@ -3053,6 +3118,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp hair oil] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "hemp-beard-oil-nepal",
       "hemp-massage-oil-nepal",
@@ -3099,6 +3165,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp soap] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "hemp-body-butter-nepal",
       "hemp-face-oil-nepal",
@@ -3145,6 +3212,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp massage oil] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "hemp-hair-oil-nepal",
       "hemp-carrier-oil-nepal",
@@ -3191,6 +3259,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp lip balm] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "hemp-balm-nepal",
       "hemp-gift-sets-nepal",
@@ -3237,6 +3306,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp body butter] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "hemp-balm-nepal",
       "hemp-face-oil-nepal",
@@ -3283,6 +3353,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp beard oil] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "hemp-hair-oil-nepal",
       "hemp-massage-oil-nepal",
@@ -3329,6 +3400,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Hemp culinary oil] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "food-grade-hemp-seed-oil-nepal",
       "hemp-gift-sets-nepal",
@@ -3376,6 +3448,7 @@ export const landingPages: LandingPage[] = [
       }
     ],
     "inquirySubject": "[Himalayan hemp gift sets] Retail/wholesale inquiry",
+    category: "finished",
     "related": [
       "hemp-face-oil-nepal",
       "hemp-balm-nepal",
