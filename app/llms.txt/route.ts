@@ -32,6 +32,7 @@ Key facts:
 - [Hemp Wellness Valley](${base}/hemp-wellness-valley/): Concept — a planned 500-ropani flagship site combining ayurvedic hemp spa, farm-to-table dining, transparency tours, eco-lodges, farmer training, and a heritage pavilion
 - [Careers](${base}/careers/): Cultivation, laboratory, product, compliance, hospitality, and sales roles as licensed operations come online
 - [Volunteer & Work-Exchange](${base}/volunteer/): Work-exchange placements, hospitality apprenticeships, research placements, corporate volunteer days, and NGO partnerships
+- [Nepal Cannabis Law Tracker](${base}/nepal-cannabis-tracker/): Current status of cannabis/hemp regulation in Nepal — federal law, Gandaki act, licensing gates, unresolved questions. Maintained reference.
 - [Compliance](${base}/compliance/): Licensing commitments and Nepal's legal framework
 - [FAQ](${base}/faq/): Common questions about legality, products, and supply
 - [Press & Media](${base}/press/): Boilerplate, company facts, and media contact

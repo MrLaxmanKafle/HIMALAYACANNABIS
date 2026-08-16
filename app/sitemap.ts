@@ -26,6 +26,7 @@ const staticRoutes: Entry[] = [
   { path: "/volunteer", lastmod: CONTENT_UPDATED, priority: 0.5 },
   { path: "/ne", lastmod: CONTENT_UPDATED, priority: 0.7 },
   { path: "/learn", lastmod: CONTENT_UPDATED, priority: 0.8 },
+  { path: "/nepal-cannabis-tracker", lastmod: CONTENT_UPDATED, priority: 0.9 },
   { path: "/compliance", lastmod: CONTENT_UPDATED, priority: 0.7 },
   { path: "/contact", lastmod: CONTENT_UPDATED, priority: 0.6 },
   { path: "/faq", lastmod: CONTENT_UPDATED, priority: 0.7 },

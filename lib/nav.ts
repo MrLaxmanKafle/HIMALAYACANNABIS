@@ -67,6 +67,7 @@ export const landLinks = [
 
 export const companyLinks = [
   { href: "/about", label: "About Us" },
+  { href: "/nepal-cannabis-tracker", label: "Nepal Cannabis Law Tracker" },
   { href: "/compliance", label: "Compliance & Licensing" },
   { href: "/investors", label: "Investors" },
   { href: "/hemp-wellness-valley", label: "Hemp Wellness Valley" },
