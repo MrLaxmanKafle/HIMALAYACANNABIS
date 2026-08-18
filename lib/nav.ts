@@ -49,6 +49,12 @@ export const productCategories: {
   },
 ];
 
+export const originLinks = [
+  { href: "/origin", label: "Marsyangdi Valley" },
+  { href: "/origin/standard", label: "Origin Standard" },
+  { href: "/traceability", label: "Traceability & Lot Records" },
+];
+
 export const serviceLinks = [
   { href: "/thc-testing-lab-nepal", label: "THC & CBD Testing Lab" },
   { href: "/agri-food-testing-lab-nepal", label: "Agri-Food Testing Lab" },

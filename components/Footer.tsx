@@ -3,6 +3,7 @@ import { company } from "@/lib/company";
 import Logo from "@/components/Logo";
 import {
   productCategories,
+  originLinks,
   serviceLinks,
   landLinks,
   companyLinks,
@@ -84,7 +85,8 @@ export default function Footer() {
       </div>
 
       {/* Services / Land / Learn / Company */}
-      <div className="mx-auto mt-14 grid max-w-6xl gap-10 border-t border-line-2 px-5 py-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto mt-14 grid max-w-6xl gap-10 border-t border-line-2 px-5 py-12 sm:grid-cols-2 lg:grid-cols-5">
+        <Column title="Origin" links={originLinks} />
         <Column title="Lab & Services" links={serviceLinks} />
         <Column title="Land & Farming" links={landLinks} />
         <Column title="Learn" links={learnLinks} />

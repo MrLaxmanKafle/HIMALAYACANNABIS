@@ -7,6 +7,7 @@ import { company } from "@/lib/company";
 import Logo from "@/components/Logo";
 import {
   productCategories,
+  originLinks,
   serviceLinks,
   landLinks,
   companyLinks,
@@ -14,7 +15,7 @@ import {
   countIn,
 } from "@/lib/nav";
 
-type MenuKey = "products" | "services" | "land" | "company";
+type MenuKey = "origin" | "products" | "services" | "land" | "company";
 
 const simpleLinks = [
   { href: "/learn", label: "Learn" },
@@ -93,6 +94,20 @@ export default function Header() {
         {/* Desktop nav */}
         <div ref={navRef} className="hidden items-center gap-6 lg:flex">
           <nav className="flex items-center gap-6" aria-label="Main">
+            {/* Origin */}
+            <div className="relative">
+              <button
+                type="button"
+                className={triggerClass(menu === "origin" || isActive("/origin"))}
+                aria-expanded={menu === "origin"}
+                aria-haspopup="true"
+                onClick={() => setMenu(menu === "origin" ? null : "origin")}
+              >
+                Origin <Chevron up={menu === "origin"} />
+              </button>
+              {menu === "origin" && <DropList items={originLinks} />}
+            </div>
+
             {/* Products mega menu */}
             <div className="relative">
               <button
@@ -240,6 +255,14 @@ export default function Header() {
           >
             Request a Quote
           </Link>
+
+          <MobileSection
+            label="Origin"
+            open={mobileSection === "origin"}
+            onToggle={() => setMobileSection(mobileSection === "origin" ? null : "origin")}
+          >
+            <MobileLinks items={originLinks} />
+          </MobileSection>
 
           <MobileSection
             label="Products"
