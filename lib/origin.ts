@@ -12,16 +12,29 @@
 
 export type ClaimStatus = "measured" | "reference" | "pending";
 
+/**
+ * The growing area is deliberately unnamed while plots are still being
+ * negotiated. Province is public (it is in our Memorandum of Association and on
+ * the farmland pages); the valley, district, and villages are not, until the
+ * condition in `disclosure.trigger` is met.
+ */
 export const appellation = {
-  name: "Marsyangdi Valley",
-  nameNepali: "मर्स्याङ्दी उपत्यका",
-  district: "Lamjung",
+  /** Formal term used throughout the standard. */
+  name: "The Defined Area",
   province: "Gandaki Province",
   country: "Nepal",
-  latitude: "28.2° N",
+  latitude: "≈28° N",
   altitudeBand: "1,200–2,200 m",
+  /** Placeholder segment in lot codes until the area is named. */
+  lotPrefix: "NP",
   summary:
-    "A defined stretch of the Marsyangdi river valley in Lamjung, Gandaki Province — the growing area whose soil, altitude, and genetics we are documenting lot by lot.",
+    "A defined stretch of mid-hill valley in Gandaki Province, Nepal, between 1,200 and 2,200 metres — the growing area whose soil, altitude, and genetics we are documenting lot by lot.",
+  disclosure: {
+    withheld: "Valley, district, and villages.",
+    why: "Land a company is known to want costs more than land nobody is asking about. Naming the valley before the plots are under contract means bidding against our own announcement, and it hands a competitor a map to the same ground.",
+    trigger:
+      "The area is named once every plot in the first block is under signed lease or sale agreement — and in any case no later than the first lot certificate. A lot record without a location is not traceability, so this is a deadline, not an intention.",
+  },
 };
 
 export type Parameter = {
@@ -106,62 +119,57 @@ export const standardVersion = "1.0 (draft for comment)";
 export const standardDate = "2026";
 
 export type Clause = {
-  n: number;
   title: string;
   body: string;
 };
 
 export const clauses: Clause[] = [
   {
-    n: 1,
     title: "Defined area",
     body:
-      "Origin may be claimed only for material grown within the Marsyangdi Valley area of Lamjung District, Gandaki Province, between 1,200 and 2,200 metres. Material grown outside that band may be bought, processed and sold by us, but it does not carry the origin mark and is labelled by its true source.",
+      "Origin may be claimed only for material grown within a single contiguous mid-hill valley area in Gandaki Province, Nepal, between 1,200 and 2,200 metres, recorded by plot in the registered plot schedule. Material grown outside that area may be bought, processed and sold by us, but it does not carry the origin mark and is labelled by its true source.",
   },
   {
-    n: 2,
+    title: "Disclosure of the defined area",
+    body:
+      "The valley, district and villages that make up the defined area are withheld while plots are under negotiation, for the commercial reason stated openly on the origin page. They are published once every plot in the first block is under signed lease or sale agreement, and in no case later than the first lot certificate — a lot record without a location is not traceability. Until then the area's identity sits with our counsel and is disclosed to any buyer under mutual non-disclosure on request.",
+  },
+  {
     title: "Soil qualification before planting",
     body:
       "No plot enters the programme until a full heavy-metal panel (minimum: cadmium, lead, arsenic, nickel, chromium, mercury) has been run on its soil by an accredited laboratory. Results are published with the plot record whether or not they are flattering. A plot that fails is recorded as failed and named.",
   },
   {
-    n: 3,
     title: "Agrochemical prohibition",
     body:
       "No synthetic pesticide, herbicide, or growth regulator on any qualifying plot, and none in the three seasons preceding first planting. The three-season look-back is by landholder declaration plus soil panel; where the two disagree, the panel governs.",
   },
   {
-    n: 4,
     title: "Lot integrity",
     body:
       "A lot is the harvest of one plot in one season, processed as one run. Lots are not blended across plots or across seasons under the origin mark. Blends are permitted, labelled as blends, and list their constituent lots.",
   },
   {
-    n: 5,
     title: "Testing",
     body:
       "Every lot is tested by an independent ISO/IEC 17025-accredited laboratory for cannabinoid profile, terpene profile, heavy metals, pesticide residue, residual solvent where applicable, and microbial load. We do not run our own compliance testing on our own material.",
   },
   {
-    n: 6,
     title: "Public certificate of analysis",
     body:
       "Every lot's full certificate of analysis is published at a permanent public URL, reachable without an account, a login, or a sales conversation. The URL is printed on the lot. It stays live after the lot sells out.",
   },
   {
-    n: 7,
     title: "No claim without a result",
     body:
       "No environmental or quality figure is stated as fact on our materials until the dated result exists and is published. Until then it is marked as pending, with the date we expect it. A claim we cannot show the paperwork for is a claim we do not make.",
   },
   {
-    n: 8,
     title: "Named growers",
     body:
       "Plots are recorded against the name of the household or cooperative farming them, published with their consent, together with plot size and the terms on which we buy. Anonymous supply does not carry the origin mark.",
   },
   {
-    n: 9,
     title: "Amendment in the open",
     body:
       "This standard is versioned. Changes are published with the date and the reason. Prior versions stay accessible, so that a lot certified under version 1.0 can always be read against the rules that were in force when it was certified.",
@@ -170,7 +178,7 @@ export const clauses: Clause[] = [
 
 /** What a lot record carries. Published before we have any lots, on purpose. */
 export const lotFields: { field: string; example: string; note: string }[] = [
-  { field: "Lot code", example: "MV-2027-A01", note: "Appellation, season, plot, run." },
+  { field: "Lot code", example: "NP-2027-A01", note: "Origin, season, plot, run. The origin segment becomes the area code on disclosure." },
   { field: "Plot", example: "Plot A — 0.8 ha, 1,640 m", note: "GPS to plot centroid, published." },
   { field: "Grower", example: "Named household or cooperative", note: "With consent, per clause 8." },
   { field: "Cultivar", example: "Landrace selection, generation recorded", note: "Seed source traced." },

@@ -10,18 +10,18 @@ import {
   type ClaimStatus,
 } from "@/lib/origin";
 
-const title = "Origin — The Marsyangdi Valley";
+const title = "Origin — A Valley We Have Not Named Yet";
 const description =
-  "Marsyangdi Valley, Lamjung — 1,200–2,200 m at 28° N. What we can prove about this growing area, what we have not measured yet, and the rules we publish lots against.";
+  "A mid-hill valley in Gandaki Province, Nepal, 1,200–2,200 m. What we can prove about this growing area, what we have not measured yet, and why we are not naming it until the plots are signed.";
 
 export const metadata: Metadata = {
-  title: "Origin — Marsyangdi Valley, Lamjung",
+  title: "Origin — Our Growing Area",
   description,
   keywords: [
     "Himalayan hemp terroir",
     "Nepal hemp origin",
-    "Marsyangdi Valley hemp",
-    "Lamjung hemp cultivation",
+    "Gandaki hemp cultivation",
+    "hemp soil heavy metals",
     "high altitude hemp Nepal",
     "Nepali landrace cannabis",
   ],
@@ -63,8 +63,8 @@ export default function OriginPage() {
       />
 
       <PageHero
-        title="The Marsyangdi Valley"
-        lede={`${appellation.altitudeBand} · ${appellation.latitude} · ${appellation.district}, ${appellation.province}. A defined growing area, and an honest account of what we have and have not measured in it.`}
+        title="A valley we have not named yet"
+        lede={`${appellation.altitudeBand} · ${appellation.latitude} · ${appellation.province}, ${appellation.country}. A defined growing area, an honest account of what we have and have not measured in it, and a plain reason for the one thing we are withholding.`}
       />
 
       {/* The premise — stated plainly, including what we cannot claim */}
@@ -102,6 +102,59 @@ export default function OriginPage() {
               instrument we are building to find out — published before we have
               anything to sell, so that the record cannot be tidied up later.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why the area is unnamed — answer the obvious objection immediately */}
+      <section className="border-t border-line-2">
+        <div className="mx-auto max-w-6xl px-5 py-16">
+          <div className="grid gap-10 rounded-2xl border border-line p-8 sm:p-10 lg:grid-cols-[1fr_1.3fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-marigold">
+                The one thing we are withholding
+              </p>
+              <h2 className="mt-4 text-[clamp(1.5rem,2.6vw,2rem)] font-bold leading-[1.14] tracking-[-0.01em]">
+                We name the province. We do not yet name the valley.
+              </h2>
+              <dl className="mt-8 space-y-4 text-sm">
+                <div className="flex justify-between gap-4 border-t border-line pt-3">
+                  <dt className="text-ink-3">Published</dt>
+                  <dd className="text-right font-semibold text-ink">
+                    {appellation.province}, {appellation.country}
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-4 border-t border-line pt-3">
+                  <dt className="text-ink-3">Published</dt>
+                  <dd className="text-right font-semibold text-ink">
+                    {appellation.altitudeBand} · {appellation.latitude}
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-4 border-t border-line pt-3">
+                  <dt className="text-ink-3">Withheld</dt>
+                  <dd className="text-right font-semibold text-ink-2">
+                    {appellation.disclosure.withheld}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <div className="space-y-5 leading-relaxed text-ink-2">
+              <p>{appellation.disclosure.why}</p>
+              <p>{appellation.disclosure.trigger}</p>
+              <p className="text-ink">
+                We would rather say plainly that we are holding something back,
+                and why, than be vague and hope nobody notices. Buyers who need
+                the location before then can have it under mutual
+                non-disclosure — it is clause 2 of the standard, not a
+                favour.
+              </p>
+              <p className="text-sm text-ink-3">
+                Nothing else on this page is withheld. Every measurement we take
+                is published whether or not it flatters us, including the ones
+                that are still blank.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -187,7 +240,8 @@ export default function OriginPage() {
               We wrote down what origin means here, so it can be held against us
             </h2>
             <p className="mt-5 leading-relaxed text-ink-2">
-              Nine clauses covering the defined area, soil qualification before
+              Ten clauses covering the defined area, when we disclose it, soil
+              qualification before
               planting, the agrochemical prohibition, lot integrity, independent
               testing, public certificates, named growers, and the rule that we
               state no figure we cannot show the paperwork for.
@@ -202,7 +256,7 @@ export default function OriginPage() {
 
           <div className="rounded-2xl border border-line p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-ink-3">
-              Clause 7
+              Clause 8
             </p>
             <blockquote className="mt-4 text-xl leading-relaxed text-ink">
               &ldquo;No environmental or quality figure is stated as fact on our
