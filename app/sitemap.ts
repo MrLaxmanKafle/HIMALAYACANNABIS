@@ -15,9 +15,6 @@ type Entry = { path: string; lastmod: string; priority: number };
 
 const staticRoutes: Entry[] = [
   { path: "", lastmod: CONTENT_UPDATED, priority: 1 },
-  { path: "/origin", lastmod: CONTENT_UPDATED, priority: 0.9 },
-  { path: "/origin/standard", lastmod: CONTENT_UPDATED, priority: 0.8 },
-  { path: "/traceability", lastmod: CONTENT_UPDATED, priority: 0.8 },
   { path: "/products", lastmod: CONTENT_UPDATED, priority: 0.9 },
   { path: "/quote", lastmod: CONTENT_UPDATED, priority: 0.9 },
   { path: "/services", lastmod: CONTENT_UPDATED, priority: 0.8 },
