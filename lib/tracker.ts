@@ -102,7 +102,7 @@ export const timeline: {
   {
     date: "Pending",
     label: "Gazette designation of districts",
-    body: "Cultivation is permitted only in districts designated by provincial gazette notice. No designation is known to have been published. Until one is, no application can proceed anywhere in the province.",
+    body: "Cultivation is permitted only in districts designated by provincial gazette notice. No designation is known to have been published. Until one is, no application can proceed — including in Lamjung.",
   },
   {
     date: "Pending",

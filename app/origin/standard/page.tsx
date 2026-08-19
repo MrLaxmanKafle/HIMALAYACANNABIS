@@ -4,9 +4,9 @@ import PageHero from "@/components/PageHero";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { appellation, clauses, standardVersion, standardDate } from "@/lib/origin";
 
-const title = "The Origin Standard";
+const title = "The Marsyangdi Valley Origin Standard";
 const description =
-  "Ten published clauses defining what origin means for Himalaya Cannabis: defined area, soil qualification before planting, agrochemical prohibition, lot integrity, independent testing, and public certificates of analysis.";
+  "Nine published clauses defining what origin means for Himalaya Cannabis: defined area, soil qualification before planting, agrochemical prohibition, lot integrity, independent testing, and public certificates of analysis.";
 
 export const metadata: Metadata = {
   title: "Origin Standard — Himalaya Cannabis",
@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   keywords: [
     "hemp origin standard",
     "cannabis appellation Nepal",
-    "Gandaki hemp origin",
     "hemp soil testing standard",
     "hemp traceability standard",
     "certificate of analysis hemp",
@@ -47,7 +46,7 @@ export default function StandardPage() {
 
       <PageHero
         title="Origin Standard"
-        lede="The rules material must meet to carry our origin mark. Published in full, versioned, and amendable only in the open."
+        lede={`The rules material must meet to carry the ${appellation.name} mark. Published in full, versioned, and amendable only in the open.`}
       />
 
       <section className="mx-auto max-w-6xl px-5 py-16">
@@ -66,10 +65,8 @@ export default function StandardPage() {
               <div>
                 <dt className="uppercase tracking-[0.14em] text-ink-3">Applies to</dt>
                 <dd className="mt-1 leading-relaxed text-ink-2">
-                  The defined area — {appellation.province}, {appellation.country}
-                  {" — "}
-                  {appellation.altitudeBand}. Valley and district withheld under
-                  clause 2.
+                  {appellation.name}, {appellation.district} District,{" "}
+                  {appellation.province} — {appellation.altitudeBand}
                 </dd>
               </div>
               <div>
@@ -100,13 +97,13 @@ export default function StandardPage() {
             </p>
 
             <ol className="mt-14">
-              {clauses.map((c, i) => (
+              {clauses.map((c) => (
                 <li
-                  key={c.title}
+                  key={c.n}
                   className="grid gap-3 border-t border-line py-8 last:border-b sm:grid-cols-[3.5rem_1fr] sm:gap-6"
                 >
                   <span className="text-sm font-semibold tabular-nums text-ink-3">
-                    {String(i + 1).padStart(2, "0")}
+                    {String(c.n).padStart(2, "0")}
                   </span>
                   <div>
                     <h2 className="text-xl font-bold">{c.title}</h2>

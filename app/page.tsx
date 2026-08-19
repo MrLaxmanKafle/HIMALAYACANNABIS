@@ -75,11 +75,9 @@ export default function HomePage() {
               Origin
             </p>
             <h2 className="mt-5 text-[clamp(1.9rem,3.5vw,2.8rem)] font-bold leading-[1.08] tracking-[-0.01em]">
-              A valley we
+              Marsyangdi Valley
               <br />
-              haven&apos;t named yet
-              <br />
-              <span className="text-ink-2">1,200–2,200 m · ≈28° N</span>
+              <span className="text-ink-2">1,200–2,200 m · 28° N</span>
             </h2>
             <p className="mt-6 leading-relaxed text-ink-2">
               Hemp is a hyperaccumulator — it draws whatever is in the soil up
@@ -92,8 +90,7 @@ export default function HomePage() {
               input. We think that is our strongest asset.{" "}
               <span className="text-ink">We have not proved it yet</span> — so
               rather than call ourselves premium, we published the rulebook and
-              the measurements we still owe you. We are also not naming the
-              valley until the plots are signed, and we say why.
+              the measurements we still owe you.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
@@ -117,7 +114,7 @@ export default function HomePage() {
               { k: "Soil composition & pH", v: "Not yet measured", s: true },
               { k: "Irrigation water", v: "Not yet measured", s: true },
               { k: "Cannabinoid profile", v: "Not yet measured", s: true },
-              { k: "Latitude", v: "≈28° N", s: false },
+              { k: "Latitude", v: "28.2° N", s: false },
               { k: "Altitude band", v: "1,200–2,200 m", s: false },
               { k: "Genetics", v: "Nepali landrace base", s: false },
             ].map((row) => (

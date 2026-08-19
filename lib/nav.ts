@@ -50,7 +50,7 @@ export const productCategories: {
 ];
 
 export const originLinks = [
-  { href: "/origin", label: "Our Growing Area" },
+  { href: "/origin", label: "Marsyangdi Valley" },
   { href: "/origin/standard", label: "Origin Standard" },
   { href: "/traceability", label: "Traceability & Lot Records" },
 ];

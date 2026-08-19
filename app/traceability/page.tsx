@@ -86,21 +86,17 @@ export default function TraceabilityPage() {
         <div className="mx-auto max-w-6xl px-5 py-16">
           <h2 className="text-2xl font-bold">Anatomy of a lot code</h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-ink-2">
-            Printed on the lot, and resolvable to its record. The first segment
-            becomes the area code once the growing area is disclosed.
+            Printed on the lot, and resolvable to its record.
           </p>
           <div className="mt-10 overflow-x-auto">
             <div className="inline-block min-w-full">
               <p className="font-mono text-4xl font-bold tracking-tight text-marigold sm:text-5xl">
-                NP<span className="text-ink-3">-</span>2027
+                MV<span className="text-ink-3">-</span>2027
                 <span className="text-ink-3">-</span>A01
               </p>
               <dl className="mt-8 grid gap-6 sm:grid-cols-3">
                 {[
-                  {
-                    k: "NP",
-                    v: "Origin. A placeholder until the growing area is named — see clause 2",
-                  },
+                  { k: "MV", v: `${appellation.name} — the defined origin area` },
                   { k: "2027", v: "Season of harvest" },
                   { k: "A01", v: "Plot A, first processing run of that season" },
                 ].map((x) => (
