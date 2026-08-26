@@ -139,7 +139,11 @@ export default async function KeywordLandingPage({
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-5">
             <Link
-              href={`/quote?product=${page.slug}`}
+              // Slash before the query string: next/link normalises this when
+              // it renders, but the raw prop is also serialised into the RSC
+              // payload, where Google's renderer finds it and crawls the
+              // unslashed URL — which then redirects.
+              href={`/quote/?product=${page.slug}`}
               className="inline-block rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
             >
               Request a quote
