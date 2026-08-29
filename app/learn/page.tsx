@@ -63,7 +63,7 @@ export default function LearnPage() {
           {articles.map((a) => (
             <Link
               key={a.slug}
-              href={`/learn/${a.slug}`}
+              href={`/learn/${a.slug}/`}
               className="group block py-8"
             >
               <h2 className="text-2xl font-bold transition-colors group-hover:text-marigold">

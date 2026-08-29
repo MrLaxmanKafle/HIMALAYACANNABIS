@@ -48,30 +48,30 @@ const breadcrumbJsonLd_services = breadcrumbJsonLd([
 const relatedLinks: Record<string, { href: string; label: string }[]> = {
   "THC/CBD Testing Laboratory": [
     {
-      href: "/thc-testing-lab-nepal",
+      href: "/thc-testing-lab-nepal/",
       label: "More on our testing laboratory →",
     },
     {
-      href: "/agri-food-testing-lab-nepal",
+      href: "/agri-food-testing-lab-nepal/",
       label: "Agri-food testing (coffee, tea, spice) →",
     },
   ],
   "Seed Supply & Genetics": [
-    { href: "/hemp-seeds-nepal", label: "Hemp seeds & cultivars →" },
-    { href: "/hemp-farmland-nepal", label: "Farmland for cultivation →" },
+    { href: "/hemp-seeds-nepal/", label: "Hemp seeds & cultivars →" },
+    { href: "/hemp-farmland-nepal/", label: "Farmland for cultivation →" },
   ],
   "Seed-to-Sale & Compliance Systems": [
     {
-      href: "/cannabis-license-consulting-nepal",
+      href: "/cannabis-license-consulting-nepal/",
       label: "Licensing consultancy →",
     },
   ],
   "Consultancy & Training": [
     {
-      href: "/cannabis-license-consulting-nepal",
+      href: "/cannabis-license-consulting-nepal/",
       label: "Licensing consultancy →",
     },
-    { href: "/careers", label: "Join our team →" },
+    { href: "/careers/", label: "Join our team →" },
   ],
 };
 
@@ -137,7 +137,7 @@ export default function ServicesPage() {
             </p>
           </div>
           <Link
-            href="/contact"
+            href="/contact/"
             className="rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
           >
             Talk to us

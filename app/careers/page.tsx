@@ -135,7 +135,7 @@ export default function CareersPage() {
           <p className="mt-6 text-sm text-ink-3">
             Not looking for paid work? See our{" "}
             <Link
-              href="/volunteer"
+              href="/volunteer/"
               className="font-semibold text-marigold hover:text-ink"
             >
               Volunteer & Work-Exchange

@@ -11,12 +11,12 @@ import {
 } from "@/lib/nav";
 
 const learnLinks = [
-  { href: "/nepal-cannabis-tracker", label: "Nepal Cannabis Law Tracker" },
-  { href: "/learn/is-cannabis-legal-in-nepal", label: "Is cannabis legal in Nepal?" },
-  { href: "/learn/hemp-vs-marijuana-difference", label: "Hemp vs marijuana" },
-  { href: "/learn/hemp-seed-oil-vs-cbd-oil", label: "Hemp seed oil vs CBD oil" },
-  { href: "/learn/hemp-cannabis-glossary-nepal", label: "Hemp & cannabis glossary" },
-  { href: "/learn", label: "All guides →" },
+  { href: "/nepal-cannabis-tracker/", label: "Nepal Cannabis Law Tracker" },
+  { href: "/learn/is-cannabis-legal-in-nepal/", label: "Is cannabis legal in Nepal?" },
+  { href: "/learn/hemp-vs-marijuana-difference/", label: "Hemp vs marijuana" },
+  { href: "/learn/hemp-seed-oil-vs-cbd-oil/", label: "Hemp seed oil vs CBD oil" },
+  { href: "/learn/hemp-cannabis-glossary-nepal/", label: "Hemp & cannabis glossary" },
+  { href: "/learn/", label: "All guides →" },
 ];
 
 function Column({
@@ -123,7 +123,7 @@ export default function Footer() {
             not engage in any transaction for recreational purposes.
           </p>
           <Link
-            href="/quote"
+            href="/quote/"
             className="mt-5 inline-block rounded-full bg-marigold px-6 py-2.5 text-sm font-semibold text-ground transition-colors hover:bg-ink"
           >
             Request a Quote
@@ -138,8 +138,8 @@ export default function Footer() {
             the licences and approvals required under the prevailing laws of Nepal.
           </p>
           <p className="flex gap-4">
-            <Link href="/privacy" className="hover:text-ink">Privacy</Link>
-            <Link href="/terms" className="hover:text-ink">Terms</Link>
+            <Link href="/privacy/" className="hover:text-ink">Privacy</Link>
+            <Link href="/terms/" className="hover:text-ink">Terms</Link>
           </p>
         </div>
       </div>

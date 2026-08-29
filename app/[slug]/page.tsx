@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { landingPages } from "@/lib/landing";
 import { company } from "@/lib/company";
 import { breadcrumbJsonLd } from "@/lib/seo";
+import { withSlash } from "@/lib/href";
 import { productCategories } from "@/lib/nav";
 
 export const dynamicParams = false;
@@ -143,7 +144,7 @@ export default async function KeywordLandingPage({
               // it renders, but the raw prop is also serialised into the RSC
               // payload, where Google's renderer finds it and crawls the
               // unslashed URL — which then redirects.
-              href={`/quote/?product=${page.slug}`}
+              href={withSlash(`/quote?product=${page.slug}`)}
               className="inline-block rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
             >
               Request a quote
@@ -243,14 +244,14 @@ export default async function KeywordLandingPage({
           {related.map((r) => (
             <Link
               key={r.slug}
-              href={`/${r.slug}`}
+              href={withSlash(`/${r.slug}`)}
               className="font-semibold text-marigold hover:text-ink"
             >
               {r.h1} →
             </Link>
           ))}
           <Link
-            href="/land"
+            href="/land/"
             className="font-semibold text-marigold hover:text-ink"
           >
             Hemp &amp; cannabis farmland →
@@ -280,7 +281,7 @@ export default async function KeywordLandingPage({
               {siblings.map((s) => (
                 <li key={s.slug}>
                   <Link
-                    href={`/${s.slug}`}
+                    href={withSlash(`/${s.slug}`)}
                     className="text-sm text-ink-2 hover:text-marigold"
                   >
                     {s.h1}

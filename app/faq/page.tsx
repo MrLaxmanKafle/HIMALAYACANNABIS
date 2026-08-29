@@ -126,7 +126,7 @@ export default function FaqPage() {
         <p className="mt-10 text-ink-2">
           Something else?{" "}
           <Link
-            href="/contact"
+            href="/contact/"
             className="font-semibold text-marigold hover:text-ink"
           >
             Ask us directly

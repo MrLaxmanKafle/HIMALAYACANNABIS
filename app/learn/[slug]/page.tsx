@@ -135,7 +135,7 @@ export default async function ArticlePage({
       <section className="border-b border-line-2">
         <div className="mx-auto max-w-3xl px-5 pb-14 pt-16">
           <Link
-            href="/learn"
+            href="/learn/"
             className="text-sm font-semibold text-marigold hover:text-ink"
           >
             ← Learn
@@ -214,13 +214,13 @@ export default async function ArticlePage({
             recreational transactions.
           </p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm font-semibold">
-            <Link href="/products" className="text-marigold hover:text-ink">
+            <Link href="/products/" className="text-marigold hover:text-ink">
               Our products
             </Link>
-            <Link href="/compliance" className="text-marigold hover:text-ink">
+            <Link href="/compliance/" className="text-marigold hover:text-ink">
               How we comply
             </Link>
-            <Link href="/contact" className="text-marigold hover:text-ink">
+            <Link href="/contact/" className="text-marigold hover:text-ink">
               Contact us
             </Link>
           </div>

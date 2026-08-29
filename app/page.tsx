@@ -40,13 +40,13 @@ export default function HomePage() {
           </p>
           <div className="rise rise-4 mt-10 flex flex-wrap gap-4">
             <Link
-              href="/products"
+              href="/products/"
               className="rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
             >
               Explore products
             </Link>
             <Link
-              href="/investors"
+              href="/investors/"
               className="rounded-full border border-line px-7 py-3 font-medium text-ink transition-colors hover:border-ink"
             >
               Invest with us
@@ -87,7 +87,7 @@ export default function HomePage() {
               className="group border-t border-line last:border-b"
             >
               <Link
-                href={`/products#${cat.slug}`}
+                href={`/products/#${cat.slug}`}
                 className="grid gap-2 py-7 transition-colors sm:grid-cols-[4rem_1fr_auto] sm:items-baseline sm:gap-6"
               >
                 <span className="text-sm font-semibold text-ink-3 tabular-nums">
@@ -134,7 +134,7 @@ export default function HomePage() {
                 industry needs — testing, traceability, and know-how.
               </p>
               <Link
-                href="/services"
+                href="/services/"
                 className="mt-8 inline-block text-sm font-semibold text-marigold hover:text-ink"
               >
                 About our services →
@@ -165,7 +165,7 @@ export default function HomePage() {
           , one licensed harvest at a time.
         </p>
         <Link
-          href="/about"
+          href="/about/"
           className="mt-10 inline-block rounded-full border border-line px-7 py-3 font-medium transition-colors hover:border-ink"
         >
           Our story
@@ -181,32 +181,32 @@ export default function HomePage() {
           <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                href: "/learn",
+                href: "/learn/",
                 label: "Learn: Cannabis in Nepal",
                 body: "Plain-language guides to the law, the history, and the plant.",
               },
               {
-                href: "/land",
+                href: "/land/",
                 label: "Hemp Farmland",
                 body: "Landowners and buyers — lease, sell, or invest in licensed hemp land.",
               },
               {
-                href: "/hemp-wellness-valley",
+                href: "/hemp-wellness-valley/",
                 label: "Hemp Wellness Valley",
                 body: "A planned 500-ropani wellness and agritourism destination.",
               },
               {
-                href: "/careers",
+                href: "/careers/",
                 label: "Careers",
                 body: "Cultivation, lab, product, and hospitality roles as we grow.",
               },
               {
-                href: "/volunteer",
+                href: "/volunteer/",
                 label: "Volunteer & Work-Exchange",
                 body: "Work-exchange placements and partnerships for universities and NGOs.",
               },
               {
-                href: "/press",
+                href: "/press/",
                 label: "Press & Media",
                 body: "Boilerplate, company facts, and media contact.",
               },

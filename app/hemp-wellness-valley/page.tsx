@@ -248,7 +248,7 @@ export default function WellnessValleyPage() {
             Register interest
           </a>
           <Link
-            href="/land"
+            href="/land/"
             className="rounded-full border border-line px-7 py-3 font-medium transition-colors hover:border-ink"
           >
             Our land programme →

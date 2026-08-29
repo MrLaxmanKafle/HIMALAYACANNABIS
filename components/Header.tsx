@@ -17,8 +17,8 @@ import {
 type MenuKey = "products" | "services" | "land" | "company";
 
 const simpleLinks = [
-  { href: "/learn", label: "Learn" },
-  { href: "/ne", label: "नेपाली" },
+  { href: "/learn/", label: "Learn" },
+  { href: "/ne/", label: "नेपाली" },
 ];
 
 export default function Header() {
@@ -128,10 +128,10 @@ export default function Header() {
                     ))}
                   </div>
                   <div className="mt-2 flex items-center justify-between border-t border-line px-3 pt-3">
-                    <Link href="/products" className="text-sm font-semibold text-marigold hover:text-ink">
+                    <Link href="/products/" className="text-sm font-semibold text-marigold hover:text-ink">
                       All product lines →
                     </Link>
-                    <Link href="/quote" className="text-sm font-semibold text-ink-2 hover:text-marigold">
+                    <Link href="/quote/" className="text-sm font-semibold text-ink-2 hover:text-marigold">
                       Request a quote →
                     </Link>
                   </div>
@@ -170,7 +170,7 @@ export default function Header() {
             </div>
 
             <Link
-              href="/learn"
+              href="/learn/"
               className={`text-sm transition-colors ${
                 isActive("/learn") ? "font-semibold text-marigold" : "text-ink-2 hover:text-ink"
               }`}
@@ -193,7 +193,7 @@ export default function Header() {
             </div>
 
             <Link
-              href="/ne"
+              href="/ne/"
               className={`text-sm transition-colors ${
                 isActive("/ne") ? "font-semibold text-marigold" : "text-ink-2 hover:text-ink"
               }`}
@@ -203,7 +203,7 @@ export default function Header() {
           </nav>
 
           <Link
-            href="/quote"
+            href="/quote/"
             className="shrink-0 rounded-full bg-marigold px-5 py-2 text-sm font-semibold text-ground transition-colors hover:bg-ink"
           >
             Request a Quote
@@ -235,7 +235,7 @@ export default function Header() {
           aria-label="Mobile"
         >
           <Link
-            href="/quote"
+            href="/quote/"
             className="mt-4 block rounded-full bg-marigold px-5 py-2.5 text-center font-semibold text-ground"
           >
             Request a Quote
@@ -263,7 +263,7 @@ export default function Header() {
                 </ul>
               </div>
             ))}
-            <Link href="/products" className="mt-2 block font-semibold text-marigold">
+            <Link href="/products/" className="mt-2 block font-semibold text-marigold">
               All product lines →
             </Link>
           </MobileSection>
@@ -284,7 +284,7 @@ export default function Header() {
             <MobileLinks items={landLinks} />
           </MobileSection>
 
-          <Link href="/learn" className="block border-b border-line py-3 font-medium text-ink-2 hover:text-ink">
+          <Link href="/learn/" className="block border-b border-line py-3 font-medium text-ink-2 hover:text-ink">
             Learn
           </Link>
 
@@ -296,7 +296,7 @@ export default function Header() {
             <MobileLinks items={companyLinks} />
           </MobileSection>
 
-          <Link href="/ne" className="block py-3 font-medium text-ink-2 hover:text-ink">
+          <Link href="/ne/" className="block py-3 font-medium text-ink-2 hover:text-ink">
             नेपाली
           </Link>
         </nav>

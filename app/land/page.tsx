@@ -146,7 +146,7 @@ export default function LandPage() {
             economy.
           </p>
           <Link
-            href="/contact"
+            href="/contact/"
             className="mt-6 inline-block rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
           >
             Offer your land
@@ -234,13 +234,13 @@ export default function LandPage() {
 
           <div className="mt-12 flex flex-wrap gap-4">
             <Link
-              href="/contact"
+              href="/contact/"
               className="rounded-full bg-marigold px-7 py-3 font-semibold text-ground transition-colors hover:bg-ink"
             >
               Offer your land
             </Link>
             <Link
-              href="/learn"
+              href="/learn/"
               className="rounded-full border border-line px-7 py-3 font-medium transition-colors hover:border-ink"
             >
               Learn about hemp in Nepal

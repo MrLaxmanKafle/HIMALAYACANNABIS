@@ -87,7 +87,7 @@ export default function QuotePage() {
           </a>
           . For investment discussions specifically, see our{" "}
           <a
-            href="/investors"
+            href="/investors/"
             className="font-semibold text-marigold hover:text-ink"
           >
             Investors page

@@ -101,7 +101,7 @@ export default function AboutPage() {
           <p>
             We are equally committed to building the sector around us: a{" "}
             <Link
-              href="/services"
+              href="/services/"
               className="font-semibold text-marigold hover:text-ink"
             >
               certified THC/CBD testing laboratory, seed supply, seed-to-sale
@@ -111,7 +111,7 @@ export default function AboutPage() {
             this industry safely and legally. See exactly how we stay within the
             law on our{" "}
             <Link
-              href="/compliance"
+              href="/compliance/"
               className="font-semibold text-marigold hover:text-ink"
             >
               Compliance & Licensing
@@ -126,21 +126,21 @@ export default function AboutPage() {
           <p className="text-base">
             Want to be part of it?{" "}
             <Link
-              href="/careers"
+              href="/careers/"
               className="font-semibold text-marigold hover:text-ink"
             >
               See open roles
             </Link>
             ,{" "}
             <Link
-              href="/volunteer"
+              href="/volunteer/"
               className="font-semibold text-marigold hover:text-ink"
             >
               volunteer with us
             </Link>
             , or{" "}
             <Link
-              href="/investors"
+              href="/investors/"
               className="font-semibold text-marigold hover:text-ink"
             >
               explore investing

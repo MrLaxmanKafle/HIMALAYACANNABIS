@@ -154,7 +154,7 @@ export default function VolunteerPage() {
             by paid, trained, and (where required) licence-registered staff.
             Looking for paid work instead?{" "}
             <Link
-              href="/careers"
+              href="/careers/"
               className="font-semibold text-marigold hover:text-ink"
             >
               See Careers

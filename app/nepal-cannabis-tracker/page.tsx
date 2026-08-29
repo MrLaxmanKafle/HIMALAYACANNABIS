@@ -303,13 +303,13 @@ export default function TrackerPage() {
         </div>
 
         <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-8">
-          <Link href="/learn/is-cannabis-legal-in-nepal" className="font-semibold text-marigold hover:text-ink">
+          <Link href="/learn/is-cannabis-legal-in-nepal/" className="font-semibold text-marigold hover:text-ink">
             Is cannabis legal in Nepal? →
           </Link>
-          <Link href="/cannabis-license-consulting-nepal" className="font-semibold text-marigold hover:text-ink">
+          <Link href="/cannabis-license-consulting-nepal/" className="font-semibold text-marigold hover:text-ink">
             Licence readiness →
           </Link>
-          <Link href="/compliance" className="font-semibold text-marigold hover:text-ink">
+          <Link href="/compliance/" className="font-semibold text-marigold hover:text-ink">
             How we comply →
           </Link>
         </div>
