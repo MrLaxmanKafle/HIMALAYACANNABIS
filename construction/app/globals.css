@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/**
+ * Design direction: an engineering document, not a brochure.
+ *
+ * The audience is procurement officers, engineers and prequalification
+ * committees. That audience reads drawings, specifications and bid documents
+ * all day, and reads a glossy marketing site as a company with more budget for
+ * photography than for site records. So: paper ground, graphite ink, hairline
+ * rules that behave like drawing borders, monospace for every technical figure,
+ * and one safety-amber accent used sparingly enough that it still means
+ * something when it appears.
+ */
+
+@theme {
+  /* Ground — concrete and paper */
+  --color-paper: oklch(0.976 0.003 95);
+  --color-paper-2: oklch(0.945 0.004 95);
+  --color-paper-3: oklch(0.912 0.005 95);
+
+  /* Ink — graphite, cool rather than warm black */
+  --color-ink: oklch(0.235 0.012 250);
+  --color-ink-2: oklch(0.455 0.012 250);
+  --color-ink-3: oklch(0.6 0.01 250);
+
+  /* Inverse ground for dark sections */
+  --color-graphite: oklch(0.215 0.014 250);
+  --color-graphite-2: oklch(0.275 0.016 250);
+  --color-graphite-3: oklch(0.34 0.016 250);
+  --color-on-graphite: oklch(0.955 0.004 95);
+  --color-on-graphite-2: oklch(0.775 0.008 250);
+
+  /* Accents */
+  --color-amber: oklch(0.735 0.155 68);
+  --color-amber-deep: oklch(0.6 0.14 62);
+  --color-survey: oklch(0.52 0.115 232);
+
+  /* Hairlines — drawing borders, not shadows */
+  --color-line: oklch(0.235 0.012 250 / 0.16);
+  --color-line-2: oklch(0.235 0.012 250 / 0.08);
+  --color-line-inv: oklch(0.955 0.004 95 / 0.16);
+  --color-line-inv-2: oklch(0.955 0.004 95 / 0.08);
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Noto Sans Devanagari", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+    "Liberation Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-graphite);
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-amber-deep);
+  outline-offset: 3px;
+}
+
+/**
+ * Survey grid. A faint measured grid behind hero sections — the paper an
+ * engineering drawing is set out on. Kept very low contrast so it reads as
+ * texture rather than decoration.
+ */
+.survey-grid {
+  background-image:
+    linear-gradient(to right, var(--color-line-2) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-line-2) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.survey-grid-inv {
+  background-image:
+    linear-gradient(to right, var(--color-line-inv-2) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-line-inv-2) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Technical label: the caption style used on drawings and schedules. */
+.tech-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Long-form article body. */
+.prose-doc h2 {
+  font-size: 1.5rem;
+  font-weight: 650;
+  margin-top: 2.75rem;
+  margin-bottom: 0.875rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-line-2);
+}
+
+.prose-doc p {
+  margin-bottom: 1.125rem;
+  line-height: 1.75;
+  color: var(--color-ink-2);
+}
+
+.prose-doc p:first-of-type {
+  color: var(--color-ink);
+}
+
+.prose-doc li {
+  line-height: 1.7;
+  color: var(--color-ink-2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .rise-1 { animation-delay: 0.05s; }
+  .rise-2 { animation-delay: 0.13s; }
+  .rise-3 { animation-delay: 0.21s; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

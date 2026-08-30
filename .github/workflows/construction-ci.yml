@@ -1,0 +1,47 @@
+name: Construction site — build & lint
+
+# The repository's GitHub Pages deployment serves the cannabis site from the
+# root. This workflow does not deploy; it verifies that the construction site
+# in construction/ still builds and lints, so the project cannot rot while it
+# waits for its own domain and hosting.
+
+on:
+  push:
+    paths:
+      - "construction/**"
+      - ".github/workflows/construction-ci.yml"
+  pull_request:
+    paths:
+      - "construction/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: construction
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: construction/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - name: Check the export produced pages and OG images
+        run: |
+          test -f out/index.html
+          test -f out/robots.txt
+          test -f out/llms.txt
+          test -f out/llms-full.txt
+          pages=$(find out -name index.html | wc -l)
+          ogs=$(find out -name 'opengraph-image.png' | wc -l)
+          echo "pages: $pages, og images: $ogs"
+          test "$pages" -gt 30
+          test "$ogs" -gt 30
