@@ -12,9 +12,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Staging copy of the Sanjal app — a separate project with its own
-    // toolchain, awaiting a move to its own repository.
-    "sanjal/**",
   ]),
 ]);
 
