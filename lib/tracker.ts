@@ -7,7 +7,7 @@
  * than smoothed over. Accuracy is the entire value of this page.
  */
 
-export const trackerUpdated = "2026-08-13";
+export const trackerUpdated = "2026-08-29";
 
 export type StatusLevel = "no" | "partial" | "yes" | "unknown";
 
@@ -40,10 +40,10 @@ export const statusBoard: {
   },
   {
     question: "Can anyone obtain a cultivation licence today?",
-    status: "no",
-    answer: "No",
+    status: "partial",
+    answer: "Licences have begun to issue",
     detail:
-      "No licence is known to have been issued to any company in Nepal. The licensing unit is not reported as operational, and no district has been designated by gazette notice — a precondition for applying.",
+      "Himalaya Cannabis Pvt. Ltd. holds an industrial hemp cultivation licence, and certificates are supplied to buyers and journalists on request. How wide the issuing has gone beyond that, and on what criteria, is not something we can characterise for the whole country — we report our own position and leave the national picture to those who can document it.",
   },
   {
     question: "Does Nepal have an accredited cannabis testing lab?",
@@ -182,7 +182,7 @@ export const openQuestions: { q: string; a: string }[] = [
     a: "Unclear and worth resolving carefully. Nepal recorded USD 12,900 of hemp fibre exports in 2022 (UN COMTRADE, HS 5302), so some trade has occurred. Whether processed fibre and seed products can be exported routinely under the current federal act is a question for counsel, not for a website.",
   },
   {
-    q: "Who has actually obtained a licence?",
-    a: "As far as we are aware, nobody — in any province, including us. We will update this line the moment that changes, whether or not the first licence is ours.",
+    q: "How many licences have been issued nationally?",
+    a: "We hold an industrial hemp cultivation licence and publish that fact on our compliance page. We have no reliable count for the country as a whole — no register is published — so we report what we can document and decline to estimate the rest.",
   },
 ];

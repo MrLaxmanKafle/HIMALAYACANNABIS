@@ -56,7 +56,7 @@ const jsonLd = {
       headline: TITLE,
       description: DESC,
       abstract:
-        "Recreational cannabis is illegal in Nepal. Industrial hemp is not yet lawful at federal level. Gandaki Province enacted a cannabis act on 3 August 2026 over the Province Chief's objection, but no district has been designated by gazette notice and no cultivation licence is known to have been issued to anyone.",
+        "Recreational cannabis is illegal in Nepal. Industrial hemp is not yet lawful at federal level, and Gandaki Province enacted a cannabis act on 3 August 2026 over the Province Chief's objection — leaving the two unresolved. Himalaya Cannabis holds an industrial hemp cultivation licence. No accredited cannabis testing laboratory yet operates in the country.",
       datePublished: trackerUpdated,
       dateModified: trackerUpdated,
       inLanguage: "en",
@@ -143,11 +143,12 @@ export default function TrackerPage() {
           </h2>
           <p data-answer className="mt-3 text-lg leading-relaxed text-ink">
             Recreational cannabis is illegal in Nepal. Industrial hemp is not yet
-            lawful at federal level. Gandaki Province enacted a cannabis act on
-            3 August 2026 over its Province Chief&apos;s written objection — but
-            no district has been designated by gazette notice, no accredited
-            testing laboratory exists in the country, and no cultivation licence
-            is known to have been issued to anyone, including us.
+            lawful at federal level, and Gandaki Province enacted a cannabis act
+            on 3 August 2026 over its Province Chief&apos;s written objection —
+            leaving the relationship between the two unresolved. Himalaya
+            Cannabis holds an industrial hemp cultivation licence; we cannot
+            speak to how many others do. No accredited cannabis testing
+            laboratory yet operates inside the country.
           </p>
         </div>
       </section>

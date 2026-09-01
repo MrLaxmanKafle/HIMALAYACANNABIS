@@ -58,12 +58,14 @@ export default function HomePage() {
       {/* Compliance line — one quiet sentence, not a badge strip */}
       <section className="border-y border-line-2">
         <p className="mx-auto max-w-6xl px-5 py-5 text-sm leading-relaxed text-ink-2">
-          <span className="font-semibold text-ink">
-            Licensed activities only.
-          </span>{" "}
-          Industrial hemp below 0.3% THC · every product laboratory-tested · no
-          recreational sales, ever — it&apos;s written into our founding
-          documents.
+          <span className="font-semibold text-ink">Licensed.</span>{" "}
+          Cultivation, processing and export licences held · industrial hemp
+          below 0.3% THC · every lot laboratory-tested · no recreational sales,
+          ever — it&apos;s written into our founding documents.{" "}
+          <Link href="/compliance/" className="underline hover:text-ink">
+            See the register
+          </Link>
+          .
         </p>
       </section>
 

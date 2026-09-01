@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { breadcrumbJsonLd } from "@/lib/seo";
+import { licences, isVerifiable, accreditedTestingAvailable } from "@/lib/licence";
 
 export const metadata: Metadata = {
   title: "Cannabis Compliance & Licensing — Nepal Hemp Law",
@@ -81,8 +82,92 @@ export default function CompliancePage() {
 
       <PageHero
         title="Compliance & Licensing"
-        lede="Operating legally is not a constraint on our business — it is our business. Here is exactly how we work."
+        lede="Operating legally is not a constraint on our business — it is our business. Here are the licences we hold, what each one permits, and the limits we state rather than gloss."
       />
+
+      {/* Licence register — renders from lib/licence.ts so the claim can only be
+          as strong as the recorded evidence. */}
+      <section className="border-b border-line-2 bg-ink/[0.02]">
+        <div className="mx-auto max-w-3xl px-5 py-16">
+          <h2 className="text-2xl font-bold">What we are authorised to do</h2>
+          <p className="mt-4 leading-relaxed text-ink-2">
+            Four instruments, listed with the body that issued each one. Buyers
+            conducting supplier due diligence should ask for the certificates —
+            we send them on request, and we would think less of a buyer who did
+            not ask.
+          </p>
+
+          <dl className="mt-10 divide-y divide-line border-y border-line">
+            {licences.map((l) => (
+              <div key={l.key} className="py-7">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+                  <dt className="font-bold">
+                    {l.name}
+                    {l.nameNepali && (
+                      <span className="ml-2.5 text-sm font-normal text-ink-3">
+                        {l.nameNepali}
+                      </span>
+                    )}
+                  </dt>
+                  <span
+                    className={`shrink-0 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] ${
+                      isVerifiable(l)
+                        ? "border-marigold/50 bg-marigold/10 text-marigold"
+                        : "border-line text-ink-3"
+                    }`}
+                  >
+                    {isVerifiable(l) ? "Reference published" : "On request"}
+                  </span>
+                </div>
+
+                <dd className="mt-3 leading-relaxed text-ink-2">{l.scope}</dd>
+
+                {isVerifiable(l) ? (
+                  <dl className="mt-4 grid gap-x-8 gap-y-1.5 text-sm sm:grid-cols-[8rem_1fr]">
+                    <dt className="text-ink-3">Issuing authority</dt>
+                    <dd className="text-ink">{l.authority}</dd>
+                    <dt className="text-ink-3">Reference</dt>
+                    <dd className="font-mono text-ink">{l.number}</dd>
+                    {l.issued && (
+                      <>
+                        <dt className="text-ink-3">Issued</dt>
+                        <dd className="text-ink">{l.issued}</dd>
+                      </>
+                    )}
+                    {l.validTo && (
+                      <>
+                        <dt className="text-ink-3">Valid to</dt>
+                        <dd className="text-ink">{l.validTo}</dd>
+                      </>
+                    )}
+                  </dl>
+                ) : (
+                  <p className="mt-4 text-sm text-ink-3">
+                    {l.authority
+                      ? `Issued by ${l.authority}. Certificate reference supplied to buyers on request.`
+                      : "Certificate supplied to buyers on request."}
+                  </p>
+                )}
+
+                {l.limits && (
+                  <p className="mt-4 border-l-2 border-line pl-4 text-sm leading-relaxed text-ink-2">
+                    {l.limits}
+                  </p>
+                )}
+              </div>
+            ))}
+          </dl>
+
+          {!accreditedTestingAvailable && (
+            <p className="mt-8 text-sm leading-relaxed text-ink-3">
+              One gap we state rather than gloss: no accredited cannabis testing
+              laboratory is yet operating inside Nepal. Until one is, lot testing
+              for export goes to an accredited laboratory abroad, and the
+              certificate names that laboratory.
+            </p>
+          )}
+        </div>
+      </section>
 
       <section className="mx-auto max-w-3xl px-5 py-16">
         <h2 className="text-2xl font-bold">Our commitments</h2>
