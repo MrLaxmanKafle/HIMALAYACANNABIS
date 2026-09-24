@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512" role="img" aria-label="Himalaya Cannabis">
+  <title>Himalaya Cannabis Pvt. Ltd. — single colour</title>
+  <!--
+    Single-colour mark. One solid fill, no opacity, no gradient — reproduces on
+    a stamp, an embosser, a one-colour print run, an engraved plate or a fax.
+    Recolour by changing `fill` on the group.
+
+    Note the peaks and leaf are separated vertically. In the full-colour logo
+    they overlap and are told apart by colour; with a single fill they would
+    merge into one unreadable silhouette, so this version spaces them.
+  -->
+  <g fill="#1b1b1b">
+    <!-- Peaks -->
+    <g transform="translate(32,17) scale(0.74) translate(-28,-29.5)">
+      <path d="M4 46 L20 20 L27.5 32 L36 13 L52 46 Z"/>
+    </g>
+    <!-- Hemp leaf, lobes thickened so they survive ink spread at small sizes -->
+    <g transform="translate(32,45) scale(0.82) translate(-32,-47)">
+      <path d="M32 61 C32 54 32 50.5 32 47 C33.4 51 36.6 53.6 40.6 54.4 C37.8 50.6 35.9 47.8 35.2 45 C37.8 47.8 41.6 49.2 45.4 48.6 C41.6 46 38.9 43.4 37.4 40.4 C40 42 43.4 42.2 46.4 41 C42.9 39.4 39.9 37.6 38.1 35.2 L32 41.4 L25.9 35.2 C24.1 37.6 21.1 39.4 17.6 41 C20.6 42.2 24 42 26.6 40.4 C25.1 43.4 22.4 46 18.6 48.6 C22.4 49.2 26.2 47.8 28.8 45 C28.1 47.8 26.2 50.6 23.4 54.4 C27.4 53.6 30.6 51 32 47 Z"/>
+    </g>
+  </g>
+</svg>
