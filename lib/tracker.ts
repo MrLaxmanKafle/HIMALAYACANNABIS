@@ -7,7 +7,7 @@
  * than smoothed over. Accuracy is the entire value of this page.
  */
 
-export const trackerUpdated = "2026-08-29";
+export const trackerUpdated = "2026-10-16";
 
 export type StatusLevel = "no" | "partial" | "yes" | "unknown";
 
@@ -85,7 +85,7 @@ export const timeline: {
   {
     date: "24 Jul 2026",
     label: "Province Chief refuses assent",
-    body: "Assent is withheld under Article 201(3), on the stated ground that the act conflicts with the federal Narcotic Drugs (Control) Act. The objection is public and reasoned — which makes it a roadmap for any future legal challenge.",
+    body: "Province Chief Dilliraj Bhatta withholds assent under Article 201(3) and returns the bill with a three-point message, on the stated ground that it conflicts with the federal Narcotic Drugs (Control) Act. The objection is public and reasoned — which makes it a roadmap for any future legal challenge.",
     weight: "major",
   },
   {
@@ -100,14 +100,20 @@ export const timeline: {
     weight: "major",
   },
   {
+    date: "16 Oct 2026",
+    label: "Ten weeks on, nothing has moved",
+    body: "Checked again on this date: no rules under Section 31, no ministry standards, no gazette designation of any area, and no public indication that the Cannabis Cultivation Regulation and Management Unit is operating. The act has been law for ten weeks and the machinery it depends on does not yet exist. We record the absence of news because, for anyone planning around this framework, the absence is the news.",
+    weight: "major",
+  },
+  {
     date: "Pending",
     label: "Gazette designation of districts",
-    body: "Cultivation is permitted only in districts designated by provincial gazette notice. No designation is known to have been published. Until one is, no application can proceed — including in Lamjung.",
+    body: "Cultivation is permitted only in areas designated by provincial gazette notice. Designation is made by the ministry on the recommendation of the Cannabis Cultivation Regulation and Management Unit — the body the act creates to issue licences and carry out inspections. No designation is known to have been published.",
   },
   {
     date: "Pending",
     label: "Draft regulations",
-    body: "The regulations that will govern application, inspection, and enforcement have not been published. Their terms will determine whether the framework is commercially workable.",
+    body: "Rules must be framed by the provincial government under Section 31 of the act, with ministry standards beneath them, before the licensing machinery can operate at all. Neither has been published. Their terms will determine whether the framework is commercially workable.",
   },
 ];
 
@@ -167,7 +173,7 @@ export const licenceRequirements: {
 export const openQuestions: { q: string; a: string }[] = [
   {
     q: "Will the Gandaki act survive a constitutional challenge?",
-    a: "Unresolved. The act is in force, was passed unanimously twice, and the Chief Minister is reported to chair its steering committee. Against that, the Province Chief's written objection is public and citable by any challenger, and the federal/provincial jurisdiction question has not been settled for this subject matter. Anyone telling you the outcome is certain in either direction is guessing.",
+    a: "Unresolved. The act is in force, was passed unanimously twice, and the Chief Minister is reported to chair its steering committee. Against that, the Province Chief's written objection is public and citable by any challenger, and the federal/provincial jurisdiction question has not been settled for this subject matter. Gandaki's chief attorney has argued publicly that the act is consistent with the Constitution and with existing law. Anyone telling you the outcome is certain in either direction is guessing.",
   },
   {
     q: "Does a provincial licence protect against federal prosecution?",
