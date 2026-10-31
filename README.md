@@ -63,3 +63,7 @@ Pushing to `claude/himalayacannabis-development-ype4jb` (the default branch) or 
 builds the static export and deploys it to GitHub Pages via
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The site is served at
 himalayacannabis.com (`public/CNAME`), so `BASE_PATH` must stay unset.
+
+## License
+
+[MIT](LICENSE) © 2026 Laxman Kafle. Built by [Laxman Kafle](https://laxmankafle.com).
