@@ -2,6 +2,7 @@ import { company } from "@/lib/company";
 import { withSlash } from "@/lib/href";
 import type { LandingPage } from "@/lib/landing";
 import { productCategories } from "@/lib/nav";
+import { specPropertiesFor } from "@/lib/specs";
 
 const BASE = "https://himalayacannabis.com";
 
@@ -51,6 +52,9 @@ export function productJsonLd(page: LandingPage) {
         name: "Supply status",
         value: page.statusNote,
       },
+      // The technical sheet, machine-readable — this is what an assistant
+      // answering "who supplies cold-pressed hemp seed oil" can actually quote.
+      ...specPropertiesFor(page),
     ],
   };
 

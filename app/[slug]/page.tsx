@@ -6,6 +6,7 @@ import { company } from "@/lib/company";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { withSlash } from "@/lib/href";
 import { productJsonLd } from "@/lib/product-schema";
+import SpecSheet from "@/components/SpecSheet";
 import { productCategories } from "@/lib/nav";
 
 export const dynamicParams = false;
@@ -223,6 +224,8 @@ export default async function KeywordLandingPage({
           </ul>
         </aside>
       </section>
+
+      <SpecSheet page={page} />
 
       <section className="border-y border-line-2 bg-ground-2">
         <div className="mx-auto max-w-3xl px-5 py-16">
