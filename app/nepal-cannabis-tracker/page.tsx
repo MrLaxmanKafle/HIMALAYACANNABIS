@@ -56,7 +56,7 @@ const jsonLd = {
       headline: TITLE,
       description: DESC,
       abstract:
-        "Recreational cannabis is illegal in Nepal. Industrial hemp is not yet lawful at federal level, and Gandaki Province enacted a cannabis act on 3 August 2026 over the Province Chief's objection — leaving the two unresolved. Himalaya Cannabis holds an industrial hemp cultivation licence. No accredited cannabis testing laboratory yet operates in the country.",
+        "Recreational cannabis remains illegal in Nepal and cultivation is still unlawful federally. On 1 November 2026 the Supreme Court ordered the government to build a cannabis licensing framework within three months. Gandaki Province enacted its own act on 3 August 2026, but its licensing machinery is not yet operating. No accredited cannabis testing laboratory yet operates in the country.",
       datePublished: trackerUpdated,
       dateModified: trackerUpdated,
       inLanguage: "en",
@@ -142,13 +142,16 @@ export default function TrackerPage() {
             The short answer
           </h2>
           <p data-answer className="mt-3 text-lg leading-relaxed text-ink">
-            Recreational cannabis is illegal in Nepal. Industrial hemp is not yet
-            lawful at federal level, and Gandaki Province enacted a cannabis act
-            on 3 August 2026 over its Province Chief&apos;s written objection —
-            leaving the relationship between the two unresolved. Himalaya
-            Cannabis holds an industrial hemp cultivation licence; we cannot
-            speak to how many others do. No accredited cannabis testing
-            laboratory yet operates inside the country.
+            Recreational cannabis remains illegal in Nepal, and cultivation is
+            still unlawful federally. On 1 November 2026 the Supreme Court
+            ordered the government to build a licensing framework for medicinal,
+            scientific, agricultural and industrial cannabis within three months
+            — the most consequential move since the 1976 ban. Gandaki Province
+            enacted its own cannabis act on 3 August 2026 over the Province
+            Chief&apos;s written objection, and its licensing machinery is not
+            yet operating. Himalaya Cannabis holds an industrial hemp
+            cultivation licence; we cannot speak to how many others do. No
+            accredited cannabis testing laboratory yet operates in the country.
           </p>
         </div>
       </section>

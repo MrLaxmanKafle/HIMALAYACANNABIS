@@ -7,7 +7,7 @@
  * than smoothed over. Accuracy is the entire value of this page.
  */
 
-export const trackerUpdated = "2026-10-16";
+export const trackerUpdated = "2026-11-04";
 
 export type StatusLevel = "no" | "partial" | "yes" | "unknown";
 
@@ -27,9 +27,9 @@ export const statusBoard: {
   {
     question: "Is industrial hemp legal at federal level?",
     status: "no",
-    answer: "Not yet",
+    answer: "Not yet — but the Supreme Court has ordered a framework",
     detail:
-      "The Narcotic Drugs (Control) Act, 2033 makes no distinction between industrial hemp and drug-type cannabis, and sets no THC threshold. A federal reform bill drafted by the Ministries of Finance and Home Affairs is reported to exist but has not passed.",
+      "The Narcotic Drugs (Control) Act, 2033 still makes no distinction between industrial hemp and drug-type cannabis and sets no THC threshold, so cultivation remains unlawful federally today. On 1 November 2026 the Supreme Court issued a mandamus directing the government to put the necessary legal provisions in place within three months — regulations, standards and procedures made under that same Act. The prohibition has not been lifted; a deadline to replace it with a licensing regime has been set.",
   },
   {
     question: "Has any province legalised cultivation?",
@@ -97,6 +97,12 @@ export const timeline: {
     date: "3 Aug 2026",
     label: "Authenticated — it is law",
     body: "The act is authenticated under Article 201(4) and takes effect in Gandaki Province, with a 0.3% THC ceiling for industrial cultivation and mandatory pre-harvest certified laboratory testing.",
+    weight: "major",
+  },
+  {
+    date: "1 Nov 2026",
+    label: "Supreme Court orders a federal framework",
+    body: "A joint bench of Justices Nahakul Subedi and Til Prasad Shrestha issues a mandamus directing the government to frame regulations, standards and procedures under the Narcotic Drugs (Control) Act, 2033 itself, and to establish a licensing and monitoring mechanism covering commercial cultivation, production, processing, storage, use, sale, distribution, export and import for medicinal, scientific, agricultural, horticultural and industrial purposes. The government has three months from receiving the order. Recreational use is expressly left out and referred for wider consultation, and existing penalties for consumption are untouched. This is the most consequential development since 1976: it does not make cultivation lawful, but it puts a federal deadline on building the regime that would.",
     weight: "major",
   },
   {
@@ -173,11 +179,15 @@ export const licenceRequirements: {
 export const openQuestions: { q: string; a: string }[] = [
   {
     q: "Will the Gandaki act survive a constitutional challenge?",
-    a: "Unresolved. The act is in force, was passed unanimously twice, and the Chief Minister is reported to chair its steering committee. Against that, the Province Chief's written objection is public and citable by any challenger, and the federal/provincial jurisdiction question has not been settled for this subject matter. Gandaki's chief attorney has argued publicly that the act is consistent with the Constitution and with existing law. Anyone telling you the outcome is certain in either direction is guessing.",
+    a: "Unresolved. The act is in force, was passed unanimously twice, and the Chief Minister is reported to chair its steering committee. Against that, the Province Chief's written objection is public and citable by any challenger, and the federal/provincial jurisdiction question has not been settled for this subject matter. Gandaki's chief attorney has argued publicly that the act is consistent with the Constitution and with existing law, on the ground that agriculture is an exclusive provincial subject under Schedule 6. The Supreme Court's 1 November order cuts across the question from a different angle: a federal licensing regime built under the Narcotic Drugs (Control) Act would remove much of the conflict the Province Chief objected to, by supplying the federal basis the provincial act was said to lack. Anyone telling you the outcome is certain in either direction is still guessing.",
   },
   {
     q: "Does a provincial licence protect against federal prosecution?",
     a: "On the face of the provincial act, no — it provides that criminal violations fall under federal narcotics law. This is the exposure that any operator, investor, or director should obtain written legal advice on before committing capital.",
+  },
+  {
+    q: "Will the government meet the three-month deadline?",
+    a: "Unknown, and worth watching closely — it falls around the start of February 2027. A mandamus sets an obligation, not a guarantee of performance, and Nepal has missed court-set deadlines on other subjects before. What makes this one different is that it creates a federal duty to regulate rather than merely permitting a province to: if the regulations appear, the central legal objection to provincial frameworks largely dissolves. If they do not, the sector stays where it has been since 1976.",
   },
   {
     q: "When will districts be designated?",
@@ -185,7 +195,7 @@ export const openQuestions: { q: string; a: string }[] = [
   },
   {
     q: "Can hemp products be exported from Nepal?",
-    a: "Unclear and worth resolving carefully. Nepal recorded USD 12,900 of hemp fibre exports in 2022 (UN COMTRADE, HS 5302), so some trade has occurred. Whether processed fibre and seed products can be exported routinely under the current federal act is a question for counsel, not for a website.",
+    a: "Clearer than it was, and still not settled. Nepal recorded USD 12,900 of hemp fibre exports in 2022 (UN COMTRADE, HS 5302), so some trade has occurred. The Supreme Court's 1 November order expressly directs that the licensing mechanism cover export and import — the first time a federal instrument has addressed cannabis export directly. Until those regulations exist, what may lawfully leave the country is still a question for counsel, not for a website.",
   },
   {
     q: "How many licences have been issued nationally?",
