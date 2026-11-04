@@ -5,6 +5,7 @@ import { landingPages } from "@/lib/landing";
 import { company } from "@/lib/company";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { withSlash } from "@/lib/href";
+import { productJsonLd } from "@/lib/product-schema";
 import { productCategories } from "@/lib/nav";
 
 export const dynamicParams = false;
@@ -86,6 +87,7 @@ export default async function KeywordLandingPage({
         url: `https://himalayacannabis.com/${page.slug}/`,
         provider: { "@type": "Organization", name: company.name },
       },
+      productJsonLd(page),
       {
         "@type": "FAQPage",
         mainEntity: page.faq.map((f) => ({

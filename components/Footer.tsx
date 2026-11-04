@@ -50,6 +50,12 @@ export default function Footer() {
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-3">
           Products &amp; Markets
         </p>
+        <Link
+          href="/shop/"
+          className="mt-2 inline-block text-sm font-semibold text-marigold hover:text-ink"
+        >
+          Browse the full catalogue →
+        </Link>
         <div className="mt-6 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {productCategories.map((c) => (
             <div key={c.key}>

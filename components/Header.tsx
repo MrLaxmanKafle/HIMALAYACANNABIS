@@ -128,8 +128,8 @@ export default function Header() {
                     ))}
                   </div>
                   <div className="mt-2 flex items-center justify-between border-t border-line px-3 pt-3">
-                    <Link href="/products/" className="text-sm font-semibold text-marigold hover:text-ink">
-                      All product lines →
+                    <Link href="/shop/" className="text-sm font-semibold text-marigold hover:text-ink">
+                      Browse all 68 products →
                     </Link>
                     <Link href="/quote/" className="text-sm font-semibold text-ink-2 hover:text-marigold">
                       Request a quote →
@@ -263,8 +263,8 @@ export default function Header() {
                 </ul>
               </div>
             ))}
-            <Link href="/products/" className="mt-2 block font-semibold text-marigold">
-              All product lines →
+            <Link href="/shop/" className="mt-2 block font-semibold text-marigold">
+              Browse all 68 products →
             </Link>
           </MobileSection>
 
