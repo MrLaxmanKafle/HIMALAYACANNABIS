@@ -63,3 +63,44 @@ Pushing to `claude/himalayacannabis-development-ype4jb` (the default branch) or 
 builds the static export and deploys it to GitHub Pages via
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The site is served at
 himalayacannabis.com (`public/CNAME`), so `BASE_PATH` must stay unset.
+
+### GitHub Pages needs the repository to be public
+
+GitHub Pages does not serve a **private** repository on the free plan. Making this
+repository private switches Pages off, which takes the live site down and makes every
+subsequent deploy fail at the `configure-pages` step with:
+
+```
+Get Pages site failed. Error: Not Found
+Create Pages site failed. Error: Resource not accessible by integration
+```
+
+That second line is not a permissions bug to chase. `GITHUB_TOKEN` can deploy *to*
+Pages but cannot switch Pages *on*, so `enablement: true` cannot recover from this by
+itself. Two things have to be true, and neither can be set from CI:
+
+1. The repository is public (or the account is on GitHub Pro, which allows Pages on
+   private repositories).
+2. **Settings → Pages → Build and deployment → Source** is set to **GitHub Actions**.
+
+Re-enabling Pages also clears the custom domain, so check `himalayacannabis.com` is
+still set in **Settings → Pages → Custom domain** afterwards. `public/CNAME` re-applies
+it on deploy, but the domain verification lives in repository settings.
+
+### Keeping the repository private: Cloudflare Pages
+
+Cloudflare Pages serves private repositories on the free plan, is a faster CDN than
+GitHub Pages, and includes cookieless analytics the site otherwise has none of. The
+build is an ordinary static export, so no code changes are needed:
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | None |
+| Build command | `npm run build` |
+| Output directory | `out` |
+| Node version | `22` (set `NODE_VERSION=22` as a build variable) |
+| Environment | leave `BASE_PATH` unset |
+
+Then point `himalayacannabis.com` at the Cloudflare Pages project and remove the
+GitHub Pages workflow. `public/CNAME` is a GitHub Pages file and is ignored elsewhere;
+it is harmless to leave in place.
