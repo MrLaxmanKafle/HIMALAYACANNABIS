@@ -101,6 +101,32 @@ build is an ordinary static export, so no code changes are needed:
 | Node version | `22` (set `NODE_VERSION=22` as a build variable) |
 | Environment | leave `BASE_PATH` unset |
 
-Then point `himalayacannabis.com` at the Cloudflare Pages project and remove the
-GitHub Pages workflow. `public/CNAME` is a GitHub Pages file and is ignored elsewhere;
-it is harmless to leave in place.
+`public/_headers` is already in the repository. Cloudflare Pages reads it for cache
+and security headers; GitHub Pages ignores it, so it is safe to ship before migrating.
+
+#### Cutover order
+
+Do it in this order so the site is never down. GitHub Pages keeps serving until the
+last step.
+
+1. In Cloudflare, create a Pages project and connect this repository, with the build
+   settings above. Deploy it and check the generated `*.pages.dev` URL serves the site.
+2. Add `himalayacannabis.com` as a custom domain **on the Cloudflare Pages project**.
+   Cloudflare will tell you the DNS record it wants.
+3. Only once the `pages.dev` build is confirmed good, point the apex DNS at Cloudflare.
+   Propagation is usually minutes, but allow for the TLS certificate to issue.
+4. Confirm `https://himalayacannabis.com` serves from Cloudflare.
+5. Now, and not before, make the repository private again if you want to, and delete
+   `.github/workflows/deploy.yml`. Leaving the workflow in place on a private
+   repository just produces a failing run on every push.
+
+`public/CNAME` is a GitHub Pages file and is ignored by Cloudflare. Leave it until
+step 5; delete it with the workflow.
+
+#### Headers not set here
+
+`Strict-Transport-Security` and a `Content-Security-Policy` are both worth adding and
+neither is in `public/_headers`, because both can take a site down in ways that are
+awkward to reverse — HSTS pins browsers to HTTPS for its `max-age`, and a CSP that
+misses a font or image host silently breaks the page. Add them once the site is
+serving somewhere you can load and test it.
