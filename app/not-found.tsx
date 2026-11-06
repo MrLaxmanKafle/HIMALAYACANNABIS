@@ -1,5 +1,20 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Logo from "@/components/Logo";
+
+/**
+ * Without this the 404 inherits the root layout's metadata, which means every
+ * missing URL served this page declared the homepage's title AND a canonical
+ * pointing at the homepage — telling Google a not-found page *is* the homepage.
+ * noindex stops the soft-404 being indexed; the empty canonical override keeps
+ * it from claiming to be another page.
+ */
+export const metadata: Metadata = {
+  title: "Page not found",
+  description: "This page does not exist or has moved.",
+  robots: { index: false, follow: true },
+  alternates: {},
+};
 
 export default function NotFound() {
   return (
