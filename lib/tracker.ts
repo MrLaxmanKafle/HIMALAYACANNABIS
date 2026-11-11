@@ -7,7 +7,7 @@
  * than smoothed over. Accuracy is the entire value of this page.
  */
 
-export const trackerUpdated = "2026-11-04";
+export const trackerUpdated = "2026-11-11";
 
 export type StatusLevel = "no" | "partial" | "yes" | "unknown";
 
@@ -102,7 +102,7 @@ export const timeline: {
   {
     date: "1 Nov 2026",
     label: "Supreme Court orders a federal framework",
-    body: "A joint bench of Justices Nahakul Subedi and Til Prasad Shrestha issues a mandamus directing the government to frame regulations, standards and procedures under the Narcotic Drugs (Control) Act, 2033 itself, and to establish a licensing and monitoring mechanism covering commercial cultivation, production, processing, storage, use, sale, distribution, export and import for medicinal, scientific, agricultural, horticultural and industrial purposes. The government has three months from receiving the order. Recreational use is expressly left out and referred for wider consultation, and existing penalties for consumption are untouched. This is the most consequential development since 1976: it does not make cultivation lawful, but it puts a federal deadline on building the regime that would.",
+    body: "A joint bench of Justices Nahakul Subedi and Til Prasad Shrestha issues a mandamus directing the government to frame regulations, standards and procedures under the Narcotic Drugs (Control) Act, 2033 itself, and to establish a licensing and monitoring mechanism covering commercial cultivation, production, processing, storage, use, sale, distribution, export and import for medicinal, scientific, agricultural, horticultural and industrial purposes. The stated basis is that the government failed, over a prolonged period, to exercise the rule-making authority the Act already delegates to it. The government has three months from receiving the order, and any rules must satisfy both domestic law and the 1961 UN Single Convention on Narcotic Drugs — a real constraint on how permissive they can be. Recreational use is expressly left out and referred for wider consultation, and existing penalties for consumption are untouched. This is the most consequential development since 1976: it does not make cultivation lawful, but it puts a federal deadline on building the regime that would.",
     weight: "major",
   },
   {
@@ -184,6 +184,10 @@ export const openQuestions: { q: string; a: string }[] = [
   {
     q: "Does a provincial licence protect against federal prosecution?",
     a: "On the face of the provincial act, no — it provides that criminal violations fall under federal narcotics law. This is the exposure that any operator, investor, or director should obtain written legal advice on before committing capital.",
+  },
+  {
+    q: "When does the three-month clock actually start?",
+    a: "Genuinely unclear, and it matters. Most reporting treats the order as made on 1 November 2026. At least one wire account instead dates the ruling to May 2025 and says the court\u2019s records were destroyed in a fire during the September protests, with the full text only published in late 2026. The order runs three months from when the government receives it, so a 2025 ruling published in 2026 and a 2026 ruling imply very different deadlines. We have not seen the judgment itself and are not going to pick between the accounts on the strength of secondary reporting.",
   },
   {
     q: "Will the government meet the three-month deadline?",

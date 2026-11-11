@@ -106,8 +106,61 @@ function merge(base: SpecRow[], over?: SpecRow[]): SpecRow[] {
   return out;
 }
 
+
+/* ---------------------------------------------------------------------------
+ * Fibre line.
+ *
+ * Allo (Girardinia diversifolia) and hemp bast are the only products here that
+ * are legal, uncontrolled and available today, so the figures matter more than
+ * anywhere else on the site — a textile buyer evaluates bast fibre on staple
+ * length, fineness and moisture regain the way an oil buyer evaluates on fatty
+ * acids. Ranges are typical for hand-processed Himalayan bast, not measured
+ * values from our own bales; the page says so.
+ * ------------------------------------------------------------------------- */
+
+const ALLO_IDENTITY: SpecRow[] = [
+  { k: "Common name", v: "Allo — Himalayan giant nettle" },
+  { k: "Botanical source", v: "Girardinia diversifolia, inner bark (bast)" },
+  { k: "Nepali name", v: "अल्लो" },
+  { k: "HS heading", v: "5303 / 5305 — other vegetable textile fibres" },
+  { k: "Harvest", v: "Wild-collected, 1,200–3,000 m" },
+  { k: "Country of origin", v: "Nepal" },
+];
+
+const HEMP_FIBRE_IDENTITY: SpecRow[] = [
+  { k: "Common name", v: "Hemp bast fibre" },
+  { k: "Botanical source", v: "Cannabis sativa L., stem bast" },
+  { k: "HS heading", v: "5302 — true hemp, raw or processed" },
+  { k: "Country of origin", v: "Nepal" },
+];
+
+const FIBRE_PHYSICAL: SpecRow[] = [
+  { k: "Staple length", v: "60–180 mm, hand-stripped" },
+  { k: "Fineness", v: "20–50 µm single fibre" },
+  { k: "Tensile strength", v: "High for a bast fibre; comparable to ramie" },
+  { k: "Elongation at break", v: "2–4%" },
+  { k: "Moisture regain", v: "8–12% at 20 °C / 65% RH" },
+  { k: "Colour", v: "Natural ecru to pale grey-brown; undyed" },
+  { k: "Lustre", v: "Silky — the property allo is bought for" },
+];
+
+const FIBRE_PROCESS: SpecRow[] = [
+  { k: "Retting", v: "Traditional ash-boil and water retting" },
+  { k: "Degumming", v: "Non-chemical; wood-ash alkali" },
+  { k: "Spinning", v: "Hand-spun or mill-blended to order" },
+  { k: "Bleaching", v: "None unless specified" },
+];
+
+const FIBRE_SUPPLY: SpecRow[] = [
+  { k: "Formats", v: "Raw bast, degummed sliver, hand-spun yarn, woven cloth" },
+  { k: "Bale / pack", v: "On request" },
+  { k: "Minimum order", v: "On request" },
+  { k: "Licensing", v: "Allo requires no cannabis licence — it is not a controlled plant" },
+];
+
 /** Specs for a product, or null where the line has no published spec sheet yet. */
 export function specsFor(page: LandingPage): SpecGroup[] | null {
+  if (page.category === "fibre") return fibreSpecs(page);
   if (page.category !== "seed-oil") return null;
   const o = OVERRIDES[page.slug] ?? {};
   return [
@@ -138,4 +191,27 @@ export function specPropertiesFor(page: LandingPage) {
       value: r.v,
     }))
   );
+}
+
+function fibreSpecs(page: LandingPage): SpecGroup[] {
+  const isAllo = page.slug.includes("allo");
+  return [
+    {
+      title: "Identity",
+      rows: isAllo ? ALLO_IDENTITY : HEMP_FIBRE_IDENTITY,
+    },
+    {
+      title: "Fibre properties",
+      rows: FIBRE_PHYSICAL,
+      note: "Typical for hand-processed Himalayan bast. Hand-stripping gives a wider staple spread than mill decortication — buyers blending with cotton or wool should specify the range they can run.",
+    },
+    { title: "Processing", rows: FIBRE_PROCESS },
+    {
+      title: "Supply",
+      rows: FIBRE_SUPPLY,
+      note: isAllo
+        ? "Allo is wild-collected by households under existing community forest arrangements, outside the cannabis licensing framework entirely."
+        : "Hemp bast supply follows the cultivation licence and the harvest cycle.",
+    },
+  ];
 }
