@@ -307,6 +307,12 @@ export default function TrackerPage() {
         </div>
 
         <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-8">
+          <Link href="/nepal-cannabis-news/" className="font-semibold text-marigold hover:text-ink">
+            Dated news entries →
+          </Link>
+          <Link href="/supreme-court-cannabis-order/" className="font-semibold text-marigold hover:text-ink">
+            The Supreme Court order, explained →
+          </Link>
           <Link href="/learn/is-cannabis-legal-in-nepal/" className="font-semibold text-marigold hover:text-ink">
             Is cannabis legal in Nepal? →
           </Link>

@@ -12,6 +12,8 @@ import {
 
 const learnLinks = [
   { href: "/nepal-cannabis-tracker/", label: "Nepal Cannabis Law Tracker" },
+  { href: "/nepal-cannabis-news/", label: "Nepal Cannabis News" },
+  { href: "/supreme-court-cannabis-order/", label: "Supreme Court order, explained" },
   { href: "/learn/is-cannabis-legal-in-nepal/", label: "Is cannabis legal in Nepal?" },
   { href: "/learn/hemp-vs-marijuana-difference/", label: "Hemp vs marijuana" },
   { href: "/learn/hemp-seed-oil-vs-cbd-oil/", label: "Hemp seed oil vs CBD oil" },

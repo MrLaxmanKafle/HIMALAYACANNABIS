@@ -7,7 +7,7 @@
  * than smoothed over. Accuracy is the entire value of this page.
  */
 
-export const trackerUpdated = "2026-11-11";
+export const trackerUpdated = "2026-11-26";
 
 export type StatusLevel = "no" | "partial" | "yes" | "unknown";
 

@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/lib/articles";
 import { landingPages } from "@/lib/landing";
+import { trackerUpdated } from "@/lib/tracker";
+import { newsUpdated } from "@/lib/news";
+import { orderUpdated } from "@/lib/court-order";
 
 export const dynamic = "force-static";
 
@@ -27,7 +30,9 @@ const staticRoutes: Entry[] = [
   { path: "/volunteer", lastmod: CONTENT_UPDATED, priority: 0.5 },
   { path: "/ne", lastmod: CONTENT_UPDATED, priority: 0.7 },
   { path: "/learn", lastmod: CONTENT_UPDATED, priority: 0.8 },
-  { path: "/nepal-cannabis-tracker", lastmod: CONTENT_UPDATED, priority: 0.9 },
+  { path: "/nepal-cannabis-tracker", lastmod: trackerUpdated, priority: 0.9 },
+  { path: "/nepal-cannabis-news", lastmod: newsUpdated, priority: 0.9 },
+  { path: "/supreme-court-cannabis-order", lastmod: orderUpdated, priority: 0.9 },
   { path: "/compliance", lastmod: CONTENT_UPDATED, priority: 0.7 },
   { path: "/contact", lastmod: CONTENT_UPDATED, priority: 0.6 },
   { path: "/faq", lastmod: CONTENT_UPDATED, priority: 0.7 },

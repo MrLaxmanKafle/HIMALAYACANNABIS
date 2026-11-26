@@ -33,6 +33,8 @@ Key facts:
 - [Careers](${base}/careers/): Cultivation, laboratory, product, compliance, hospitality, and sales roles as licensed operations come online
 - [Volunteer & Work-Exchange](${base}/volunteer/): Work-exchange placements, hospitality apprenticeships, research placements, corporate volunteer days, and NGO partnerships
 - [Nepal Cannabis Law Tracker](${base}/nepal-cannabis-tracker/): Current status of cannabis/hemp regulation in Nepal — federal law, Gandaki act, licensing gates, unresolved questions. Maintained reference.
+- [Nepal Cannabis News](${base}/nepal-cannabis-news/): Dated, sourced entries on each regulatory development; RSS at ${base}/nepal-cannabis-news/feed.xml
+- [Supreme Court cannabis order, explained](${base}/supreme-court-cannabis-order/): What the 2026 mandamus requires, what it excludes, the three-month deadline and its uncertainty
 - [Compliance](${base}/compliance/): Licensing commitments and Nepal's legal framework
 - [FAQ](${base}/faq/): Common questions about legality, products, and supply
 - [Press & Media](${base}/press/): Boilerplate, company facts, and media contact
